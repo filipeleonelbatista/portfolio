@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaStar } from 'react-icons/fa';
+import { FaGithub, FaAndroid, FaStar, FaGlobe } from 'react-icons/fa';
 import { Box, Heading, Image, Text } from 'theme-ui';
 
 const FavoriteCardProject = (props) => {
@@ -9,13 +9,44 @@ const FavoriteCardProject = (props) => {
         <Image src={props.image} alt="content image" />
       </Box>
       <Box sx={styles.fevCard.content}>
-        <Text as="p">
-          <FaStar color="#FFCE1F" style={{ marginRight: '1.4rem' }} /> {props.watchCount}
-        </Text>
         <Heading as="h3">
-          <a href={`${props.project_url}`} style={{ textDecoration: 'none', color: '#0f2137', transition: '0.2s', '&:hover': { color: '#0063c6' } }} >{props.title}</a>
+          <a href={props.project_url} style={{ textDecoration: 'none', color: '#0f2137', transition: '0.2s', '&:hover': { color: '#0063c6' } }} >{props.title}</a>
         </Heading>
         <Text as="p">{props.description}</Text>
+        <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center', alignItems: 'center', margin: '1.4rem 0 5.8rem 0' }}>
+
+          {
+            !(props.view_app_url !== '' && props.download_app_url !== '') &&
+            (
+              <a href={props.project_url} target="_blank" rel="noreferer noopener nofollow"
+                style={{ fontSize: 14, display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', textDecoration: 'none', padding: '0.4rem', margin: '0 0.2rem', borderRadius: '0.4rem', color: '#FFF', backgroundColor: '#0063c6', transition: '0.2s', "&:hover": { backgroundColor: '#82b4eb' } }}
+              >
+                <FaGithub size={24} style={{ marginRight: '0.4rem' }} />Veja no Github
+              </a>
+            )
+          }
+
+          {
+            props.view_app_url !== '' && (
+              <a href={props.view_app_url} target="_blank" rel="noreferer noopener nofollow"
+                style={{ fontSize: 14, display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', textDecoration: 'none', padding: '0.4rem', margin: '0 0.2rem', borderRadius: '0.4rem', color: '#FFF', backgroundColor: '#0063c6', transition: '0.2s', "&:hover": { backgroundColor: '#82b4eb' } }}
+              >
+                <FaGlobe size={24} style={{ marginRight: '0.4rem' }} />Ver aplicação
+              </a>
+            )
+          }
+
+          {
+            props.download_app_url !== '' && (
+              <a href={props.download_app_url} target="_blank" rel="noreferer noopener nofollow"
+                style={{ fontSize: 14, display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', textDecoration: 'none', padding: '0.4rem', margin: '0 0.2rem', borderRadius: '0.4rem', color: '#FFF', backgroundColor: '#0063c6', transition: '0.2s', "&:hover": { backgroundColor: '#82b4eb' } }}
+              >
+                <FaAndroid size={24} style={{ marginRight: '0.4rem' }} />Baixar App
+              </a>
+            )
+          }
+
+        </div>
       </Box>
     </Box>
   );

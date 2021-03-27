@@ -1,4 +1,3 @@
-import axios from 'axios';
 import BlockTitle from 'components/block-title';
 import FavoriteCardProject from 'components/favorite-card-project';
 import React, { useEffect, useState } from 'react';
@@ -37,70 +36,59 @@ const FavoriteCourse = () => {
       },
     },
   };
-  const tk_access = "bab3c5a05f5db3d6d2efbc8685453ff0e713ae1f";
   const [favoriteCourseData, setFavoriteCourseData] = useState([]);
 
   async function loadItens() {
-
-    const result = await axios({
-      url: 'https://api.github.com/graphql',
-      method: 'post',
-      data: {
-        query: `
-        query {
-          viewer {
-            id
-            pinnedItems(first: 6) {
-              edges {
-                node {
-                  ... on Repository {
-                    name
-                    description
-                    updatedAt               
-                    url  
-                    stargazers {
-                      totalCount
-                    }
-                    languages(first: 100) {
-                      nodes {
-                        name
-                      }
-                    }
-                    refs(first: 1, , refPrefix:"refs/heads/") {
-                      nodes {
-                        name
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        `
+    let newfavoriteCourseData = [
+      {
+        title: 'Queridômetro.dev',
+        description: 'Medidor de socialização de grupo voltado para desenvolvedores.',
+        image: `/images/projects/1.png`,
+        project_url: 'https://github.com/filipeleonelbatista/queridometro-dev',
+        download_app_url: '',
+        view_app_url: 'https://queridometro-dev.vercel.app/',
       },
-      headers: {
-        'Authorization': 'Bearer ' + tk_access
-      }
-    });
-
-    let newfavoriteCourseData = [];
-
-    console.log(result.data.data.viewer.pinnedItems.edges);
-
-    result.data.data.viewer.pinnedItems.edges.map(projeto => {
-      newfavoriteCourseData.push({
-        title: projeto.node.name,
-        description: projeto.node.description,
-        image: projeto.node.url + `/blob/${projeto.node.refs.nodes[0].name}/.github/site.png?raw=true`,
-        project_url: projeto.node.url,
-        reviewCount: '5.0 (392 reviews)',
-        watchCount: `${projeto.node.stargazers.totalCount} stars`,
-        videoLink: '',
-        starCount: 0,
-      })
-    });
-
+      {
+        title: 'Dev.finance$',
+        description: 'Aplicação local de gestão de contas a receber e a pagar.',
+        image: `/images/projects/4.png`,
+        project_url: 'https://github.com/filipeleonelbatista/dev-finances',
+        download_app_url: 'https://github.com/filipeleonelbatista/dev-finances/raw/master/.github/app.apk',
+        view_app_url: 'https://minhasfinancas.vercel.app',
+      },
+      {
+        title: 'Quiz App 2020',
+        description: 'Projeto desenvolvido para participar do Hacktoberfest da Digital Ocean.',
+        image: `/images/projects/2.png`,
+        project_url: 'https://github.com/filipeleonelbatista/Quiz-App-Hacktoberfest-2020',
+        download_app_url: 'https://github.com/filipeleonelbatista/Quiz-App-Hacktoberfest-2020/raw/main/.github/Quiz%20App%20-%20Hacktoberfest.apk',
+        view_app_url: '',
+      },
+      {
+        title: 'Tip Calculator',
+        description: 'Projeto desenvolvido para participar do Hacktoberfest da Digital Ocean.',
+        image: `/images/projects/5.png`,
+        project_url: 'https://github.com/filipeleonelbatista/Tip-Calculator-Hacktoberfest-2020',
+        download_app_url: '',
+        view_app_url: 'https://tipcalculator-lovat.vercel.app/',
+      },
+      {
+        title: 'Cartas para o papai noel',
+        description: 'Projeto desenvolvido para ensinar conceitos básicos de programação.',
+        image: `/images/projects/6.png`,
+        project_url: 'https://github.com/filipeleonelbatista/cartas-para-o-papai-noel-devchallenge',
+        download_app_url: 'https://github.com/filipeleonelbatista/cartas-para-o-papai-noel-devchallenge/raw/main/.github/app.apk',
+        view_app_url: 'https://cartasparaopapainoel.vercel.app/',
+      },
+      {
+        title: 'Countdown Timer App',
+        description: 'Coloque contadores regressivos para suas datas importantes.',
+        image: `/images/projects/3.png`,
+        project_url: 'https://github.com/filipeleonelbatista/App-Ideas-CTA',
+        download_app_url: 'https://github.com/filipeleonelbatista/App-Ideas-CTA/raw/master/assets/Countdown-Timer-App.apk',
+        view_app_url: '',
+      },
+    ];
 
     setFavoriteCourseData(newfavoriteCourseData)
 
@@ -123,14 +111,12 @@ const FavoriteCourse = () => {
           {favoriteCourseData.map((course, index) => (
             <SwiperSlide key={index}>
               <FavoriteCardProject
-                starCount={course.starCount}
                 title={course.title}
                 description={course.description}
                 project_url={course.project_url}
+                download_app_url={course.download_app_url}
+                view_app_url={course.view_app_url}
                 image={course.image}
-                reviewCount={course.reviewCount}
-                watchCount={course.watchCount}
-                videoLink={course.videoLink}
               />
             </SwiperSlide>
           ))}

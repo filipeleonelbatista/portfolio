@@ -29,12 +29,12 @@ const Banner = () => {
           <Box sx={styles.banner.col}>
             <Box sx={styles.banner.content}>
               <Heading as="h3">
-                Procura por <br />
-                Desenvolvedor de aplicativos
+                Procurando <br />
+                Desenvolvedor de aplicativos?
               </Heading>
               <Text as="p">
-                Sou <strong>Filipe Batista</strong>, desenvolvedor de apps com experiência na stack JavaScript <br />
-                Gosto de tirar as ideias do papel e ajudar pessoas a <strong>automatizar</strong> e <strong>impulsionar</strong><br />
+                Sou <strong>Filipe Batista</strong>, desenvolvedor de apps com experiência na stack <strong>JavaScript </strong>
+                Gosto de tirar as ideias do papel e ajudar pessoas a <strong>automatizar</strong> e <strong>impulsionar </strong>
                 seu negócio por meio da tecnologia.
               </Text>
 
