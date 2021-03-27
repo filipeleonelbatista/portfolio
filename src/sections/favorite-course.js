@@ -139,7 +139,7 @@ export default FavoriteCourse;
 
 const styles = {
   fevCourse: {
-    paddingTop: ['60px', null, null, '80px', '110px'],
+    paddingTop: ['60px', null, null, '80px', '10px'],
     pb: [null, null, null, '30px', '50px', '0'],
     container: {
       maxWidth: 1440,

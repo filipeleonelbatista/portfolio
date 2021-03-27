@@ -6,6 +6,8 @@ import { StickyProvider } from 'contexts/app/app.provider';
 import { VideoProvider } from 'contexts/video/video.provider';
 import React from 'react';
 import Banner from 'sections/banner';
+import CtaThree from 'sections/cta-three';
+import CtaTwo from 'sections/cta-two';
 import FavoriteCourse from 'sections/favorite-course';
 import PopularCourse from 'sections/popular-course';
 import theme from 'theme';
@@ -23,8 +25,10 @@ export default function IndexPage() {
                 title="Filipe Batista | Desenvolvedor de aplicativos"
               />
               <Banner />
+              <CtaTwo />
               <FavoriteCourse />
               <PopularCourse />
+              {/* <CtaThree /> */}
               <Modal />
             </Layout>
           </VideoProvider>

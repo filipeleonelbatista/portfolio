@@ -4,6 +4,10 @@ export default [
     label: 'Inicio',
   },
   {
+    path: 'sobre',
+    label: 'Sobre',
+  },
+  {
     path: 'projetos',
     label: 'Projetos',
   },

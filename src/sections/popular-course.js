@@ -33,7 +33,7 @@ const popularCourseData = [
   {
     title:
       'Salux - Informatização em saúde',
-    date: 'De 04/2019 até 11/2019 (7 meses)',
+    date: 'De 04/2019 até 11/2019',
     description: 'Suporte e manutenção das estações de trabalho dos colaboradores da empresa.',
     role: 'Estágiario TI',
     list: [
@@ -54,8 +54,8 @@ const popularCourseData = [
   {
     title:
       'Gerdau Aços Longos - Sapucaia do sul-RS',
-    date: 'De 09/2017 até 01/2019 (7 meses)',
-    description: 'Suporte e manutenção das estações de trabalho dos colaboradores da empresa.',
+    date: 'De 09/2017 até 01/2019',
+    description: 'Atendimento a demandas da ferramenta JIRA. Pagamento de fornecedores e suporte na Gestão de mudança de TI  e Gestão de demandas.',
     role: 'Estágiario',
     list: [
       {
@@ -96,7 +96,7 @@ const PopularCourse = () => {
           <Box sx={styles.popularCourse.col} key={index}>
             <PopularCard
               key={index}
-              expanded={index == 1 ? true : false}
+              expanded={index === 0 ? true : false}
               listData={course.list}
               description={course.description}
               title={course.title}

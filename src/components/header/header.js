@@ -1,14 +1,12 @@
 /** @jsx jsx */
-import { jsx, Container, Flex, Button, Box } from 'theme-ui';
-import { keyframes } from '@emotion/core';
-import { IoIosUnlock } from 'react-icons/io';
-import { NavLink, Link } from 'components/link';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import Logo from 'components/logo';
-
 import { DrawerProvider } from 'contexts/drawer/drawer.provider';
-import MobileDrawer from './mobileDrawer';
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { Link as ScrollLink } from 'react-scroll';
+import { Container, Flex, jsx } from 'theme-ui';
 import menuItems from './header.data';
+import MobileDrawer from './mobileDrawer';
+
 
 export default function Header({ className }) {
   return (
@@ -34,13 +32,28 @@ export default function Header({ className }) {
             ))}
           </Flex>
 
-          <Link
+          {/* <Link
             path="/"
             ml={2}
             label="Entrar em contato"
             sx={styles.headerBtn}
             variant="buttons.primary"
-          />
+          /> */}
+
+          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+            <a target="_blank" rel="noopener noreferer" href="https://github.com/filipeleonelbatista" style={{ padding: '0.8rem', border: 'solid 1px #0063c6', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#0063c6', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+              <FaGithub />
+            </a>
+            <a target="_blank" rel="noopener noreferer" href="https://www.linkedin.com/in/filipeleonelbatista/" style={{ padding: '0.8rem', border: 'solid 1px #0063c6', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#0063c6', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+              <FaLinkedinIn />
+            </a>
+            <a target="_blank" rel="noopener noreferer" href="https://www.instagram.com/filipeleonelbatista/" style={{ padding: '0.8rem', border: 'solid 1px #0063c6', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#0063c6', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+              <FaInstagram />
+            </a>
+            <a target="_blank" rel="noopener noreferer" href="mailto:filipe.x2016@gmail.com" style={{ padding: '0.8rem', border: 'solid 1px #0063c6', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#0063c6', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+              <FaEnvelope />
+            </a>
+          </div>
 
           <MobileDrawer />
         </Container>

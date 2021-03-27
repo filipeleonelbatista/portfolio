@@ -6,7 +6,7 @@ import ctaTwoImage from 'assets/free-course.png';
 
 const CtaTwo = () => {
   return (
-    <Box as="section" sx={styles.ctaTwo}>
+    <Box as="section" id="sobre" sx={styles.ctaTwo}>
       <Container>
         <Flex sx={styles.ctaTwo.row}>
           <Box sx={styles.ctaTwo.col}>
@@ -20,19 +20,19 @@ const CtaTwo = () => {
             <Box sx={styles.ctaTwo.content}>
               <BlockTitle
                 sx={styles.ctaTwo.blockTitle}
-                tagline="Free tutorial"
+                tagline="Sobre mim"
                 heading={
-                  'More than thousand \n of free tutorial upload \n every weeks'
+                  'Olá, sou o Filipe Batista.'
                 }
               />
               <Text as="p" sx={styles.ctaTwo.text}>
                 {
-                  'Get your tests delivered at let home collect sample \n from the victory of the managments that supplies \n best design system  guidelines ever. Get your tests \n delivered at let home collect sample.'
+                  'Amo muito minha família.\n Tenho uma grande realização no desenvolvimento especialmente quando consigo tirar idéias do papel e tornar em realidade. \nSou desenvolvedor PHP, Python for web, um pouquinho de Oracle SQL, SQLite, MySql e Postgres e Fullstack com ReactJS ReactNative e NodeJS 💻'
                 }
               </Text>
               <Link
-                path="#"
-                label="Explore details"
+                path="#projetos"
+                label="Veja meus projetos"
                 variant="buttons.primary"
               />
             </Box>
@@ -47,7 +47,7 @@ export default CtaTwo;
 
 const styles = {
   ctaTwo: {
-    paddingBottom: '100px',
+    paddingBottom: '10px',
     '@media(min-width: 1200px)': {
       paddingTop: '100px',
     },

@@ -1,15 +1,28 @@
 /** @jsx jsx */
-import { jsx, Heading, Box, Divider, Text, Container } from 'theme-ui';
-import { Link } from 'components/link';
-import Logo from 'components/logo';
-import menuItems from './footer.data';
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { Container, Divider, jsx } from 'theme-ui';
 
 export default function Footer() {
   return (
     <footer sx={styles.footer}>
       <Divider sx={styles.footer.divider} />
       <Container sx={styles.footer.container}>
+
+
+        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+          <a target="_blank" rel="noopener noreferer" href="https://github.com/filipeleonelbatista" style={{ padding: '0.8rem', border: 'solid 1px #343d48', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#343d48', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+            <FaGithub />
+          </a>
+          <a target="_blank" rel="noopener noreferer" href="https://www.linkedin.com/in/filipeleonelbatista/" style={{ padding: '0.8rem', border: 'solid 1px #343d48', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#343d48', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+            <FaLinkedinIn />
+          </a>
+          <a target="_blank" rel="noopener noreferer" href="https://www.instagram.com/filipeleonelbatista/" style={{ padding: '0.8rem', border: 'solid 1px #343d48', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#343d48', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+            <FaInstagram />
+          </a>
+          <a target="_blank" rel="noopener noreferer" href="mailto:filipe.x2016@gmail.com" style={{ padding: '0.8rem', border: 'solid 1px #343d48', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#343d48', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+            <FaEnvelope />
+          </a>
+        </div>
 
         <p style={{ textAlign: 'center' }}>
           {
@@ -18,21 +31,6 @@ export default function Footer() {
           <br />Desenvolvido em NextJS por Filipe Batista
 
         </p>
-
-        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-          <a target="_blank" rel="noopener noreferer" href="https://github.com/filipeleonelbatista" style={{ padding: '0.8rem', border: 'solid 1px #CCC', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#CCC', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
-            <FaGithub />
-          </a>
-          <a target="_blank" rel="noopener noreferer" href="https://www.linkedin.com/in/filipeleonelbatista/" style={{ padding: '0.8rem', border: 'solid 1px #CCC', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#CCC', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
-            <FaLinkedinIn />
-          </a>
-          <a target="_blank" rel="noopener noreferer" href="https://www.instagram.com/filipeleonelbatista/" style={{ padding: '0.8rem', border: 'solid 1px #CCC', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#CCC', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
-            <FaInstagram />
-          </a>
-          <a target="_blank" rel="noopener noreferer" href="mailto:filipe.x2016@gmail.com" style={{ padding: '0.8rem', border: 'solid 1px #CCC', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#CCC', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
-            <FaEnvelope />
-          </a>
-        </div>
 
         {/* {menuItems.map(({ header, items }, i) => (
           <Box key={i} sx={styles.footer.widget}>

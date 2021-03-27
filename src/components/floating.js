@@ -78,12 +78,12 @@ export default function Floating({
 
     return (
         <div>
-            <button onClick={handleShowForm} className="whats-btn">
+            <button id="whats-btn" onClick={handleShowForm} className="whats-btn">
                 <FaWhatsapp size={32} color="#FFF" />
             </button>
             <div id="call-to-action" className="call-to-action hidden">
                 Chama no WhatsApp!
-      </div>
+            </div>
             <div id="whats-form" className="whats-form hidden">
                 <div className="form-header">
                     Digite seu Nome/WhatsApp para entrar em contato.
