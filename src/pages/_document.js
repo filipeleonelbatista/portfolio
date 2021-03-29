@@ -11,8 +11,21 @@ class CustomDocument extends Document {
       <Html lang="pt-br">
         <Head>
           <link rel="stylesheet" href="/styles.css" />
+          <script dangerouslySetInnerHTML={{
+            __html: `
+                (function(w,d,s,l,i){w[l] = w[l] || []{'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-TKK5Z29');
+            `}}
+          />
+
+
         </Head>
         <body>
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKK5Z29"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <Main />
           <NextScript />
         </body>
