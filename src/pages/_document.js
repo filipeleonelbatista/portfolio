@@ -12,6 +12,8 @@ class CustomDocument extends Document {
         <Head>
           <link rel="stylesheet" href="/styles.css" />
 
+          <link rel="shortcut icon" href="favicon.png" type="image/png" />
+
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-21W1RKR7EV"></script>
           <script dangerouslySetInnerHTML={{
             __html: `
