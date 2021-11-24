@@ -88,6 +88,14 @@ const FavoriteCourse = () => {
         download_app_url: 'https://github.com/filipeleonelbatista/App-Ideas-CTA/raw/master/assets/Countdown-Timer-App.apk',
         view_app_url: '',
       },
+      {
+        title: 'Em Cartaz - Filmes perto de você',
+        description: 'Reserve filmes no cinema mais perto de você.',
+        image: `/images/projects/7.png`,
+        project_url: 'https://github.com/filipeleonelbatista/emcartaz',
+        download_app_url: '',
+        view_app_url: 'https://emcartaz.vercel.app/',
+      },
     ];
 
     setFavoriteCourseData(newfavoriteCourseData)
