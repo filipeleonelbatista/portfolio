@@ -38,7 +38,7 @@ export default function SEO({
     },
     {
       property: `og:image`,
-      content: '/images/banner-image-1.png',
+      content: '/images/header.png',
     },
     {
       property: `og:url`,
