@@ -28,7 +28,6 @@ export default function IndexPage() {
               <CtaTwo />
               <FavoriteCourse />
               <PopularCourse />
-              {/* <CtaThree /> */}
               <Modal />
             </Layout>
           </VideoProvider>
