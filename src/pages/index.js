@@ -6,9 +6,9 @@ import { StickyProvider } from 'contexts/app/app.provider';
 import { VideoProvider } from 'contexts/video/video.provider';
 import React from 'react';
 import Banner from 'sections/banner';
-import CtaThree from 'sections/cta-three';
 import CtaTwo from 'sections/cta-two';
 import FavoriteCourse from 'sections/favorite-course';
+import OtherProjects from 'sections/other-projects';
 import PopularCourse from 'sections/popular-course';
 import theme from 'theme';
 import { ThemeProvider } from 'theme-ui';
@@ -20,14 +20,12 @@ export default function IndexPage() {
         <StickyProvider>
           <VideoProvider>
             <Layout>
-              <SEO
-                description="Desenvolvedor de aplicativos com foco em desenvolvimento web e mobile com experiência na stack JavaScript, ReactJS, React Native e NodeJS. Tire suas idéias do papel!"
-                title="Filipe Batista | Desenvolvedor de aplicativos"
-              />
+              <SEO />
               <Banner />
               <CtaTwo />
               <FavoriteCourse />
               <PopularCourse />
+              <OtherProjects />
               <Modal />
             </Layout>
           </VideoProvider>
