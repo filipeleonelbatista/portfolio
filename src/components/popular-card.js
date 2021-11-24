@@ -28,7 +28,7 @@ const PopularCard = (props) => {
               </Box>
             </Box>
             <Heading as="h3">
-              <Link href={props.link} label={props.title} />
+              <Link path={props.link} label={props.title} />
             </Heading>
             <Text as="p" style={{ maxWidth: '80%' }}>
               {props.description}
