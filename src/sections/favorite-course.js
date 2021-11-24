@@ -39,7 +39,31 @@ const FavoriteCourse = () => {
   const [favoriteCourseData, setFavoriteCourseData] = useState([]);
 
   async function loadItens() {
-    let newfavoriteCourseData = [
+    let newfavoriteCourseData = [      
+      {
+        title: 'Em Cartaz - Filmes perto de você',
+        description: 'Reserve filmes no cinema mais perto de você.',
+        image: `/images/projects/7.png`,
+        project_url: 'https://github.com/filipeleonelbatista/emcartaz',
+        download_app_url: '',
+        view_app_url: 'https://emcartaz.vercel.app/',
+      },
+      {
+        title: 'Cartas para o papai noel',
+        description: 'Projeto desenvolvido para ensinar conceitos básicos de programação.',
+        image: `/images/projects/6.png`,
+        project_url: 'https://github.com/filipeleonelbatista/cartas-para-o-papai-noel-devchallenge',
+        download_app_url: 'https://github.com/filipeleonelbatista/cartas-para-o-papai-noel-devchallenge/raw/main/.github/app.apk',
+        view_app_url: 'https://cartasparaopapainoel.vercel.app/',
+      },      
+      {
+        title: 'Frases Inspiradoras',
+        description: 'Frases diarias de inspiração com a opção de texto em fala.',
+        image: `/images/projects/8.png`,
+        project_url: 'https://github.com/filipeleonelbatista/frases-inspiradoras',
+        download_app_url: '',
+        view_app_url: 'https://frases-inspiradoras.vercel.app/',
+      },
       {
         title: 'Queridômetro.dev',
         description: 'Medidor de socialização de grupo voltado para desenvolvedores.',
@@ -73,28 +97,12 @@ const FavoriteCourse = () => {
         view_app_url: 'https://tipcalculator-lovat.vercel.app/',
       },
       {
-        title: 'Cartas para o papai noel',
-        description: 'Projeto desenvolvido para ensinar conceitos básicos de programação.',
-        image: `/images/projects/6.png`,
-        project_url: 'https://github.com/filipeleonelbatista/cartas-para-o-papai-noel-devchallenge',
-        download_app_url: 'https://github.com/filipeleonelbatista/cartas-para-o-papai-noel-devchallenge/raw/main/.github/app.apk',
-        view_app_url: 'https://cartasparaopapainoel.vercel.app/',
-      },
-      {
         title: 'Countdown Timer App',
         description: 'Coloque contadores regressivos para suas datas importantes.',
         image: `/images/projects/3.png`,
         project_url: 'https://github.com/filipeleonelbatista/App-Ideas-CTA',
         download_app_url: 'https://github.com/filipeleonelbatista/App-Ideas-CTA/raw/master/assets/Countdown-Timer-App.apk',
         view_app_url: '',
-      },
-      {
-        title: 'Em Cartaz - Filmes perto de você',
-        description: 'Reserve filmes no cinema mais perto de você.',
-        image: `/images/projects/7.png`,
-        project_url: 'https://github.com/filipeleonelbatista/emcartaz',
-        download_app_url: '',
-        view_app_url: 'https://emcartaz.vercel.app/',
       },
     ];
 
