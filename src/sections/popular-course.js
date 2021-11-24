@@ -8,8 +8,56 @@ import { FaFileDownload } from 'react-icons/fa';
 const popularCourseData = [
   {
     title:
+      'Moben',
+    link:
+      'https://moben.com.br',
+    date: 'De 7/2021 até Hoje',
+    description: 'Suporte em ReactJS usando Firebase como base de dados e Redux para manter estados da aplicação',
+    role: 'Desenvolvedor Fullstack',
+    list: [
+      {
+        content: 'Desenvolvimento e manutenção de aplicações em ReactJS',
+      },
+      {
+        content: ' Desenvolvimento e manutenção de integrações do Sistema com Pagar-me, Discord entre outros',
+      },
+      {
+        content: 'Manutenção de banco de dados em Firebase',
+      },
+      {
+        content: 'Desenvolvimento de documentação nas ferramentas Jira.',
+      },
+    ],
+  },
+  {
+    title:
+      'Interprocess - Tecnologia em Saúde',
+    link:
+      'https://www.interprocess.com.br/',
+    date: 'De 7/2021 até 10/2021',
+    description: 'Desenvolvimento da aplicação de prontuário eletronico em React JS com Typescript usando SQLServer como base de dados',
+    role: 'Desenvolvedor Jr',
+    list: [
+      {
+        content: 'Desenvolvimento e manutenção de aplicações em ReactJS com Typescript',
+      },
+      {
+        content: ' Desenvolvimento e manutenção de integrações do Sistema Gemed em C#',
+      },
+      {
+        content: 'Manutenção de banco de dados SQLServer',
+      },
+      {
+        content: ' Desenvolvimento de documentação nas ferramentas Devops, Storybook.',
+      },
+    ],
+  },
+  {
+    title:
       'Salux - Informatização em saúde',
-    date: 'De 11/2019 até Hoje',
+    link:
+      'https://www.salux.com.br/',
+    date: 'De 11/2019 até 04/2021',
     description: 'Suporte em PowerBuilder 11.5 para o sistema principal da empresa e manutenção no banco de dados Oracle',
     role: 'Desenvolvedor Jr',
     list: [
@@ -33,6 +81,8 @@ const popularCourseData = [
   {
     title:
       'Salux - Informatização em saúde',
+    link:
+      'https://www.salux.com.br/',
     date: 'De 04/2019 até 11/2019',
     description: 'Suporte e manutenção das estações de trabalho dos colaboradores da empresa.',
     role: 'Estágiario TI',
@@ -54,6 +104,8 @@ const popularCourseData = [
   {
     title:
       'Gerdau Aços Longos - Sapucaia do sul-RS',
+    link:
+      'https://www2.gerdau.com.br/',
     date: 'De 09/2017 até 01/2019',
     description: 'Atendimento a demandas da ferramenta JIRA. Pagamento de fornecedores e suporte na Gestão de mudança de TI  e Gestão de demandas.',
     role: 'Estágiario',
@@ -100,6 +152,7 @@ const PopularCourse = () => {
               listData={course.list}
               description={course.description}
               title={course.title}
+              link={course.link}
               date={course.date}
               role={course.role}
             />
