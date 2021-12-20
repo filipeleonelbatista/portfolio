@@ -1,25 +1,13 @@
-import {
-  Box,
-  Flex,
-  Container,
-  Image,
-  Heading,
-  Text,
-  Input,
-  Button,
-} from 'theme-ui';
-
-import React from 'react';
-
-import VideoBtn from 'components/video-btn';
-import { FaFileDownload } from 'react-icons/fa';
-import { IoIosFile } from 'react-icons/io';
-
 import BannerBG from 'assets/banner-bg-1-1.png';
-import BannerTextLine from 'assets/banner-text-line.png';
-import BannerPattern from 'assets/banner-pattern.png';
 import BannerImage from 'assets/banner-image-1.png';
+import BannerPattern from 'assets/banner-pattern.png';
+import BannerTextLine from 'assets/banner-text-line.png';
 import PartnerImage from 'assets/brands.png';
+import React from 'react';
+import { FaFileDownload } from 'react-icons/fa';
+import {
+  Box, Container, Flex, Heading, Image, Text
+} from 'theme-ui';
 
 const Banner = () => {
   return (

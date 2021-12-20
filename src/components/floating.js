@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
     FaWhatsapp
 } from 'react-icons/fa';
+import { sendDiscordNotification } from 'services/discord-notify';
 
 export default function Floating({
     location = ""
@@ -57,6 +58,24 @@ export default function Floating({
         let whatsMsg = `Olá, me chamo *${whatsNome}* vi seu portfólio online e gostaria de conversar mais com você.`;
         let url = `https://api.whatsapp.com/send?phone=${whatsPhone}&text=${encodeURI(whatsMsg)}`;
 
+        const whatsMessage = 
+        `Olá
+        Recebemos seu contato e logo entraremos em contato pelo whats com você.
+    
+        Att,  Equipe Cadastra Pet
+        `
+        const discordMessage = `
+        -----------------------------------------------------------
+        Contato feito pelo Floating Button
+        
+        **Nome:** ${whatsNome}
+        **Celular:** ${whatsFone}
+
+        https://wa.me/+55${whatsFone.replace(/\D/g, "")}?text=${encodeURI(whatsMessage)}
+
+        -----------------------------------------------------------
+        `    
+        sendDiscordNotification(discordMessage,'bot')
 
         window.open(url, "_blank");
 
