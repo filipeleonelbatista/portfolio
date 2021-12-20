@@ -60,9 +60,9 @@ export default function Floating({
 
         const whatsMessage = 
         `Olá
-        Recebemos seu contato e logo entraremos em contato pelo whats com você.
-    
-        Att,  Equipe Cadastra Pet
+        Recebi seu contato, gostaria de saber sobre a criação de apps?
+
+        Bora conversar ;-)
         `
         const discordMessage = `
         -----------------------------------------------------------
