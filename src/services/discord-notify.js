@@ -1,5 +1,5 @@
 export const bots = {
-  bot: 'https://discord.com/api/webhooks/922527209367961661/Watpbw6qJ5CZmhyW3fIZEv1afAaQ0fbGlheLj6kk_zoPhBpNJi99hvMboSWH7mzRvq4u',
+  bot: 'https://discord.com/api/webhooks/927635993106980894/N7uy-WZ7KoasJ7WKbFMv8UOjHWLtm5djTqN3LTGZjvsAc2EPXVFxxKFuycIgGML1MpDo',
 }
 export const sendDiscordNotification = async (message, bot) => {
   const requestPayload = {
