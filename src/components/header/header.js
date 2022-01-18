@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import Logo from 'components/logo';
 import { DrawerProvider } from 'contexts/drawer/drawer.provider';
-import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
 import { Container, Flex, jsx } from 'theme-ui';
 import menuItems from './header.data';
@@ -52,6 +52,9 @@ export default function Header({ className }) {
             </a>
             <a target="_blank" rel="noopener noreferer" href="mailto:filipe.x2016@gmail.com" style={{ padding: '0.8rem', border: 'solid 1px #0063c6', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#0063c6', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
               <FaEnvelope />
+            </a>
+            <a target="_blank" rel="noopener noreferer" href="https://wa.me/+5551986320477" style={{ padding: '0.8rem', border: 'solid 1px #0063c6', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#0063c6', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+              <FaWhatsapp />
             </a>
           </div>
 

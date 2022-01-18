@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import { Container, Divider, jsx } from 'theme-ui';
 
 export default function Footer() {
@@ -21,6 +21,9 @@ export default function Footer() {
           </a>
           <a target="_blank" rel="noopener noreferer" href="mailto:filipe.x2016@gmail.com" style={{ padding: '0.8rem', border: 'solid 1px #343d48', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#343d48', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
             <FaEnvelope />
+          </a>
+          <a target="_blank" rel="noopener noreferer" href="https://wa.me/+5551986320477" style={{ padding: '0.8rem', border: 'solid 1px #343d48', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#343d48', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+            <FaWhatsapp />
           </a>
         </div>
 
