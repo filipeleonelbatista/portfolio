@@ -58,6 +58,7 @@
     background-color: #FFF;
     border: 1px solid #aaa;
     border-radius: 0.4rem;
+    overflow: hidden;
   }
   .postHeader{
     display: flex;
@@ -68,7 +69,10 @@
   }
   .postImageContainer{
     width: 100%;
-    height: auto;
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   .postFooter{
     display: flex;
@@ -149,6 +153,7 @@
     background-color: #FFF;
     border: 1px solid #aaa;
     border-radius: 0.4rem;
+    overflow: hidden;
   }
   .postHeader{
     display: flex;
@@ -159,7 +164,10 @@
   }
   .postImageContainer{
     width: 100%;
-    height: auto;
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   .postFooter{
     display: flex;
@@ -240,6 +248,7 @@
     background-color: #FFF;
     border: 1px solid #aaa;
     border-radius: 0.4rem;
+    overflow: hidden;
   }
   .postHeader{
     display: flex;
@@ -250,7 +259,10 @@
   }
   .postImageContainer{
     width: 100%;
-    height: auto;
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   .postFooter{
     display: flex;

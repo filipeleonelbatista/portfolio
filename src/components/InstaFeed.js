@@ -41,41 +41,20 @@ export default function InstaFeed() {
         <p className={styles.subtitle}>Últimas postagens</p>
         <div className={styles.postList}>
           <div className={styles.postContainer}>
-            <img
-              src="http://localhost:3000/images/banner-image-1.png"
-              alt="username"
-              className={styles.postImageContainer}
-            />
+            <div
+              title={"filipeleonelbatista"}
+              style={{
+                background: `url(https://desenvolvedordeaplicativos.vercel.app/_next/static/images/banner-image-1-a66ee6f73d07bb1017577a288c87ef6a.png) no-repeat center center`,
+                width: "100%",
+                height: "20rem",
+                backgroundSize: "cover",
+              }}
+            ></div>
             <div className={styles.postFooter}>
               <div
-                title={"cadastrapet"}
+                title={"filipeleonelbatista"}
                 style={{
-                  background: `url(http://localhost:3000/_next/static/images/banner-image-1-959a18cdae9377b267d2659748d6f60d.png) no-repeat center center`,
-                  borderRadius: "50%",
-                  width: "2.4rem",
-                  height: "2.4rem",
-                  backgroundSize: "cover",
-                }}
-              ></div>
-              <div className={styles.postFooterContent}>
-                <strong className={styles.usernameFooter}>cadastra.pet</strong>
-                <p className={styles.descriptionFooter}>
-                  Testando a postagem que ...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.postContainer}>
-            <img
-              src="http://localhost:3000/images/banner-image-1.png"
-              alt="username"
-              className={styles.postImageContainer}
-            />
-            <div className={styles.postFooter}>
-              <div
-                title={"cadastrapet"}
-                style={{
-                  background: `url(http://localhost:3000/_next/static/images/banner-image-1-959a18cdae9377b267d2659748d6f60d.png) no-repeat center center`,
+                  background: `url(https://desenvolvedordeaplicativos.vercel.app/_next/static/images/banner-image-1-a66ee6f73d07bb1017577a288c87ef6a.png) no-repeat center center`,
                   borderRadius: "50%",
                   width: "2.4rem",
                   height: "2.4rem",
@@ -93,16 +72,20 @@ export default function InstaFeed() {
             </div>
           </div>
           <div className={styles.postContainer}>
-            <img
-              src="http://localhost:3000/images/banner-image-1.png"
-              alt="username"
-              className={styles.postImageContainer}
-            />
+            <div
+              title={"filipeleonelbatista"}
+              style={{
+                background: `url(https://desenvolvedordeaplicativos.vercel.app/_next/static/images/banner-image-1-a66ee6f73d07bb1017577a288c87ef6a.png) no-repeat center center`,
+                width: "100%",
+                height: "20rem",
+                backgroundSize: "cover",
+              }}
+            ></div>
             <div className={styles.postFooter}>
               <div
-                title={"cadastrapet"}
+                title={"filipeleonelbatista"}
                 style={{
-                  background: `url(http://localhost:3000/_next/static/images/banner-image-1-959a18cdae9377b267d2659748d6f60d.png) no-repeat center center`,
+                  background: `url(https://desenvolvedordeaplicativos.vercel.app/_next/static/images/banner-image-1-a66ee6f73d07bb1017577a288c87ef6a.png) no-repeat center center`,
                   borderRadius: "50%",
                   width: "2.4rem",
                   height: "2.4rem",
@@ -110,7 +93,40 @@ export default function InstaFeed() {
                 }}
               ></div>
               <div className={styles.postFooterContent}>
-                <strong className={styles.usernameFooter}>cadastra.pet</strong>
+                <strong className={styles.usernameFooter}>
+                  filipeleonelbatista
+                </strong>
+                <p className={styles.descriptionFooter}>
+                  Testando a postagem que ...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.postContainer}>
+            <div
+              title={"filipeleonelbatista"}
+              style={{
+                background: `url(https://desenvolvedordeaplicativos.vercel.app/_next/static/images/banner-image-1-a66ee6f73d07bb1017577a288c87ef6a.png) no-repeat center center`,
+                width: "100%",
+                height: "20rem",
+                backgroundSize: "cover",
+              }}
+            ></div>
+            <div className={styles.postFooter}>
+              <div
+                title={"filipeleonelbatista"}
+                style={{
+                  background: `url(https://desenvolvedordeaplicativos.vercel.app/_next/static/images/banner-image-1-a66ee6f73d07bb1017577a288c87ef6a.png) no-repeat center center`,
+                  borderRadius: "50%",
+                  width: "2.4rem",
+                  height: "2.4rem",
+                  backgroundSize: "cover",
+                }}
+              ></div>
+              <div className={styles.postFooterContent}>
+                <strong className={styles.usernameFooter}>
+                  filipeleonelbatista
+                </strong>
                 <p className={styles.descriptionFooter}>
                   Testando a postagem que ...
                 </p>
