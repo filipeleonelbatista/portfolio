@@ -44,7 +44,7 @@ const OtherProjects = () => {
         description:
           "Mantenha os registros clinicos do seu pet em qualquer lugar.",
         image: `/images/other-projects/3.png`,
-        view_app_url: "https://cadastrapet.co/",
+        view_app_url: "https://cadastrapet.com.br/",
       },
       {
         title: "Unique",
