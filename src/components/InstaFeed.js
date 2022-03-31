@@ -12,7 +12,7 @@ export default function InstaFeed() {
 
     const executeAsync = async () => {
       const url =
-        "https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink,thumbnail_url,timestamp&access_token=IGQVJWTjBrVDZAIQVZAIVnluTmxqR050QzZABOTEzaG9tUnFvYVg0VE9nV1p0VWpOeEJXcG9MNHQ3N196RHYzbnlSdFRQWkM2R2RrYm84M2x6OF9NWG56R1U5RVdWSFhGQWZAPcTJyZA0R5M0ZApNU5DRTBLbHNZAaGhkaV9rWjBN";
+        "https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink,thumbnail_url,timestamp&access_token=IGQVJYSDNEOWR6cmxzUldGMGVuRGNLN0hDampsQ2xocThJVkFya0ZADdFN1OVBwR0MwakVzWEJ3WlFwYUI2Qk9yZAmxUM0p5WTBLOEVpd3EtUnFISjhzc3MyQ1B2WGhxZAUxMcjBfNG9QX3AwaGpHbmFEeEQ1cllubW1nZA1NB";
 
       const result = await axios.get(url);
       const lastPosts = [
