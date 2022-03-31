@@ -79,18 +79,22 @@
     flex-direction: row;
     gap: 0.8rem;
     align-items: flex-start;
+    justify-content: center;
     padding: 0.8rem;
   }
   .postFooterContent{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
   .usernameFooter{
     font-size: small;
+    line-height: normal;
   }
   .descriptionFooter{
     font-size: small;
+    line-height: normal;
     margin: 0;
   }
 
@@ -174,18 +178,22 @@
     flex-direction: row;
     gap: 0.8rem;
     align-items: flex-start;
+    justify-content: center;
     padding: 0.8rem;
   }
   .postFooterContent{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
   .usernameFooter{
     font-size: small;
+    line-height: normal;
   }
   .descriptionFooter{
     font-size: small;
+    line-height: normal;
     margin: 0;
   }
 
@@ -269,18 +277,22 @@
     flex-direction: row;
     gap: 0.8rem;
     align-items: flex-start;
+    justify-content: center;
     padding: 0.8rem;
   }
   .postFooterContent{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
   .usernameFooter{
     font-size: small;
+    line-height: normal;
   }
   .descriptionFooter{
     font-size: small;
+    line-height: normal;
     margin: 0;
   }
 }
