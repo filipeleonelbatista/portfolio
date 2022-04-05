@@ -27,7 +27,7 @@ export default function IndexPage() {
               <FavoriteCourse />
               <PopularCourse />
               <OtherProjects />
-              <InstaFeed />
+              {/* <InstaFeed /> */}
               <Modal />
             </Layout>
           </VideoProvider>
