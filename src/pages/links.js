@@ -124,7 +124,7 @@ export default function Links() {
                 className={styles.actionTransparent}
               >
                 <IoQrCodeOutline size={18} />
-                <p className={styles.actionTransparentLabel}>Qr Code</p>
+                <p className={styles.actionTransparentLabel}>Pix</p>
               </button>
               <a href="/filipevcard.vcf" download className={styles.action}>
                 Salvar na agenda
@@ -179,6 +179,19 @@ export default function Links() {
             <h4 className={styles.title} style={{ textTransform: "uppercase" }}>
               Meus Links
             </h4>
+
+            <button
+              onClick={handleCopyPix}
+              className={styles.link}
+              style={{
+                width: "100%",
+                margin: "1.6rem 0 0 0",
+                fontSize: "small",
+              }}
+            >
+              <IoCopyOutline />
+              Copiar Código Pix
+            </button>
             <a
               href="/FilipeBatistaCV.pdf"
               download
