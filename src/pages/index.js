@@ -1,5 +1,4 @@
 import Floating from "components/floating";
-import InstaFeed from "components/InstaFeed";
 import Layout from "components/layout";
 import Modal from "components/modal";
 import SEO from "components/seo";
@@ -27,7 +26,6 @@ export default function IndexPage() {
               <FavoriteCourse />
               <PopularCourse />
               <OtherProjects />
-              {/* <InstaFeed /> */}
               <Modal />
             </Layout>
           </VideoProvider>
