@@ -26,8 +26,8 @@ export default function Links() {
   const [showPix, setShowPix] = useState(false);
   const sharableContent = {
     title: "Desennvolvedor de aplicativos",
-    text: "Vi este Este contato no site https://desenvolvedordeaplicativos.vercel.app",
-    url: "https://desenvolvedordeaplicativos.vercel.app",
+    text: "Vi este Este contato no site https://desenvolvedordeaplicativos.com.br",
+    url: "https://desenvolvedordeaplicativos.com.br",
   };
 
   const pixKey =
@@ -149,14 +149,6 @@ export default function Links() {
               <FaLinkedin size={48} /> <p className={styles.label}>Linkedin</p>
             </a>
             <a
-              href="https://github.com/filipeleonelbatista"
-              target="_blank"
-              rel="noopener noreferer"
-              className={styles.actionsLink}
-            >
-              <FaGithub size={48} /> <p className={styles.label}>Github</p>
-            </a>
-            <a
               href="https://instagram.com/filipeleonelbatista"
               target="_blank"
               rel="noopener noreferer"
@@ -166,7 +158,7 @@ export default function Links() {
               <p className={styles.label}>Instagram</p>
             </a>
             <a
-              href="mailto:filipe.x2016@gmail.com"
+              href="mailto:filipe.batista@desenvolvedordeaplicativos.com.br"
               target="_blank"
               rel="noopener noreferer"
               className={styles.actionsLink}
@@ -201,7 +193,7 @@ export default function Links() {
               <FaRegFileAlt /> Curriculum
             </a>
             <a
-              href="https://desenvolvedordeaplicativos.vercel.app"
+              href="https://desenvolvedordeaplicativos.com.br"
               target="_blank"
               rel="noopener noreferer"
               className={styles.link}
