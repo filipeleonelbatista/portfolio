@@ -9,6 +9,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaRegFileAlt,
+  FaRocket,
   FaYoutube,
 } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
@@ -191,6 +192,14 @@ export default function Links() {
               className={styles.link}
             >
               <FaRegFileAlt /> Curriculum
+            </a>
+            <a
+              href="https://desenvolvedordeaplicativos.com.br"
+              target="_blank"
+              rel="noopener noreferer"
+              className={styles.link}
+            >
+              <FaRocket /> Meu Perfil na Rocketseat
             </a>
             <a
               href="https://desenvolvedordeaplicativos.com.br"
