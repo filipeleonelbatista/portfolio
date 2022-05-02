@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 
 export default function SEO({
-  description = 'Desenvolvedor de aplicativos com foco em desenvolvimento web e mobile com experiência na stack JavaScript, ReactJS, React Native e NodeJS. Tire suas idéias do papel!',
-  author = 'Filipe Batista',
+  description = "Desenvolvedor de aplicativos com foco em desenvolvimento web e mobile com experiência na stack JavaScript, ReactJS, React Native e NodeJS. Tire suas idéias do papel!",
+  author = "Filipe Batista",
   meta,
-  title = 'Filipe Batista | Desenvolvedor de aplicativos',
+  title = "Filipe Batista | Desenvolvedor de aplicativos",
 }) {
   const metaData = [
     {
@@ -22,7 +22,8 @@ export default function SEO({
     },
     {
       name: `keywords`,
-      content: 'portfólio, desenvolvedor, aplicação, aplicativos, react js, react native, nodejs, javascript, desenvolvedor de aplicativos, apk, ipa, android, ios, iphone, aplicativo, fullstack, postgres, sql, oracle',
+      content:
+        "portfólio, desenvolvedor, aplicação, aplicativos, react js, react native, nodejs, javascript, desenvolvedor de aplicativos, apk, ipa, android, ios, iphone, aplicativo, fullstack, postgres, sql, oracle",
     },
     {
       property: `og:title`,
@@ -38,11 +39,11 @@ export default function SEO({
     },
     {
       property: `og:image`,
-      content: '/images/header.png',
+      content: "/images/header.png",
     },
     {
       property: `og:url`,
-      content: 'https://desenvolvedordeaplicativos.ga',
+      content: "https://desenvolvedordeaplicativos.com.br",
     },
     {
       name: `twitter:card`,
@@ -50,7 +51,7 @@ export default function SEO({
     },
     {
       property: `twitter:site`,
-      content: 'https://desenvolvedordeaplicativos.ga',
+      content: "https://desenvolvedordeaplicativos.com.br",
     },
     {
       name: `twitter:creator`,

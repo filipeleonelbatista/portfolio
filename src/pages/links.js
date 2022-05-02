@@ -1,3 +1,4 @@
+import SEO from "components/seo";
 import Head from "next/head";
 import React, { useState } from "react";
 import {
@@ -50,6 +51,7 @@ export default function Links() {
 
   return (
     <div className={styles.container}>
+      <SEO />
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
