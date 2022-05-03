@@ -60,11 +60,25 @@ const OtherProjects = () => {
         view_app_url: "https://ascorsan.com.br/",
       },
       {
+        title: "SinaPark - Sinalização Viária",
+        description:
+          "Empresa especializada em sinalização viária, acessibilidade e sinalização de emergência.",
+        image: `/images/other-projects/4.png`,
+        view_app_url: "https://sinapark.com.br/",
+      },
+      {
         title: "Sistema de votação - Ascorsan",
         description:
           "Sistema de votação para os associados com segurança e voto impresso.",
         image: `/images/other-projects/2.png`,
         view_app_url: "https://ascorsan.com.br/votacao",
+      },
+      {
+        title: "Park Jardinagem",
+        description:
+          "Empresa especializada em serviços de corte de grama, podas e paisagismo.",
+        image: `/images/other-projects/5.png`,
+        view_app_url: "https://parkjardinagem.com.br/",
       },
     ];
 
