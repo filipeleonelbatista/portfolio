@@ -54,7 +54,7 @@ export default function Links() {
       <SEO />
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins"
           rel="stylesheet"
@@ -196,7 +196,7 @@ export default function Links() {
               <FaRegFileAlt /> Curriculum
             </a>
             <a
-              href="https://desenvolvedordeaplicativos.com.br"
+              href="https://app.rocketseat.com.br/me/filipeleonelbatista"
               target="_blank"
               rel="noopener noreferer"
               className={styles.link}
