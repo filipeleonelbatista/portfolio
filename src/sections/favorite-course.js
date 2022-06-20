@@ -49,7 +49,7 @@ const FavoriteCourse = () => {
         download_app_url:
           "https://play.google.com/store/apps/details?id=com.instinctfamily.ifpads",
         view_app_url:
-          "https://github.com/filipeleonelbatista/if-pads/raw/main/.github/app.apk",
+          "https://github.com/filipeleonelbatista/ifpads/raw/main/.github/app.apk",
       },
       {
         title: "Em Cartaz - Filmes perto de você",
