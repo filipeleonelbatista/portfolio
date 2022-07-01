@@ -116,7 +116,7 @@ export default function Header({ className }) {
             >
               <FaEnvelope />
             </a>
-            {/* <a target="_blank" rel="noopener noreferer" href="https://wa.me/+5551986320477" style={{ padding: '0.8rem', border: 'solid 1px #0063c6', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#0063c6', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
+            {/* <a target="_blank" rel="noopener noreferer" href="https://wa.me/+5551992736445" style={{ padding: '0.8rem', border: 'solid 1px #0063c6', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#0063c6', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
               <FaWhatsapp />
             </a> */}
           </div>

@@ -54,7 +54,7 @@ export default function Floating({
             return;
         }
 
-        let whatsPhone = `+5551986320477`;
+        let whatsPhone = `+5551992736445`;
         let whatsMsg = `Olá, me chamo *${whatsNome}* vi seu portfólio online e gostaria de conversar mais com você.`;
         let url = `https://api.whatsapp.com/send?phone=${whatsPhone}&text=${encodeURI(whatsMsg)}`;
 
