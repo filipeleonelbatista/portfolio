@@ -16,17 +16,20 @@ const popularCourseData = [
     role: 'Desenvolvedor Fullstack',
     list: [
       {
-        content: 'Desenvolvimento e manutenção de aplicações em ReactJS',
+        content: 'Desenvolvimento e manutenção de aplicações em ReactJS com Firebase.',
       },
       {
-        content: ' Desenvolvimento e manutenção de integrações do Sistema com Pagar-me, Discord entre outros',
+        content: 'Desenvolvimento e manutenção de Backend Node JS, Express JS, Cron Jobs, email templates e Firebase com TypeScript.',
       },
       {
-        content: 'Manutenção de banco de dados em Firebase',
+        content: 'Desenvolvimento e manutenção de integrações do Sistemas de pagamento da Pagar-me',
       },
       {
-        content: 'Desenvolvimento de documentação nas ferramentas Jira.',
+        content: 'Desenvolvimento e manutenção de integrações do Sistemas de automação de atendimento TakeBlip.',
       },
+      {
+        content: 'Desenvolvimento e manutenção de integrações do Sistemas de automação de alertas internos com Discord.'
+      }
     ],
   },
   {
