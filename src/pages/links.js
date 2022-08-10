@@ -170,6 +170,14 @@ export default function Links() {
             </a>
           </div>
           <div className={styles.divider}></div>
+          <iframe className={styles.videoFrame}
+            src="https://www.youtube.com/embed/vUySI7RQu0I"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <div className={styles.divider}></div>
           <div className={styles.linksContainer}>
             <h4 className={styles.title} style={{ textTransform: "uppercase" }}>
               Meus Links
