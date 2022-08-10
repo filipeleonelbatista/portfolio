@@ -8,10 +8,30 @@ import { FaFileDownload } from 'react-icons/fa';
 const popularCourseData = [
   {
     title:
+      'Stefanini Group',
+    link:
+      'https://stefanini.com',
+    date: 'De 8/2022 até hoje',
+    description: 'Desenvolvimento e manutenção de aplicações em ReactJS com TypeScript e Material UI',
+    role: 'Analista de sistemas',
+    list: [
+      {
+        content: 'Desenvolvimento e manutenção de aplicações em ReactJS com Typescript e Material UI.',
+      },
+      {
+        content: 'Desenvolvimento e manutenção de Backend em C# e SQL Server'
+      },
+      {
+        content: 'Desenvolvimento de documentação nas ferramentas Jira, Swagger'
+      }
+    ],
+  },
+  {
+    title:
       'Moben',
     link:
       'https://moben.com.br',
-    date: 'De 7/2021 até Hoje',
+    date: 'De 6/2021 até 8/2022',
     description: 'Suporte em ReactJS usando Firebase como base de dados e Redux para manter estados da aplicação',
     role: 'Desenvolvedor Fullstack',
     list: [
