@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import {
   FaArrowLeft,
   FaDog,
+  FaGamepad,
   FaGithub,
   FaGlobeAmericas,
   FaHome,
@@ -203,14 +204,14 @@ export default function Links() {
             >
               <FaRegFileAlt /> Curriculum
             </a>
-            {/* <a
+            <a
               href="https://app.rocketseat.com.br/me/filipeleonelbatista"
               target="_blank"
               rel="noopener noreferer"
               className={styles.link}
             >
               <FaRocket /> Meu Perfil na Rocketseat
-            </a> */}
+            </a>
             <a
               href="https://desenvolvedordeaplicativos.com.br"
               target="_blank"
@@ -243,15 +244,15 @@ export default function Links() {
             >
               <FaDog /> Dados Médicos do pet na palma da mão
             </a>
-            {/* <a
-              href="https://moben.com.br"
+            <a
+              href="https://gamelinks.vercel.app/"
               target="_blank"
               rel="noopener noreferer"
               className={styles.link}
             >
-              <FaHome /> Gerencie o aluguel do seu imóvel
+              <FaGamepad /> Bora jogar?
             </a>
-           */}
+
           </div>
           <button
             onClick={handleShare}
