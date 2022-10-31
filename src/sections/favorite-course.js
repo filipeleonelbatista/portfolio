@@ -52,6 +52,17 @@ const FavoriteCourse = () => {
           "https://github.com/filipeleonelbatista/ifpads/raw/main/.github/app.apk",
       },
       {
+        title: "GoWhatch - App de filmes",
+        description:
+          "App com Listas de filmes em destaque e opções de pesquisa em react native.",
+        image: `/images/projects/10.png`,
+        project_url: "https://github.com/filipeleonelbatista/gowatch",
+        download_app_url:
+          "https://github.com/filipeleonelbatista/gowatch/raw/main/application-b0cb963a-b37d-4de3-9d0f-c3374e9ca9ba.apk",
+        view_app_url:
+          "https://github.com/filipeleonelbatista/gowatch/",
+      },
+      {
         title: "Em Cartaz - Filmes perto de você",
         description: "Reserve filmes no cinema mais perto de você.",
         image: `/images/projects/7.png`,
