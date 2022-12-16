@@ -19,6 +19,9 @@ const popularCourseData = [
         content: 'Desenvolvimento e manutenção de aplicações em ReactJS com Typescript e Material UI.',
       },
       {
+        content: 'Desenvolvimento e manutenção de aplicações em React-Native com Typescript e Papper UI.',
+      },
+      {
         content: 'Desenvolvimento e manutenção de Backend em C# e SQL Server'
       },
       {

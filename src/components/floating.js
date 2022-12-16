@@ -56,14 +56,12 @@ export default function Floating({
 
         let whatsPhone = `+5551992736445`;
         let whatsMsg = `Olá, me chamo *${whatsNome}* vi seu portfólio online e gostaria de conversar mais com você.`;
-        let url = `https://api.whatsapp.com/send?phone=${whatsPhone}&text=${encodeURI(whatsMsg)}`;
 
-        const whatsMessage = 
-        `Olá
-        Recebi seu contato, gostaria de saber sobre a criação de apps?
+        let url = `https://web.whatsapp.com/send/?phone=%2B55${whatsPhone.replace(/\D/g, "")}&text=${encodeURI(whatsMsg)}&amp;text&amp;type=phone_number&amp;app_absent=0`;
 
-        Bora conversar ;-)
-        `
+        const whatsMessage =
+            `Olá, Recebi seu contato, gostaria de saber sobre a criação de apps?\nBora conversar ;-)`
+            
         const discordMessage = `
         -----------------------------------------------------------
         Contato feito pelo Floating Button
@@ -74,8 +72,8 @@ export default function Floating({
         https://wa.me/+55${whatsFone.replace(/\D/g, "")}?text=${encodeURI(whatsMessage)}
 
         -----------------------------------------------------------
-        `    
-        sendDiscordNotification(discordMessage,'bot')
+        `
+        sendDiscordNotification(discordMessage, 'bot')
 
         window.open(url, "_blank");
 
@@ -106,7 +104,7 @@ export default function Floating({
             <div id="whats-form" className="whats-form hidden">
                 <div className="form-header">
                     Digite seu Nome/WhatsApp para entrar em contato.
-            </div>
+                </div>
                 <div className="form-body">
                     <div id="errorMsg" className="error hidden">
                         {errorMsg}
@@ -125,7 +123,7 @@ export default function Floating({
                 </div>
                 <div className="form-footer">
                     Não envio nada além do contato. É uma promessa!
-        </div>
+                </div>
             </div>
         </div>
     );

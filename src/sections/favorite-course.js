@@ -47,9 +47,9 @@ const FavoriteCourse = () => {
         image: `/images/projects/9.png`,
         project_url: "https://github.com/filipeleonelbatista/if-pads",
         download_app_url:
-          "https://play.google.com/store/apps/details?id=com.instinctfamily.ifpads",
+          "https://play.google.com/store/apps/details?id=com.ifpads.streamers",
         view_app_url:
-          "https://github.com/filipeleonelbatista/ifpads/raw/main/.github/app.apk",
+          "https://ifpads.vercel.app/",
       },
       {
         title: "GoWhatch - App de filmes",
