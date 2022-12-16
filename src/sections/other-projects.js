@@ -40,6 +40,20 @@ const OtherProjects = () => {
   async function loadItens() {
     let newfavoriteCourseData = [
       {
+        title: "WhatsApp Sender App",
+        description:
+          "Enviar mensagens pelo whatsapp em massa de forma rápida.",
+        image: `/images/other-projects/6.png`,
+        view_app_url: "https://enviodemensagensemmassa.vercel.app/",
+      },
+      {
+        title: "IF Pads - Web",
+        description:
+          "Botões com audios dos streamers da Instinct Family.",
+        image: `/images/other-projects/7.png`,
+        view_app_url: "https://ifpads.vercel.app/",
+      },
+      {
         title: "Cadastra Pet",
         description:
           "Mantenha os registros clinicos do seu pet em qualquer lugar.",
