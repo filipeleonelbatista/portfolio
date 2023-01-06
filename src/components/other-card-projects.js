@@ -1,8 +1,10 @@
+import { useI18n } from 'hooks/useI18n';
 import React from 'react';
 import { FaGlobe } from 'react-icons/fa';
 import { Box, Heading, Image, Text } from 'theme-ui';
 
 const OtherCardProject = (props) => {
+  const {currentLanguageObject} = useI18n()
   return (
     <Box sx={styles.fevCard}>
       <Box sx={styles.fevCard.image}>
@@ -20,7 +22,8 @@ const OtherCardProject = (props) => {
               <a href={props.view_app_url} target="_blank" rel="noreferer noopener nofollow"
                 style={{ fontSize: 14, display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', textDecoration: 'none', padding: '0.4rem', margin: '0 0.2rem', borderRadius: '0.4rem', color: '#FFF', backgroundColor: '#0063c6', transition: '0.2s', "&:hover": { backgroundColor: '#82b4eb' } }}
               >
-                <FaGlobe size={24} style={{ marginRight: '0.4rem' }} />Ver aplicação
+                <FaGlobe size={24} style={{ marginRight: '0.4rem' }} />
+                {currentLanguageObject.other_card_projects_button_see_app_text}
               </a>
             )
           }

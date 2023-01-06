@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
 import { keyframes } from '@emotion/core';
-import { jsx, Box, Heading, Text, Button, Image } from 'theme-ui';
 import { Link } from 'components/link';
 import VideoBtn from 'components/video-btn';
-import { FaCalendar, FaAngleDown, FaAngleUp, FaCheckCircle } from 'react-icons/fa';
-import eyeIcon from 'assets/eye-2.svg';
+import { useState } from 'react';
+import { FaAngleDown, FaAngleUp, FaCalendar, FaCheckCircle } from 'react-icons/fa';
+import { Box, Button, Heading, Text } from 'theme-ui';
 
 const PopularCard = (props) => {
   const [status, setStatus] = useState(props.expanded);
@@ -247,7 +246,7 @@ const styles = {
       },
     },
     courseBtn: {
-      width: '100%',
+      width: '250px',
       backgroundColor: '#0063c6',
       borderRadius: '6px',
       fontSize: '15px',

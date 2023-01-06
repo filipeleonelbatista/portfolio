@@ -1,14 +1,13 @@
 /** @jsx jsx */
+import { useI18n } from "hooks/useI18n";
 import {
-  FaEnvelope,
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaWhatsapp,
+  FaEnvelope, FaInstagram,
+  FaLinkedinIn
 } from "react-icons/fa";
 import { Container, Divider, jsx } from "theme-ui";
 
 export default function Footer() {
+  const { currentLanguageObject } = useI18n()
   return (
     <footer sx={styles.footer}>
       <Divider sx={styles.footer.divider} />
@@ -21,9 +20,6 @@ export default function Footer() {
             alignItems: "center",
           }}
         >
-          {/* <a target="_blank" rel="noopener noreferer" href="https://github.com/filipeleonelbatista" style={{ padding: '0.8rem', border: 'solid 1px #343d48', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#343d48', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
-            <FaGithub />
-          </a> */}
           <a
             target="_blank"
             rel="noopener noreferer"
@@ -84,31 +80,13 @@ export default function Footer() {
           >
             <FaEnvelope />
           </a>
-          {/* <a target="_blank" rel="noopener noreferer" href="https://wa.me/+5551992736445" style={{ padding: '0.8rem', border: 'solid 1px #343d48', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#343d48', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
-            <FaWhatsapp />
-          </a> */}
         </div>
 
         <p style={{ textAlign: "center" }}>
-          {`${new Date().getFullYear()} © Direitos reservados.`}
+          {`${new Date().getFullYear()} © ${currentLanguageObject.footer_copyright}.`}
           <br />
-          Desenvolvido em NextJS por Filipe Batista
+          {currentLanguageObject.footer_subtitle}
         </p>
-
-        {/* {menuItems.map(({ header, items }, i) => (
-          <Box key={i} sx={styles.footer.widget}>
-            <Heading sx={styles.footer.title}>{header}</Heading>
-            {items.map(({ path, label }, i) => (
-              <Link
-                sx={styles.footer.text}
-                path={path}
-                key={i}
-                label={label}
-                variant="footer"
-              />
-            ))}
-          </Box>
-        ))} */}
       </Container>
     </footer>
   );

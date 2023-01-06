@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useI18n } from 'hooks/useI18n';
+import { useEffect, useState } from 'react';
 import {
     FaWhatsapp
 } from 'react-icons/fa';
 import { sendDiscordNotification } from 'services/discord-notify';
 
-export default function Floating({
-    location = ""
-}) {
+export default function Floating() {
+    const { currentLanguage, currentLanguageObject } = useI18n();
+
     const [whatsNome, setWhatsNome] = useState("");
     const [whatsFone, setWhatsFone] = useState("");
     const [errorMsg, setErrorMsg] = useState("");
@@ -23,7 +24,7 @@ export default function Floating({
 
     async function handleSubmitForm() {
         if (whatsNome === "") {
-            setErrorMsg("Nome não foi digitado!");
+            setErrorMsg(currentLanguageObject.floating_erro_message_name);
 
             document.getElementById("errorMsg").classList.toggle("hidden");
             setTimeout(() => {
@@ -33,7 +34,7 @@ export default function Floating({
             return;
         }
         if (whatsFone === "") {
-            setErrorMsg("Número não foi digitado!");
+            setErrorMsg(currentLanguageObject.floating_erro_message_phone);
 
             document.getElementById("errorMsg").classList.toggle("hidden");
             setTimeout(() => {
@@ -44,7 +45,7 @@ export default function Floating({
         }
 
         if (whatsFone.length < 15) {
-            setErrorMsg("Numero digitado incorreto!");
+            setErrorMsg(currentLanguageObject.floating_erro_message_phone_length);
 
             document.getElementById("errorMsg").classList.toggle("hidden");
             setTimeout(() => {
@@ -55,13 +56,19 @@ export default function Floating({
         }
 
         let whatsPhone = `+5551992736445`;
-        let whatsMsg = `Olá, me chamo *${whatsNome}* vi seu portfólio online e gostaria de conversar mais com você.`;
+        let whatsMsg = {
+            "en": `Hello, My name is *${whatsNome}* and i saw your portfolio and wanna talk more about with you.`,
+            "pt-BR": `Olá, me chamo *${whatsNome}* vi seu portfólio online e gostaria de conversar mais com você.`
+        };
 
-        let url = `https://web.whatsapp.com/send/?phone=%2B55${whatsPhone.replace(/\D/g, "")}&text=${encodeURI(whatsMsg)}&amp;text&amp;type=phone_number&amp;app_absent=0`;
+        let url = `https://web.whatsapp.com/send/?phone=%2B55${whatsPhone[currentLanguage].replace(/\D/g, "")}&text=${encodeURI(whatsMsg)}&amp;text&amp;type=phone_number&amp;app_absent=0`;
 
-        const whatsMessage =
-            `Olá, Recebi seu contato, gostaria de saber sobre a criação de apps?\nBora conversar ;-)`
-            
+        const whatsMessage = {
+            "en": `Hello, i recive your contact through my website. Do you wanna talk about creation of apps?\nLet's talk ;-)`,
+            "pt-BR": `Olá, Recebi seu contato, gostaria de saber sobre a criação de apps?\nBora conversar ;-)`
+        }
+
+
         const discordMessage = `
         -----------------------------------------------------------
         Contato feito pelo Floating Button
@@ -69,7 +76,7 @@ export default function Floating({
         **Nome:** ${whatsNome}
         **Celular:** ${whatsFone}
 
-        https://wa.me/+55${whatsFone.replace(/\D/g, "")}?text=${encodeURI(whatsMessage)}
+        https://wa.me/+55${whatsFone.replace(/\D/g, "")}?text=${encodeURI(whatsMessage[currentLanguage])}
 
         -----------------------------------------------------------
         `
@@ -99,30 +106,36 @@ export default function Floating({
                 <FaWhatsapp size={32} color="#FFF" />
             </button>
             <div id="call-to-action" className="call-to-action hidden">
-                Chama no WhatsApp!
+                {currentLanguageObject.floating_ballon_text}
             </div>
             <div id="whats-form" className="whats-form hidden">
                 <div className="form-header">
-                    Digite seu Nome/WhatsApp para entrar em contato.
+                    {currentLanguageObject.floating_header_form_text}
                 </div>
                 <div className="form-body">
                     <div id="errorMsg" className="error hidden">
                         {errorMsg}
                     </div>
                     <div className="form-input-group">
-                        <label className="whats-form-label" htmlFor="whats-name">Seu Nome</label>
+                        <label className="whats-form-label" htmlFor="whats-name">
+                            {currentLanguageObject.floating_field_label_name}
+                        </label>
                         <input id="whats-name" value={whatsNome} onChange={(e) => { setWhatsNome(e.target.value) }} className="whats-form-input" />
                     </div>
 
                     <div className="form-input-group">
-                        <label className="whats-form-label" htmlFor="whats-phone">Seu WhatsApp</label>
+                        <label className="whats-form-label" htmlFor="whats-phone">
+                            {currentLanguageObject.floating_field_label_phone}
+                        </label>
                         <input id="whats-phone" maxLength={15} onChange={(e) => { setWhatsFone(e.target.value) }} onKeyUp={(e) => { setMaskPhone(e.target.value) }} value={whatsFone} className="whats-form-input" />
                     </div>
 
-                    <button onClick={handleSubmitForm} className="whats-form-button">Chamar no WhatsApp</button>
+                    <button onClick={handleSubmitForm} className="whats-form-button">
+                        {currentLanguageObject.floating_form_button_text}
+                    </button>
                 </div>
                 <div className="form-footer">
-                    Não envio nada além do contato. É uma promessa!
+                    {currentLanguageObject.floating_span_text}
                 </div>
             </div>
         </div>

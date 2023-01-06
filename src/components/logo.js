@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { jsx, Image } from 'theme-ui';
 import { Link } from 'components/link';
-import LogoDark from 'assets/logo.svg';
+import { useI18n } from 'hooks/useI18n';
 
 export default function Logo() {
+  const { currentLanguageObject } = useI18n();
   return (
     <Link
       path="/"
@@ -14,7 +15,10 @@ export default function Logo() {
         cursor: 'pointer',
       }}
     >
-      <Image src={LogoDark} alt="Filipe Batista | Desenvolvedor de aplicativos" title="Filipe Batista | Desenvolvedor de aplicativos" />
+      <Image
+        src={currentLanguageObject.nav_logo}
+        alt={currentLanguageObject.nav_logo_alt}
+        title={currentLanguageObject.nav_logo_alt} />
     </Link>
   );
 }

@@ -1,10 +1,13 @@
 import BlockTitle from "components/block-title";
 import OtherCardProject from "components/other-card-projects";
+import { useI18n } from "hooks/useI18n";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Container } from "theme-ui";
 
 const OtherProjects = () => {
+  const { currentLanguageObject, currentLanguage } = useI18n()
+
   const FavoriteCarousel = {
     spaceBetween: 30,
     slidesPerView: 3,
@@ -35,10 +38,66 @@ const OtherProjects = () => {
       },
     },
   };
-  const [favoriteCourseData, setFavoriteCourseData] = useState([]);
 
-  async function loadItens() {
-    let newfavoriteCourseData = [
+  let favoriteCourseData = {
+    "en": [
+      {
+        title: "WhatsApp Sender App",
+        description:
+          "Send WhatsApp Messages quickly.",
+        image: `/images/other-projects/6.png`,
+        view_app_url: "https://enviodemensagensemmassa.vercel.app/",
+      },
+      {
+        title: "IF Pads - Web",
+        description:
+          "Audio Buttons of streamers of Instinct Family Crew.",
+        image: `/images/other-projects/7.png`,
+        view_app_url: "https://ifpads.vercel.app/",
+      },
+      {
+        title: "Cadastra Pet",
+        description:
+          "Keep your pet's medical records anywhere.",
+        image: `/images/other-projects/3.png`,
+        view_app_url: "https://cadastrapet.com.br/",
+      },
+      {
+        title: "Unique",
+        description:
+          "Car rental with owner with contract, GPS and insurance.",
+        image: `/images/other-projects/1.png`,
+        view_app_url: "https://aluguel-de-veiculos.vercel.app/",
+      },
+      {
+        title: "Ascorsan",
+        description: "News and information portal for members.",
+        image: `/images/other-projects/2.png`,
+        view_app_url: "https://ascorsan.com.br/",
+      },
+      {
+        title: "SinaPark - Sinalização Viária",
+        description:
+          "Company specialized in road signs, accessibility and emergency signs.",
+        image: `/images/other-projects/4.png`,
+        view_app_url: "https://sinapark.com.br/",
+      },
+      {
+        title: "Sistema de votação - Ascorsan",
+        description:
+          "Voting system for members with security and printed vote.",
+        image: `/images/other-projects/2.png`,
+        view_app_url: "https://ascorsan.com.br/votacao",
+      },
+      {
+        title: "Park Jardinagem",
+        description:
+          "Company specializing in lawn mowing, pruning and landscaping services.",
+        image: `/images/other-projects/5.png`,
+        view_app_url: "https://parkjardinagem.com.br/",
+      },
+    ],
+    "pt-BR": [
       {
         title: "WhatsApp Sender App",
         description:
@@ -94,25 +153,19 @@ const OtherProjects = () => {
         image: `/images/other-projects/5.png`,
         view_app_url: "https://parkjardinagem.com.br/",
       },
-    ];
-
-    setFavoriteCourseData(newfavoriteCourseData);
-  }
-
-  useEffect(() => {
-    loadItens();
-  }, []);
+    ]
+  };
 
   return (
     <Box as="section" id="outros-projetos" sx={styles.fevCourse}>
       <Container sx={styles.fevCourse.container}>
         <BlockTitle
           sx={styles.fevCourse.blockTitle}
-          tagline="Outros projetos realizados"
-          heading="Projetos entregues para clientes."
+          tagline={currentLanguageObject.other_projects_title_section}
+          heading={currentLanguageObject.other_projects_description_section}
         />
         <Swiper {...FavoriteCarousel} sx={styles.carousel}>
-          {favoriteCourseData.map((course, index) => (
+          {favoriteCourseData[currentLanguage].map((course, index) => (
             <SwiperSlide key={index}>
               <OtherCardProject
                 title={course.title}

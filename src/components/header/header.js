@@ -1,19 +1,43 @@
 /** @jsx jsx */
 import Logo from "components/logo";
+import SwitchLanguage from "components/SwitchLanguage";
 import { DrawerProvider } from "contexts/drawer/drawer.provider";
+import { useI18n } from "hooks/useI18n";
+import { useEffect, useState } from "react";
 import {
-  FaEnvelope,
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaWhatsapp,
+  FaEnvelope, FaInstagram,
+  FaLinkedinIn
 } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 import { Container, Flex, jsx } from "theme-ui";
-import menuItems from "./header.data";
 import MobileDrawer from "./mobileDrawer";
 
 export default function Header({ className }) {
+  const { currentLanguageObject, currentLanguage } = useI18n();
+
+  const [menuItems, setMenuItems] = useState([])
+
+  useEffect(() => {
+    setMenuItems([
+      {
+        path: 'banner',
+        label: currentLanguageObject.nav_home,
+      },
+      {
+        path: 'sobre',
+        label: currentLanguageObject.nav_about,
+      },
+      {
+        path: 'projetos',
+        label: currentLanguageObject.nav_projects,
+      },
+      {
+        path: 'xp',
+        label: currentLanguageObject.nav_experiences,
+      },
+    ])
+  }, [currentLanguage])
+
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className}>
@@ -37,13 +61,6 @@ export default function Header({ className }) {
             ))}
           </Flex>
 
-          {/* <Link
-            path="/"
-            ml={2}
-            label="Entrar em contato"
-            sx={styles.headerBtn}
-            variant="buttons.primary"
-          /> */}
 
           <div
             style={{
@@ -53,9 +70,7 @@ export default function Header({ className }) {
               alignItems: "center",
             }}
           >
-            {/* <a target="_blank" rel="noopener noreferer" href="https://github.com/filipeleonelbatista" style={{ padding: '0.8rem', border: 'solid 1px #0063c6', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#0063c6', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
-              <FaGithub />
-            </a> */}
+            <SwitchLanguage />
             <a
               target="_blank"
               rel="noopener noreferer"
@@ -116,9 +131,6 @@ export default function Header({ className }) {
             >
               <FaEnvelope />
             </a>
-            {/* <a target="_blank" rel="noopener noreferer" href="https://wa.me/+5551992736445" style={{ padding: '0.8rem', border: 'solid 1px #0063c6', borderRadius: '0.3rem', margin: '0.2rem', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', color: '#0063c6', svg: { width: 24, heigth: 24 }, "&:hover": { color: '#666' } }}>
-              <FaWhatsapp />
-            </a> */}
           </div>
 
           <MobileDrawer />

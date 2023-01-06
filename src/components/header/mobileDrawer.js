@@ -1,15 +1,40 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Button, Box } from 'theme-ui';
 import { Scrollbars } from 'react-custom-scrollbars';
 import Drawer from 'components/drawer';
 import { DrawerContext } from 'contexts/drawer/drawer.context';
 import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'components/link';
-import menuItems from './header.data';
 import Logo from 'components/logo';
 import LogoDark from 'assets/logo.svg';
+import { useI18n } from 'hooks/useI18n';
 
 const MobileDrawer = () => {
+  const { currentLanguageObject, currentLanguage } = useI18n();
+
+  const [menuItems, setMenuItems] = useState([])
+
+  useEffect(() => {
+    setMenuItems([
+      {
+        path: 'banner',
+        label: currentLanguageObject.nav_home,
+      },
+      {
+        path: 'sobre',
+        label: currentLanguageObject.nav_about,
+      },
+      {
+        path: 'projetos',
+        label: currentLanguageObject.nav_projects,
+      },
+      {
+        path: 'xp',
+        label: currentLanguageObject.nav_experiences,
+      },
+    ])
+  }, [currentLanguage])
+
   const { state, dispatch } = useContext(DrawerContext);
 
   // Toggle drawer
@@ -44,7 +69,7 @@ const MobileDrawer = () => {
 
           <Box sx={styles.menuFooter}>
             <Button variant="primary" sx={styles.button}>
-              Entrar em contato
+              {currentLanguageObject.nav_contact}
             </Button>
           </Box>
         </Box>

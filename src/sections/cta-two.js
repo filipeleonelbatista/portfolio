@@ -3,8 +3,10 @@ import React from 'react';
 import { Link } from 'components/link';
 import BlockTitle from 'components/block-title';
 import ctaTwoImage from 'assets/free-course.png';
+import { useI18n } from 'hooks/useI18n';
 
 const CtaTwo = () => {
+  const { currentLanguageObject } = useI18n()
   return (
     <Box as="section" id="sobre" sx={styles.ctaTwo}>
       <Container>
@@ -13,26 +15,22 @@ const CtaTwo = () => {
             <Image
               src={ctaTwoImage}
               sx={styles.ctaTwo.img}
-              alt="cta two image"
+              alt="family or família"
             />
           </Box>
           <Box sx={styles.ctaTwo.col}>
             <Box sx={styles.ctaTwo.content}>
               <BlockTitle
                 sx={styles.ctaTwo.blockTitle}
-                tagline="Sobre mim"
-                heading={
-                  'Olá, sou o Filipe Batista.'
-                }
+                tagline={currentLanguageObject.cta_two_title_section}
+                heading={currentLanguageObject.cta_two_title}
               />
               <Text as="p" sx={styles.ctaTwo.text}>
-                {
-                  'Amo muito minha família.\n Tenho uma grande realização no desenvolvimento especialmente quando consigo tirar idéias do papel e tornar em realidade. \nSou desenvolvedor PHP, Python for web, um pouquinho de Oracle SQL, SQLite, MySql e Postgres e Fullstack com ReactJS ReactNative e NodeJS 💻'
-                }
+                {currentLanguageObject.cta_two_description}
               </Text>
               <Link
                 path="#projetos"
-                label="Veja meus projetos"
+                label={currentLanguageObject.cta_two_button_text}
                 variant="buttons.primary"
               />
             </Box>
