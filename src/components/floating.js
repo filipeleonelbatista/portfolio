@@ -90,12 +90,6 @@ export default function Floating() {
         document.getElementById("whats-form").classList.toggle("hidden");
     }
 
-    function setMaskPhone(value) {
-        value = value.replace(/\D/g, "");
-        value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
-        value = value.replace(/(\d)(\d{4})$/, "$1-$2");
-        setWhatsFone(value);
-    }
     function handleShowForm() {
         document.getElementById("whats-form").classList.toggle("hidden");
     }
@@ -127,7 +121,14 @@ export default function Floating() {
                         <label className="whats-form-label" htmlFor="whats-phone">
                             {currentLanguageObject.floating_field_label_phone}
                         </label>
-                        <input id="whats-phone" maxLength={15} onChange={(e) => { setWhatsFone(e.target.value) }} onKeyUp={(e) => { setMaskPhone(e.target.value) }} value={whatsFone} className="whats-form-input" />
+                        <input
+                            id="whats-phone"
+                            onChange={(e) => { setWhatsFone(e.target.value) }}
+                            value={whatsFone}
+                            type="number"
+                            inputMode='numeric'
+                            className="whats-form-input"
+                        />
                     </div>
 
                     <button onClick={handleSubmitForm} className="whats-form-button">
