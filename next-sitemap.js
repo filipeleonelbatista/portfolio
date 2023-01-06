@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://desenvolvedordeaplicativos.ga/',
+  siteUrl: 'https://desenvolvedordeaplicativos.com.br/',
   generateRobotsTxt: true,
   // optional
   // robotsTxtOptions: {
