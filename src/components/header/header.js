@@ -12,6 +12,8 @@ import { Link as ScrollLink } from "react-scroll";
 import { Container, Flex, jsx } from "theme-ui";
 import MobileDrawer from "./mobileDrawer";
 
+import customStyles from 'styles/components/header.module.css';
+
 export default function Header({ className }) {
   const { currentLanguageObject, currentLanguage } = useI18n();
 
@@ -62,78 +64,74 @@ export default function Header({ className }) {
           </Flex>
 
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className={customStyles.sideMenu}>
             <SwitchLanguage />
-            <a
-              target="_blank"
-              rel="noopener noreferer"
-              href="https://www.linkedin.com/in/filipeleonelbatista/"
-              style={{
-                padding: "0.8rem",
-                border: "solid 1px #0063c6",
-                borderRadius: "0.3rem",
-                margin: "0.2rem",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-                color: "#0063c6",
-                svg: { width: 24, heigth: 24 },
-                "&:hover": { color: "#666" },
-              }}
-            >
-              <FaLinkedinIn />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferer"
-              href="https://www.instagram.com/filipeleonelbatista/"
-              style={{
-                padding: "0.8rem",
-                border: "solid 1px #0063c6",
-                borderRadius: "0.3rem",
-                margin: "0.2rem",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-                color: "#0063c6",
-                svg: { width: 24, heigth: 24 },
-                "&:hover": { color: "#666" },
-              }}
-            >
-              <FaInstagram />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferer"
-              href="mailto:filipe.batista@desenvolvedordeaplicativos.com.br"
-              style={{
-                padding: "0.8rem",
-                border: "solid 1px #0063c6",
-                borderRadius: "0.3rem",
-                margin: "0.2rem",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-                color: "#0063c6",
-                svg: { width: 24, heigth: 24 },
-                "&:hover": { color: "#666" },
-              }}
-            >
-              <FaEnvelope />
-            </a>
-          </div>
 
-          <MobileDrawer />
+            <div className={customStyles.socialIcons}>
+              <a
+                target="_blank"
+                rel="noopener noreferer"
+                href="https://www.linkedin.com/in/filipeleonelbatista/"
+                style={{
+                  padding: "0.8rem",
+                  border: "solid 1px #0063c6",
+                  borderRadius: "0.3rem",
+                  margin: "0.2rem",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  color: "#0063c6",
+                  svg: { width: 24, heigth: 24 },
+                  "&:hover": { color: "#666" },
+                }}
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferer"
+                href="https://www.instagram.com/filipeleonelbatista/"
+                style={{
+                  padding: "0.8rem",
+                  border: "solid 1px #0063c6",
+                  borderRadius: "0.3rem",
+                  margin: "0.2rem",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  color: "#0063c6",
+                  svg: { width: 24, heigth: 24 },
+                  "&:hover": { color: "#666" },
+                }}
+              >
+                <FaInstagram />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferer"
+                href="mailto:filipe.batista@desenvolvedordeaplicativos.com.br"
+                style={{
+                  padding: "0.8rem",
+                  border: "solid 1px #0063c6",
+                  borderRadius: "0.3rem",
+                  margin: "0.2rem",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  color: "#0063c6",
+                  svg: { width: 24, heigth: 24 },
+                  "&:hover": { color: "#666" },
+                }}
+              >
+                <FaEnvelope />
+              </a>
+            </div>
+
+            <MobileDrawer />
+          </div>
         </Container>
       </header>
     </DrawerProvider>

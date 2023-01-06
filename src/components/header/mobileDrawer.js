@@ -1,13 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Button, Box } from 'theme-ui';
-import { Scrollbars } from 'react-custom-scrollbars';
+import LogoDark from 'assets/logo.svg';
 import Drawer from 'components/drawer';
-import { DrawerContext } from 'contexts/drawer/drawer.context';
-import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Link } from 'components/link';
 import Logo from 'components/logo';
-import LogoDark from 'assets/logo.svg';
+import { DrawerContext } from 'contexts/drawer/drawer.context';
 import { useI18n } from 'hooks/useI18n';
+import React, { useContext, useEffect, useState } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
+import {
+  FaEnvelope, FaInstagram,
+  FaLinkedinIn
+} from "react-icons/fa";
+import { IoMdClose, IoMdMenu } from 'react-icons/io';
+import { Box, Button } from 'theme-ui';
 
 const MobileDrawer = () => {
   const { currentLanguageObject, currentLanguage } = useI18n();
@@ -72,6 +76,78 @@ const MobileDrawer = () => {
               {currentLanguageObject.nav_contact}
             </Button>
           </Box>
+          
+          <div
+            id="social-icons-nav-drawer"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 16
+            }}
+          >
+            <a
+              target="_blank"
+              rel="noopener noreferer"
+              href="https://www.linkedin.com/in/filipeleonelbatista/"
+              style={{
+                padding: "0.8rem",
+                border: "solid 1px #0063c6",
+                borderRadius: "0.3rem",
+                margin: "0.2rem",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "#0063c6",
+                svg: { width: 24, heigth: 24 },
+                "&:hover": { color: "#666" },
+              }}
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferer"
+              href="https://www.instagram.com/filipeleonelbatista/"
+              style={{
+                padding: "0.8rem",
+                border: "solid 1px #0063c6",
+                borderRadius: "0.3rem",
+                margin: "0.2rem",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "#0063c6",
+                svg: { width: 24, heigth: 24 },
+                "&:hover": { color: "#666" },
+              }}
+            >
+              <FaInstagram />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferer"
+              href="mailto:filipe.batista@desenvolvedordeaplicativos.com.br"
+              style={{
+                padding: "0.8rem",
+                border: "solid 1px #0063c6",
+                borderRadius: "0.3rem",
+                margin: "0.2rem",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "#0063c6",
+                svg: { width: 24, heigth: 24 },
+                "&:hover": { color: "#666" },
+              }}
+            >
+              <FaEnvelope />
+            </a>
+          </div>
         </Box>
       </Scrollbars>
     </Drawer>
