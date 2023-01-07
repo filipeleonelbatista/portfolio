@@ -34,7 +34,7 @@ const Banner = () => {
                 </a>
               </div>
               <Box sx={styles.banner.partner}>
-                <span>{currentLanguageObject.banner_job_title}:</span>
+                <span>{currentLanguageObject.banner_job_title}</span>
                 <Image src={PartnerImage} width="450" alt="banner image" />
               </Box>
             </Box>

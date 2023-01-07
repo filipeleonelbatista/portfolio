@@ -38,7 +38,7 @@ export function I18nContextProvider(props) {
       `,
       banner_button_text: "Download CV",
       banner_download_url_cv: "/FilipeBatistaCVEn.pdf",
-      banner_job_title: "Fullstack Software Developer:",
+      banner_job_title: "Fullstack Software Developer",
       cta_two_title_section: "About me",
       cta_two_title: "👋 Hi, i'm Filipe Batista.",
       cta_two_description: `

@@ -72,11 +72,33 @@ const MobileDrawer = () => {
           </Box>
 
           <Box sx={styles.menuFooter}>
-            <Button variant="primary" sx={styles.button}>
+            <a
+              target="_blank"
+              rel="noopener noreferer"
+              href="mailto:filipe.batista@desenvolvedordeaplicativos.com.br"
+              style={{
+                width: '100%',
+                padding: "0.4rem",
+                border: "solid 1px #0063c6",
+                borderRadius: "0.2rem",
+                margin: "0.1rem",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "#0063c6",
+                textDecoration: 'none',
+                transition: '0.2s',
+                "&:hover": {
+                  color: "#FFF",
+                  backgroundColor: "#0063c6"
+                },
+              }}
+            >
               {currentLanguageObject.nav_contact}
-            </Button>
+            </a>
           </Box>
-          
+
           <div
             id="social-icons-nav-drawer"
             style={{
