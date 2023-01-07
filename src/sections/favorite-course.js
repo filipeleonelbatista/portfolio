@@ -41,7 +41,7 @@ const FavoriteCourse = () => {
   let favoriteCourseData = {
     "en": [
       {
-        title: "IF Pads - Stramers da instinct",
+        title: "IF Pads - Streamers da instinct",
         description:
           "App Mobile with audio buttons of streamer of IF Crew in ReactJS and React Native.",
         image: `/images/projects/9_en.png`,
@@ -143,7 +143,7 @@ const FavoriteCourse = () => {
     ],
     "pt-BR": [
       {
-        title: "IF Pads - Stramers da instinct",
+        title: "IF Pads - Steramers da instinct",
         description:
           "App com botões de audio dos streamers da IF em react native.",
         image: `/images/projects/9.png`,

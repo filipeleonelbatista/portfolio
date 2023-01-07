@@ -92,7 +92,7 @@ export function I18nContextProvider(props) {
       nav_projects: "Projetos",
       nav_experiences: "Experiências",
       nav_contact: "Entrar em contato",
-      banner_title: "Porcurando Desenvolvedor de aplicativos?",
+      banner_title: "Procurando Desenvolvedor de aplicativos?",
       banner_subtitle: `
         <p>Sou <strong>Filipe Batista</strong>, desenvolvedor de apps com experiência na stack <strong>JavaScript </strong>
         Gosto de tirar as ideias do papel e ajudar pessoas a <strong>automatizar</strong> e <strong>impulsionar </strong>
