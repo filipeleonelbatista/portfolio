@@ -1,24 +1,24 @@
 import SEO from "components/seo";
+import SwitchLanguage from "components/SwitchLanguage";
+import { useI18n } from "hooks/useI18n";
 import Head from "next/head";
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   FaArrowLeft,
   FaDog,
   FaGamepad,
   FaGithub,
-  FaGlobeAmericas,
-  FaHome,
-  FaInstagram,
+  FaGlobeAmericas, FaInstagram,
   FaLinkedin,
   FaRegFileAlt,
   FaRocket,
-  FaYoutube,
+  FaYoutube
 } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import {
   IoCopyOutline,
   IoQrCodeOutline,
-  IoShareSocialOutline,
+  IoShareSocialOutline
 } from "react-icons/io5";
 import QRCode from "react-qr-code";
 import profilePic from "../assets/banner-image-1.png";
@@ -26,6 +26,112 @@ import pixLogo from "../assets/pix_logo.png";
 import styles from "../styles/pages/Links.module.css";
 
 export default function Links() {
+  const { currentLanguageObject, currentLanguage } = useI18n()
+  const linksArray = {
+    "en": [
+      {
+        href: "/FilipeBatistaCV.pdf",
+        icon: <FaRegFileAlt />,
+        text: "Download CV",
+        donwload: true,
+        target: ''
+      },
+      {
+        href: "https://app.rocketseat.com.br/me/filipeleonelbatista",
+        icon: <FaRocket />,
+        text: "My Rocketseat Profile",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://desenvolvedordeaplicativos.com.br",
+        icon: <FaGlobeAmericas />,
+        text: "Portfolio",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://www.youtube.com/channel/UCYUeJiqZCXcABWukG9RvQtw",
+        icon: <FaYoutube />,
+        text: "Youtube Channel",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://github.com/filipeleonelbatista",
+        icon: <FaGithub />,
+        text: "Github",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://cadastrapet.com.br",
+        icon: <FaDog />,
+        text: "Keep your pet's medical records anywhere.",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://gamelinks.vercel.app/",
+        icon: <FaGamepad />,
+        text: "Lets play?",
+        donwload: false,
+        target: '_blank'
+      },
+    ],
+    "pt-BR": [
+      {
+        href: "/FilipeBatistaCV.pdf",
+        icon: <FaRegFileAlt />,
+        text: "Curriculum",
+        donwload: true,
+        target: ''
+      },
+      {
+        href: "https://app.rocketseat.com.br/me/filipeleonelbatista",
+        icon: <FaRocket />,
+        text: "Perfil na Rocketseat",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://desenvolvedordeaplicativos.com.br",
+        icon: <FaGlobeAmericas />,
+        text: "Portifólio",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://www.youtube.com/channel/UCYUeJiqZCXcABWukG9RvQtw",
+        icon: <FaYoutube />,
+        text: "Canal do Youtube",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://github.com/filipeleonelbatista",
+        icon: <FaGithub />,
+        text: "Github",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://cadastrapet.com.br",
+        icon: <FaDog />,
+        text: "Dados Médicos do pet na palma da mão",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://gamelinks.vercel.app/",
+        icon: <FaGamepad />,
+        text: "Bora Jogar",
+        donwload: false,
+        target: '_blank'
+      },
+    ],
+  }
+
   const [showPix, setShowPix] = useState(false);
   const sharableContent = {
     title: "Desennvolvedor de aplicativos",
@@ -64,7 +170,7 @@ export default function Links() {
       <img
         className={styles.imageProfile}
         src={profilePic}
-        alt="Filipe Batista"
+        alt={currentLanguageObject.links_title}
       />
       {showPix ? (
         <div className={styles.content} style={{ position: "relative" }}>
@@ -77,8 +183,8 @@ export default function Links() {
           </button>
           <div className={styles.aboutContainer}>
             <div className={styles.aboutInfo}>
-              <h3 className={styles.title}>Filipe Batista</h3>
-              <p className={styles.subtitle}>Desenvolvedor Fullstack</p>
+              <h3 className={styles.title}>{currentLanguageObject.links_title}</h3>
+              <p className={styles.subtitle}>{currentLanguageObject.links_subtitle_title}</p>
             </div>
           </div>
 
@@ -87,16 +193,15 @@ export default function Links() {
               <img
                 className={styles.pixImage}
                 src={pixLogo}
-                alt="Pix Banco central do Brasil"
+                alt={currentLanguageObject.pix}
               />
             </div>
             <div className={styles.pixContainerImage}>
               <QRCode value={pixKey} />
             </div>
-            <p className={styles.pixText}>
-              Abra o App do seu banco e pague atravez do <b>QRCode</b> ou{" "}
-              <b>Pix Copia e Cola</b>
-            </p>
+            <div className={styles.pixText} dangerouslySetInnerHTML={{ __html: currentLanguageObject.links_pix_description }}>
+
+            </div>
 
             <button
               onClick={handleCopyPix}
@@ -108,7 +213,7 @@ export default function Links() {
               }}
             >
               <IoCopyOutline />
-              Copiar Código Pix
+              {currentLanguageObject.links_pix_button_copy_text}
             </button>
           </div>
         </div>
@@ -116,10 +221,15 @@ export default function Links() {
         <div className={styles.content}>
           <div className={styles.aboutContainer}>
             <div className={styles.aboutInfo}>
-              <h3 className={styles.title}>Filipe Batista</h3>
-              <p className={styles.subtitle}>Desenvolvedor Fullstack</p>
+              <SwitchLanguage />
+              <h3 className={styles.title}>
+                {currentLanguageObject.links_title}
+              </h3>
               <p className={styles.subtitle}>
-                React JS | React Native | Node JS
+                {currentLanguageObject.links_subtitle_title}
+              </p>
+              <p className={styles.subtitle}>
+                {currentLanguageObject.links_second_subtitle}
               </p>
             </div>
             <div className={styles.aboutActions}>
@@ -128,17 +238,21 @@ export default function Links() {
                 className={styles.actionTransparent}
               >
                 <IoQrCodeOutline size={18} />
-                <p className={styles.actionTransparentLabel}>Pix</p>
+                <p className={styles.actionTransparentLabel}>
+                  {currentLanguageObject.links_pix_button_text}
+                </p>
               </button>
-              <a href="/filipevcard.vcf" download className={styles.action}>
-                Salvar na agenda
+              <a href={currentLanguageObject.links_vcard_link_text} download className={styles.action}>
+                {currentLanguageObject.links_vcard_button_text}
               </a>
               <button
                 onClick={handleShare}
                 className={styles.actionTransparent}
               >
                 <IoShareSocialOutline size={18} />
-                <p className={styles.actionTransparentLabel}>Compartilhar</p>
+                <p className={styles.actionTransparentLabel}>
+                  {currentLanguageObject.links_share_button_text}
+                </p>
               </button>
             </div>
           </div>
@@ -181,7 +295,7 @@ export default function Links() {
           <div className={styles.divider}></div>
           <div className={styles.linksContainer}>
             <h4 className={styles.title} style={{ textTransform: "uppercase" }}>
-              Meus Links
+              {currentLanguageObject.links_link_section_title}
             </h4>
 
             <button
@@ -194,64 +308,20 @@ export default function Links() {
               }}
             >
               <IoCopyOutline />
-              Copiar Código Pix
+              {currentLanguageObject.links_pix_button_copy_text}
             </button>
-            <a
-              href="/FilipeBatistaCV.pdf"
-              download
-              rel="noopener noreferer"
-              className={styles.link}
-            >
-              <FaRegFileAlt /> Curriculum
-            </a>
-            <a
-              href="https://app.rocketseat.com.br/me/filipeleonelbatista"
-              target="_blank"
-              rel="noopener noreferer"
-              className={styles.link}
-            >
-              <FaRocket /> Meu Perfil na Rocketseat
-            </a>
-            <a
-              href="https://desenvolvedordeaplicativos.com.br"
-              target="_blank"
-              rel="noopener noreferer"
-              className={styles.link}
-            >
-              <FaGlobeAmericas /> Site Portifolio
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCYUeJiqZCXcABWukG9RvQtw"
-              target="_blank"
-              rel="noopener noreferer"
-              className={styles.link}
-            >
-              <FaYoutube /> Canal do Youtube
-            </a>
-            <a
-              href="https://github.com/filipeleonelbatista"
-              target="_blank"
-              rel="noopener noreferer"
-              className={styles.link}
-            >
-              <FaGithub /> Github
-            </a>
-            <a
-              href="https://cadastrapet.com.br"
-              target="_blank"
-              rel="noopener noreferer"
-              className={styles.link}
-            >
-              <FaDog /> Dados Médicos do pet na palma da mão
-            </a>
-            <a
-              href="https://gamelinks.vercel.app/"
-              target="_blank"
-              rel="noopener noreferer"
-              className={styles.link}
-            >
-              <FaGamepad /> Bora jogar?
-            </a>
+            {linksArray[currentLanguage].map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                download={link.download}
+                target={link.target}
+                rel="noopener noreferer"
+                className={styles.link}
+              >
+                {link.icon} {link.text}
+              </a>
+            ))}
 
           </div>
           <button
