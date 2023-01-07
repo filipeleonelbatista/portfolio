@@ -330,7 +330,7 @@ export default function Links() {
             style={{ margin: "1.6rem 0", fontSize: "small" }}
           >
             <IoShareSocialOutline />
-            Compartilhar
+            {currentLanguageObject.links_share_button_text}
           </button>
         </div>
       )}
