@@ -286,7 +286,7 @@ export default function Links() {
           </div>
           <div className={styles.divider}></div>
           <iframe className={styles.videoFrame}
-            src="https://www.youtube.com/embed/uTW1Qtw0eww"
+            src="https://www.youtube.com/embed/1bVF1nX9GXQ"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
