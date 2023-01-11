@@ -29,6 +29,7 @@ export function I18nContextProvider(props) {
       nav_about: "About",
       nav_projects: "Projects",
       nav_experiences: "Professional Experiences",
+      nav_challenges: "DevChallenges",
       nav_contact: "Get in touch",
       banner_title: "Looking for Software developer?",
       banner_subtitle: `
@@ -70,6 +71,12 @@ export function I18nContextProvider(props) {
       floating_span_text: "I do not send anything beyond the contact. It's a promise!",
       footer_copyright: "Rights reserved",
       footer_subtitle: "Develop in NextJS by Filipe Batista",
+      challenges_header_title: "Enhance your habilities to reach next level",
+      challenges_header_subtitle: "With front-end, back-end and mobile challenges that will grow your experience to work",
+      challenges_button_text: "Get Started",
+      challenges_list_section_title: "Challenges",
+      challenges_modal_figma_button_text: "Get Copy On Figma",
+      challenges_modal_github_button_text: "See Github Page",
     },
     "pt-BR": {
       links_title: "Filipe Batista",
@@ -91,6 +98,7 @@ export function I18nContextProvider(props) {
       nav_about: "Sobre",
       nav_projects: "Projetos",
       nav_experiences: "Experiências",
+      nav_challenges: "Desafios Dev",
       nav_contact: "Entrar em contato",
       banner_title: "Procurando Desenvolvedor de aplicativos?",
       banner_subtitle: `
@@ -132,6 +140,12 @@ export function I18nContextProvider(props) {
       floating_span_text: "Não envio nada além do contato. É uma promessa!",
       footer_copyright: "Direitos reservados",
       footer_subtitle: "Desenvolvido em NextJS por Filipe Batista",
+      challenges_header_title: "Melhore suas habilidades para alcançar o próximo nível",
+      challenges_header_subtitle: "Com desafios de front-end, back-end e mobile que ajudam a aumentar sua experiência profissional",
+      challenges_button_text: "Bora codar!",
+      challenges_list_section_title: "Desafios",
+      challenges_modal_figma_button_text: "Ver UI no Figma",
+      challenges_modal_github_button_text: "Ver projeto no Github",
     },
   };
 

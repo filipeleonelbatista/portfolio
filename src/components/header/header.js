@@ -11,6 +11,7 @@ import {
 import { Link as ScrollLink } from "react-scroll";
 import { Container, Flex, jsx } from "theme-ui";
 import MobileDrawer from "./mobileDrawer";
+import Link from 'next/link'
 
 import customStyles from 'styles/components/header.module.css';
 
@@ -22,20 +23,24 @@ export default function Header({ className }) {
   useEffect(() => {
     setMenuItems([
       {
-        path: 'banner',
+        path: '/#banner',
         label: currentLanguageObject.nav_home,
       },
       {
-        path: 'sobre',
+        path: '/#sobre',
         label: currentLanguageObject.nav_about,
       },
       {
-        path: 'projetos',
+        path: '/#projetos',
         label: currentLanguageObject.nav_projects,
       },
       {
-        path: 'xp',
+        path: '/#xp',
         label: currentLanguageObject.nav_experiences,
+      },
+      {
+        path: '/challenges',
+        label: currentLanguageObject.nav_challenges,
       },
     ])
   }, [currentLanguage])
@@ -48,18 +53,23 @@ export default function Header({ className }) {
 
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
-              <ScrollLink
-                activeClass="active"
-                sx={styles.nav.navLink}
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
+              <Link
+                href={path}
                 key={i}
               >
-                {label}
-              </ScrollLink>
+                <a style={{
+                  fontSize: "16px",
+                  color: (path === window.location.pathname + window.location.hash) || (path === window.location.pathname) ? "#0063c6" : "#02073E",
+                  fontWeight: "400",
+                  cursor: "pointer",
+                  lineHeight: "1.2",
+                  textDecoration: "none",
+                  transition: "500ms",
+                  "&:hover, &.active": {
+                    color: "primary",
+                  },
+                }}>{label}</a>
+              </Link>
             ))}
           </Flex>
 
@@ -175,6 +185,9 @@ const styles = {
   },
   nav: {
     mx: "auto",
+    display: "flex",
+    justifyContent: 'space-between',
+    gap: "2.4rem",
     "@media screen and (max-width: 991px)": {
       display: "none",
     },
