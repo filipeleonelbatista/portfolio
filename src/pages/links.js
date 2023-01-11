@@ -5,6 +5,7 @@ import Head from "next/head";
 import { useState } from "react";
 import {
   FaArrowLeft,
+  FaCode,
   FaDog,
   FaGamepad,
   FaGithub,
@@ -47,6 +48,13 @@ export default function Links() {
         href: "https://desenvolvedordeaplicativos.com.br",
         icon: <FaGlobeAmericas />,
         text: "Portfolio",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://desenvolvedordeaplicativos.com.br/challenges",
+        icon: <FaCode />,
+        text: "Dev Challenges",
         donwload: false,
         target: '_blank'
       },
@@ -98,6 +106,13 @@ export default function Links() {
         href: "https://desenvolvedordeaplicativos.com.br",
         icon: <FaGlobeAmericas />,
         text: "Portifólio",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://desenvolvedordeaplicativos.com.br/challenges",
+        icon: <FaCode />,
+        text: "Desafios Dev",
         donwload: false,
         target: '_blank'
       },
