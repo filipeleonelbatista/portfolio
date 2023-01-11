@@ -71,7 +71,7 @@ export function I18nContextProvider(props) {
       floating_span_text: "I do not send anything beyond the contact. It's a promise!",
       footer_copyright: "Rights reserved",
       footer_subtitle: "Develop in NextJS by Filipe Batista",
-      challenges_header_title: "Enhance your habilities to reach next level",
+      challenges_header_title: "Improve your skills to reach the next level",
       challenges_header_subtitle: "With front-end, back-end and mobile challenges that will grow your experience to work",
       challenges_button_text: "Get Started",
       challenges_list_section_title: "Challenges",
