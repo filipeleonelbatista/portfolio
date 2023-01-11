@@ -59,6 +59,15 @@ export default function PoliticasDePrivacidadePage() {
         figma_url: '',
         category_id: 2,
       },
+      {
+        title: 'Product Card',
+        description: "A card with the product's image, with the option to use a 360° gif A button that activates the rotation of the image. Product SKU code, product title and value with an outline button to add to cart, this inside a card component with rounded edges. More details in figma.",
+        dificult: 'Eazy',
+        featured_image: './images/challenges/4.png',
+        github_repo_url: '',
+        figma_url: 'https://www.figma.com/file/q07I441ZuGLo3YjzStnfGJ/%23boraCodar---Desafio-2-(Copy)?node-id=0%3A1&t=qyC46TjAH40ulPvc-1',
+        category_id: 1,
+      },
     ],
     "pt-BR": [
       {
@@ -87,6 +96,15 @@ export default function PoliticasDePrivacidadePage() {
         github_repo_url: '',
         figma_url: '',
         category_id: 2,
+      },
+      {
+        title: 'Cartão de produto',
+        description: 'Um card com a imagem do produto, com opção de usar um gif de 360° Um botão que atva a rotação da imagem. Código SKU do produto, titulo do produto e valor com um botão outline para adicionar ao carrinho, isso dentro de um componente card com bordas arredondadas. Mais detalhes no figma.',
+        dificult: 'Fácil',
+        featured_image: './images/challenges/4.png',
+        github_repo_url: '',
+        figma_url: 'https://www.figma.com/file/q07I441ZuGLo3YjzStnfGJ/%23boraCodar---Desafio-2-(Copy)?node-id=0%3A1&t=qyC46TjAH40ulPvc-1',
+        category_id: 1,
       },
     ]
   }
