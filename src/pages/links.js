@@ -13,6 +13,7 @@ import {
   FaLinkedin,
   FaRegFileAlt,
   FaRocket,
+  FaWhatsapp,
   FaYoutube
 } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
@@ -127,6 +128,13 @@ export default function Links() {
         href: "https://github.com/filipeleonelbatista",
         icon: <FaGithub />,
         text: "Github",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://enviodemensagensemmassa.vercel.app",
+        icon: <FaWhatsapp />,
+        text: "Envio de mensagens pelo WhatsApp",
         donwload: false,
         target: '_blank'
       },
