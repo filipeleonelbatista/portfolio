@@ -41,7 +41,13 @@ const ChallengeList = ({ list, setSelectedProject }) => {
         <Swiper {...FavoriteCarousel} sx={styles.carousel}>
           {list.map((project, index) => (
             <SwiperSlide key={index}>
-              <button onClick={() => setSelectedProject(project)} style={{ width: '100%', backgroundColor: 'transparent', border: 'none' }}>
+              <button
+                onClick={() => setSelectedProject(project)}
+                style={{
+                  width: '100%',
+                  backgroundColor: 'transparent',
+                  border: 'none'
+                }}>
                 <ChallengeCard
                   project={project}
                 />
