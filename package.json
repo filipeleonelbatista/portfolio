@@ -7,10 +7,12 @@
     "build": "next build",
     "serve": "next start",
     "export": "next export",
-    "sitemap": "next-sitemap"
+    "sitemap": "next-sitemap",
+    "dev18": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next dev"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "cross-env": "^7.0.3",
     "framer-motion": "^2.9.4",
     "next": "10.0.1",
     "next-compose-plugins": "^2.2.0",

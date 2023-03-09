@@ -117,7 +117,7 @@ export default function PoliticasDePrivacidadePage() {
             selectedProject && (
               <div
                 style={{
-                  width: "100%",
+                  width: "420px",
                   display: "flex",
                   flexDirection: 'column',
                   gap: '16px'
@@ -125,16 +125,15 @@ export default function PoliticasDePrivacidadePage() {
                 <div
                   style={{
                     width: "100%",
-                    height: "250px",
+                    height: "auto",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     overflow: 'hidden',
-                    borderRadius: '1.6rem'
                   }}>
                   <img
                     style={{
-                      width: '100%',
+                      width: '105%',
                       height: 'auto',
                     }}
                     src={selectedProject.featured_image} alt={selectedProject.title} />
@@ -144,7 +143,8 @@ export default function PoliticasDePrivacidadePage() {
                     width: "100%",
                     display: "flex",
                     flexDirection: 'column',
-                    gap: '16px'
+                    gap: '16px',
+                    padding: "1.4rem",
                   }}>
                   <h1>{selectedProject.title}</h1>
                   <p>{selectedProject.description}</p>

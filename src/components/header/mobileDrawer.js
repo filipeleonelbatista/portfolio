@@ -21,20 +21,24 @@ const MobileDrawer = () => {
   useEffect(() => {
     setMenuItems([
       {
-        path: 'banner',
+        path: '/#banner',
         label: currentLanguageObject.nav_home,
       },
       {
-        path: 'sobre',
+        path: '/#sobre',
         label: currentLanguageObject.nav_about,
       },
       {
-        path: 'projetos',
+        path: '/#projetos',
         label: currentLanguageObject.nav_projects,
       },
       {
-        path: 'xp',
+        path: '/#xp',
         label: currentLanguageObject.nav_experiences,
+      },
+      {
+        path: '/challenges',
+        label: currentLanguageObject.nav_challenges,
       },
     ])
   }, [currentLanguage])

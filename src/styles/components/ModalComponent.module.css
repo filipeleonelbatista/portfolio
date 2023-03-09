@@ -11,15 +11,16 @@
 }
 
 .modal {
-  width: 90vw;
-  height: 90vh;
+  width: fit-content;
+  height: auto;
+  min-height: auto;
+  max-height: 90vh;
   background-color: #fff;
   border-radius: 1.4rem;
   position: relative;
   display: flex;
   flex-direction: row;
   overflow: auto;
-  padding: 2.4rem;
 }
 
 .closeButton {
