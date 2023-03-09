@@ -62,7 +62,7 @@ export default function PoliticasDePrivacidadePage() {
       {
         title: 'Product Card',
         description: "A card with the product's image, with the option to use a 360° gif A button that activates the rotation of the image. Product SKU code, product title and value with an outline button to add to cart, this inside a card component with rounded edges. More details in figma.",
-        dificult: 'Eazy',
+        dificult: 'Easy',
         featured_image: './images/challenges/4.png',
         github_repo_url: '',
         figma_url: 'https://www.figma.com/file/q07I441ZuGLo3YjzStnfGJ/%23boraCodar---Desafio-2-(Copy)?node-id=0%3A1&t=qyC46TjAH40ulPvc-1',
