@@ -33,6 +33,15 @@ export default function PoliticasDePrivacidadePage() {
   const challengeList = {
     "en": [
       {
+        title: 'GoWatch',
+        description: 'The Application must be developed respecting the layout. Initial screen with lists of cards with the covers of the movie with a footer menu to move to the other screens. Screen with a search field to list movies with the searched words, displaying as a result summarized cards of each movie and screen where the highlighted image of the movie will be, as well as all the information related to it.',
+        dificult: 'Moderate',
+        featured_image: './images/challenges/5.png',
+        github_repo_url: '',
+        figma_url: 'https://www.figma.com/file/FppgSZJRLiEQCf3vrrYD4O/goWatch?node-id=1%3A3',
+        category_id: 3,
+      },
+      {
         title: 'Music Player',
         description: 'Create a functional music player that has the possibility to play the music, follow the progress through the progress bar, a timer with the time elapsed and another with the duration of the music that is playing. add the basic functionality of going to the next song and going back to the previous song. After that, the challenge will be completed.',
         dificult: 'Easy',
@@ -70,6 +79,15 @@ export default function PoliticasDePrivacidadePage() {
       },
     ],
     "pt-BR": [
+      {
+        title: 'GoWatch',
+        description: 'O Aplicativo deverá ser desenvolvido respeitando o layout. Tela inicial com listas de cards com as capas do filme com menu de rodapé para passar para as demais telas. Tela com campo de pesquisa para listar filmes com as palavras pesquisadas exibindo como resultado cards resumidos de cada filme e tela onde estará a imagem destacada do filme bem como todas as informações relativas do mesmo.',
+        dificult: 'Moderado',
+        featured_image: './images/challenges/5.png',
+        github_repo_url: '',
+        figma_url: 'https://www.figma.com/file/FppgSZJRLiEQCf3vrrYD4O/goWatch?node-id=1%3A3',
+        category_id: 3,
+      },
       {
         title: 'Player de música',
         description: 'Crie um player funcional de musica que tenha a possibilidade de reproduzir a musica, acompanhar o progresso pela barra de progresso, um timer com o tempo deocrrido e outro com a duração da musica que está tocando. adicione as funcionalidades basicas de avançar para a próxima musica e retornar a musica anterior. Feito isso o desafio estará concluído.',
