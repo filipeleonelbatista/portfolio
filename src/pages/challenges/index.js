@@ -127,6 +127,21 @@ export default function PoliticasDePrivacidadePage() {
     ]
   }
 
+  const colors = {
+    "Easy": "#28a745",
+    "Moderate": "#ffc107",
+    "Hard": "#dc3545",
+    "Fácil": "#28a745",
+    "Moderado": "#ffc107",
+    "Difícil": "#dc3545",
+  }
+
+  const categoryNames = [
+    'Front-End',
+    'Back-End',
+    'Mobile'
+  ]
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -165,6 +180,63 @@ export default function PoliticasDePrivacidadePage() {
                     padding: "1.4rem",
                   }}>
                   <h1>{selectedProject.title}</h1>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      gap: 24
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: 'flex-start',
+                        gap: 8,
+                        flexDirection: "column"
+                      }}
+                    >
+                      <p>Dificuldade</p>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: 'center',
+                          justifyContent: "center",
+                          padding: "0.4rem 0.8rem",
+                          borderRadius: "0.8rem",
+                          width: 'fit-content',
+                          backgroundColor: colors[selectedProject.dificult],
+                          color: (selectedProject.dificult === 'Moderado') || (selectedProject.dificult === 'Moderate') ? "black" : "white",
+                          fontWeight: "bold"
+                        }}
+                      >{selectedProject.dificult}</div>
+                    </div>
+
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: 'flex-end',
+                        gap: 8,
+                        flexDirection: "column"
+                      }}
+                    >
+                      <p>Plataforma</p>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: 'center',
+                          justifyContent: "center",
+                          padding: "0.4rem 0.8rem",
+                          borderRadius: "0.8rem",
+                          width: 'fit-content',
+                          backgroundColor: selectedProject.category_id === 1 ? '#28a745' : selectedProject.category_id === 2 ? '#ffc107' : '#dc3545',
+                          color: (selectedProject.category_id === 1) || (selectedProject.category_id === 2) ? "black" : "white",
+                          fontWeight: "bold"
+                        }}
+                      >{categoryNames[selectedProject.category_id - 1]}</div>
+                    </div>
+                  </div>
+                  <p><b>Descrição:</b></p>
                   <p>{selectedProject.description}</p>
                   {
                     selectedProject.github_repo_url !== "" && (

@@ -80,7 +80,7 @@ const styles = {
     borderBottomLeftRadius: '5px',
     borderBottomRightRadius: '5px',
     width: '100%',
-    height: 500,
+    height: 450,
     '&:hover': {
       boxShadow: '0px 15px 50px rgba(69, 88, 157, 0.1)',
     },
@@ -90,12 +90,11 @@ const styles = {
       borderTopRightRadius: '5px',
       overflow: 'hidden',
       width: '100%',
-      height: 280,
+      height: 200,
       display: 'flex',
       img: {
         display: 'block',
         width: '100%',
-        backgroundSize: 'cover',
       },
       '.videoBtn': {
         position: 'absolute',
