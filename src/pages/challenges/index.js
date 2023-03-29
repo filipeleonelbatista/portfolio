@@ -151,9 +151,11 @@ export default function PoliticasDePrivacidadePage() {
               <div
                 style={{
                   width: "420px",
+                  height: '100%',
                   display: "flex",
                   flexDirection: 'column',
-                  gap: '16px'
+                  gap: '16px',
+                  overflow: 'auto',
                 }}>
                 <div
                   style={{

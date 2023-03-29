@@ -63,7 +63,7 @@ export default function Footer() {
           <a
             target="_blank"
             rel="noopener noreferer"
-            href="mailto:filipe.batista@desenvolvedordeaplicativos.com.br"
+            href="mailto:filipe.x2016@gmail.com"
             style={{
               padding: "0.8rem",
               border: "solid 1px #343d48",

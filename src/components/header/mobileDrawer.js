@@ -79,7 +79,7 @@ const MobileDrawer = () => {
             <a
               target="_blank"
               rel="noopener noreferer"
-              href="mailto:filipe.batista@desenvolvedordeaplicativos.com.br"
+              href="mailto:filipe.x2016@gmail.com"
               style={{
                 width: '100%',
                 padding: "0.4rem",
@@ -156,7 +156,7 @@ const MobileDrawer = () => {
             <a
               target="_blank"
               rel="noopener noreferer"
-              href="mailto:filipe.batista@desenvolvedordeaplicativos.com.br"
+              href="mailto:filipe.x2016@gmail.com"
               style={{
                 padding: "0.8rem",
                 border: "solid 1px #0063c6",

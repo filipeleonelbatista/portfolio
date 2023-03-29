@@ -46,14 +46,14 @@ export default function Links() {
         target: '_blank'
       },
       {
-        href: "https://desenvolvedordeaplicativos.com.br",
+        href: "https://filipeleonelbatista.vercel.app",
         icon: <FaGlobeAmericas />,
         text: "Portfolio",
         donwload: false,
         target: '_blank'
       },
       {
-        href: "https://desenvolvedordeaplicativos.com.br/challenges",
+        href: "https://filipeleonelbatista.vercel.app/challenges",
         icon: <FaCode />,
         text: "Dev Challenges",
         donwload: false,
@@ -70,20 +70,6 @@ export default function Links() {
         href: "https://github.com/filipeleonelbatista",
         icon: <FaGithub />,
         text: "Github",
-        donwload: false,
-        target: '_blank'
-      },
-      {
-        href: "https://cadastrapet.com.br",
-        icon: <FaDog />,
-        text: "Keep your pet's medical records anywhere.",
-        donwload: false,
-        target: '_blank'
-      },
-      {
-        href: "https://gamelinks.vercel.app/",
-        icon: <FaGamepad />,
-        text: "Lets play?",
         donwload: false,
         target: '_blank'
       },
@@ -104,14 +90,14 @@ export default function Links() {
         target: '_blank'
       },
       {
-        href: "https://desenvolvedordeaplicativos.com.br",
+        href: "https://filipeleonelbatista.vercel.app",
         icon: <FaGlobeAmericas />,
         text: "Portifólio",
         donwload: false,
         target: '_blank'
       },
       {
-        href: "https://desenvolvedordeaplicativos.com.br/challenges",
+        href: "https://filipeleonelbatista.vercel.app/challenges",
         icon: <FaCode />,
         text: "Desafios Dev",
         donwload: false,
@@ -131,35 +117,14 @@ export default function Links() {
         donwload: false,
         target: '_blank'
       },
-      {
-        href: "https://enviodemensagensemmassa.vercel.app",
-        icon: <FaWhatsapp />,
-        text: "Envio de mensagens pelo WhatsApp",
-        donwload: false,
-        target: '_blank'
-      },
-      {
-        href: "https://cadastrapet.com.br",
-        icon: <FaDog />,
-        text: "Dados Médicos do pet na palma da mão",
-        donwload: false,
-        target: '_blank'
-      },
-      {
-        href: "https://gamelinks.vercel.app/",
-        icon: <FaGamepad />,
-        text: "Bora Jogar",
-        donwload: false,
-        target: '_blank'
-      },
     ],
   }
 
   const [showPix, setShowPix] = useState(false);
   const sharableContent = {
     title: "Desennvolvedor de aplicativos",
-    text: "Vi este Este contato no site https://desenvolvedordeaplicativos.com.br",
-    url: "https://desenvolvedordeaplicativos.com.br",
+    text: "Vi este Este contato no site https://filipeleonelbatista.vercel.app",
+    url: "https://filipeleonelbatista.vercel.app",
   };
 
   const pixKey =
@@ -299,7 +264,7 @@ export default function Links() {
               <p className={styles.label}>Instagram</p>
             </a>
             <a
-              href="mailto:filipe.batista@desenvolvedordeaplicativos.com.br"
+              href="mailto:filipe.x2016@gmail.com"
               target="_blank"
               rel="noopener noreferer"
               className={styles.actionsLink}
