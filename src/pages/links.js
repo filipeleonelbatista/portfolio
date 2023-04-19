@@ -7,10 +7,12 @@ import {
   FaArrowLeft,
   FaCode,
   FaDog,
+  FaFileArchive,
   FaGamepad,
   FaGithub,
   FaGlobeAmericas, FaInstagram,
   FaLinkedin,
+  FaPaw,
   FaRegFileAlt,
   FaRocket,
   FaWhatsapp,
@@ -37,6 +39,13 @@ export default function Links() {
         text: "Download CV",
         donwload: true,
         target: ''
+      },
+      {
+        href: "https://docs.google.com/forms/d/e/1FAIpQLSeMOvLLlrmnCi94BUOAvgJDEfyRltBTRv2k75F74LMwExjmEA/viewform",
+        icon: <FaFileArchive />,
+        text: "Do you want to build website? Answer here!",
+        donwload: false,
+        target: '_blank'
       },
       {
         href: "https://app.rocketseat.com.br/me/filipeleonelbatista",
@@ -73,6 +82,20 @@ export default function Links() {
         donwload: false,
         target: '_blank'
       },
+      {
+        href: "https://cadastrapet.vercel.app/",
+        icon: <FaPaw />,
+        text: "Medical Pet Data in your hand.",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://enviodemensagensemmassa.vercel.app/",
+        icon: <FaWhatsapp />,
+        text: "Send automated messages throught Whatsapp.",
+        donwload: false,
+        target: '_blank'
+      },
     ],
     "pt-BR": [
       {
@@ -81,6 +104,13 @@ export default function Links() {
         text: "Curriculum",
         donwload: true,
         target: ''
+      },
+      {
+        href: "https://docs.google.com/forms/d/e/1FAIpQLSeMOvLLlrmnCi94BUOAvgJDEfyRltBTRv2k75F74LMwExjmEA/viewform",
+        icon: <FaFileArchive />,
+        text: "Quer criar seu site, responda esse form aqui!",
+        donwload: false,
+        target: '_blank'
       },
       {
         href: "https://app.rocketseat.com.br/me/filipeleonelbatista",
@@ -114,6 +144,20 @@ export default function Links() {
         href: "https://github.com/filipeleonelbatista",
         icon: <FaGithub />,
         text: "Github",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://cadastrapet.vercel.app/",
+        icon: <FaPaw />,
+        text: "Histórico médico do seu pet na sua mão.",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: "https://enviodemensagensemmassa.vercel.app/",
+        icon: <FaWhatsapp />,
+        text: "Envie mensagens automaticas via Whatsapp.",
         donwload: false,
         target: '_blank'
       },
