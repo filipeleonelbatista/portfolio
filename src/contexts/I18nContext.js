@@ -33,8 +33,8 @@ export function I18nContextProvider(props) {
       nav_contact: "Get in touch",
       banner_title: "Looking for Software developer?",
       banner_subtitle: `
-        <p>Im <strong>Filipe Batista</strong>, i'm a Software Developer with solid work experience with <strong>JavaScript </strong>
-        I like to put in practice project ideas and help others to <strong>
+        <p>Im <strong>Filipe Batista</strong>, i'm a Software Developer with solid work experience with <strong>Typescripy </strong>
+        I like to put in practice project ideas and help others <strong>
         to facilitate</strong> and <strong>boosting</strong> your business through technology.</p>
       `,
       banner_button_text: "Download CV",
@@ -102,7 +102,7 @@ export function I18nContextProvider(props) {
       nav_contact: "Entrar em contato",
       banner_title: "Procurando Desenvolvedor de aplicativos?",
       banner_subtitle: `
-        <p>Sou <strong>Filipe Batista</strong>, desenvolvedor de apps com experiência na stack <strong>JavaScript </strong>
+        <p>Sou <strong>Filipe Batista</strong>, desenvolvedor de apps com experiência na stack <strong>Typescripy </strong>
         Gosto de tirar as ideias do papel e ajudar pessoas a <strong>automatizar</strong> e <strong>impulsionar </strong>
         seu negócio por meio da tecnologia.</p>
       `,
