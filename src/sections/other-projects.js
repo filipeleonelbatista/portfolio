@@ -42,6 +42,13 @@ const OtherProjects = () => {
   let favoriteCourseData = {
     "en": [
       {
+        title: "Finances - Manage payments",
+        description:
+          "Manage your family payments with this eazy tool.",
+        image: `/images/other-projects/8.png`,
+        view_app_url: "https://play.google.com/store/apps/details?id=com.finances",
+      },
+      {
         title: "WhatsApp Sender App",
         description:
           "Send WhatsApp Messages quickly.",
@@ -98,6 +105,13 @@ const OtherProjects = () => {
       },
     ],
     "pt-BR": [
+      {
+        title: "Finanças - Controle os gastos",
+        description:
+          "Administre os gastos de sua família de forma fácil.",
+        image: `/images/other-projects/8.png`,
+        view_app_url: "https://play.google.com/store/apps/details?id=com.finances",
+      },
       {
         title: "WhatsApp Sender App",
         description:

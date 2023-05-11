@@ -15,6 +15,7 @@ import {
   FaPaw,
   FaRegFileAlt,
   FaRocket,
+  FaWallet,
   FaWhatsapp,
   FaYoutube
 } from "react-icons/fa";
@@ -96,6 +97,13 @@ export default function Links() {
         donwload: false,
         target: '_blank'
       },
+      {
+        href: 'https://play.google.com/store/apps/details?id=com.finances',
+        icon: <FaWallet />,
+        text: "Finances App - Manage your payments (in PT-br Only).",
+        donwload: false,
+        target: '_blank'
+      }
     ],
     "pt-BR": [
       {
@@ -161,6 +169,13 @@ export default function Links() {
         donwload: false,
         target: '_blank'
       },
+      {
+        href: 'https://play.google.com/store/apps/details?id=com.finances',
+        icon: <FaWallet />,
+        text: "Finanças - Controle os gastos (Google Play)",
+        donwload: false,
+        target: '_blank'
+      }
     ],
   }
 
