@@ -15,8 +15,6 @@ export default function PoliticasDePrivacidadePage() {
           <VideoProvider>
             <Layout>
               <SEO />
-              <Banner />
-
               <div
                 style={{
                   width: "100%",
@@ -24,6 +22,7 @@ export default function PoliticasDePrivacidadePage() {
                   alignIgems: "center",
                   justifyContent: "center",
                   margin: "2rem 0",
+                  marginTop: 128,
                 }}
               >
                 <div
@@ -33,7 +32,7 @@ export default function PoliticasDePrivacidadePage() {
                     padding: "1.4rem",
                   }}
                 >
-                  <h2>Política Privacidade</h2>
+                  <h2 style={{ fontSize: 32, marginBottom: 24 }}>Política Privacidade</h2>
                   <p>
                     A sua privacidade é importante para nós. É política do
                     Leonel Informática respeitar a sua privacidade em relação a
@@ -93,8 +92,8 @@ export default function PoliticasDePrivacidadePage() {
                     como lidamos com dados do usuário e informações pessoais,
                     entre em contacto connosco.
                   </p>
-                  <h2>Política de Cookies Leonel Informática</h2>
-                  <h3>O que são cookies?</h3>
+                  <h2 style={{ marginTop: 24 }}>Política de Cookies Leonel Informática</h2>
+                  <h3 style={{ marginTop: 24 }}>O que são cookies?</h3>
                   <p>
                     Como é prática comum em quase todos os sites profissionais,
                     este site usa cookies, que são pequenos arquivos baixados no
@@ -105,7 +104,7 @@ export default function PoliticasDePrivacidadePage() {
                     sejam armazenados, no entanto, isso pode fazer o downgrade
                     ou 'quebrar' certos elementos da funcionalidade do site.
                   </p>
-                  <h3>Como usamos os cookies?</h3>
+                  <h3 style={{ marginTop: 24 }}>Como usamos os cookies?</h3>
                   <p>
                     Utilizamos cookies por vários motivos, detalhados abaixo.
                     Infelizmente, na maioria dos casos, não existem opções
@@ -115,7 +114,7 @@ export default function PoliticasDePrivacidadePage() {
                     os cookies se não tiver certeza se precisa ou não deles,
                     caso sejam usados para fornecer um serviço que você usa.
                   </p>
-                  <h3>Desativar cookies</h3>
+                  <h3 style={{ marginTop: 24 }}>Desativar cookies</h3>
                   <p>
                     Você pode impedir a configuração de cookies ajustando as
                     configurações do seu navegador (consulte a Ajuda do
@@ -126,7 +125,7 @@ export default function PoliticasDePrivacidadePage() {
                     funcionalidades e recursos deste site. Portanto, é
                     recomendável que você não desative os cookies.
                   </p>
-                  <h3>Cookies que definimos</h3>
+                  <h3 style={{ marginTop: 24 }}>Cookies que definimos</h3>
                   <ul>
                     <li>
                       {" "}
@@ -216,7 +215,7 @@ export default function PoliticasDePrivacidadePage() {
                       <br />{" "}
                     </li>
                   </ul>
-                  <h3>Cookies de Terceiros</h3>
+                  <h3 style={{ marginTop: 24 }}>Cookies de Terceiros</h3>
                   <p>
                     Em alguns casos especiais, também usamos cookies fornecidos
                     por terceiros confiáveis. A seção a seguir detalha quais
@@ -270,7 +269,7 @@ export default function PoliticasDePrivacidadePage() {
                       possível.
                     </li>
                   </ul>
-                  <h3>Compromisso do Usuário</h3>
+                  <h3 style={{ marginTop: 24 }}>Compromisso do Usuário</h3>
                   <p>
                     O usuário se compromete a fazer uso adequado dos conteúdos e
                     da informação que o Leonel Informática oferece no site e com
@@ -296,7 +295,7 @@ export default function PoliticasDePrivacidadePage() {
                       anteriormente mencionados.
                     </li>
                   </ul>
-                  <h3>Mais informações</h3>
+                  <h3 style={{ marginTop: 24 }}>Mais informações</h3>
                   <p>
                     Esperemos que esteja esclarecido e, como mencionado
                     anteriormente, se houver algo que você não tem certeza se
