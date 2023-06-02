@@ -5,6 +5,7 @@ import Head from "next/head";
 import { useState } from "react";
 import {
   FaArrowLeft,
+  FaBus,
   FaCode,
   FaDog,
   FaFileArchive,
@@ -106,7 +107,7 @@ export default function Links() {
       },
       {
         href: 'https://play.google.com/store/apps/details?id=bussleep.br',
-        icon: <FaWallet />,
+        icon: <FaBus />,
         text: "BusSleep - Alarm to your locations (in PT-br Only)",
         donwload: false,
         target: '_blank'
@@ -185,7 +186,7 @@ export default function Links() {
       },
       {
         href: 'https://play.google.com/store/apps/details?id=bussleep.br',
-        icon: <FaWallet />,
+        icon: <FaBus />,
         text: "BusSleep - Alarme para Destinos (Google Play)",
         donwload: false,
         target: '_blank'
