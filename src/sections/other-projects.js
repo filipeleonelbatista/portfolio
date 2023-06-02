@@ -42,6 +42,14 @@ const OtherProjects = () => {
   let favoriteCourseData = {
     "en": [
       {
+        title: "BusSleep - Alarm to your locations",
+        description:
+          "Create locations safearea then when you enter at this area play a alart to wake you up or just advise.",
+        image: `/images/other-projects/9.png`,
+        view_app_url:
+          "https://play.google.com/store/apps/details?id=bussleep.br",
+      },
+      {
         title: "Finances - Manage payments",
         description:
           "Manage your family payments with this eazy tool.",
@@ -105,6 +113,14 @@ const OtherProjects = () => {
       },
     ],
     "pt-BR": [
+      {
+        title: "BusSleep - Alarme para destinos",
+        description:
+          "Crie pontos de alarme no mapa e seja avisado quando se aproximar dele.",
+        image: `/images/other-projects/9.png`,
+        view_app_url:
+          "https://play.google.com/store/apps/details?id=bussleep.br",
+      },
       {
         title: "Finanças - Controle os gastos",
         description:

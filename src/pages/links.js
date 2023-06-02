@@ -103,6 +103,13 @@ export default function Links() {
         text: "Finances App - Manage your payments (in PT-br Only).",
         donwload: false,
         target: '_blank'
+      },
+      {
+        href: 'https://play.google.com/store/apps/details?id=bussleep.br',
+        icon: <FaWallet />,
+        text: "BusSleep - Alarm to your locations (in PT-br Only)",
+        donwload: false,
+        target: '_blank'
       }
     ],
     "pt-BR": [
@@ -173,6 +180,13 @@ export default function Links() {
         href: 'https://play.google.com/store/apps/details?id=com.finances',
         icon: <FaWallet />,
         text: "Finanças - Controle os gastos (Google Play)",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: 'https://play.google.com/store/apps/details?id=bussleep.br',
+        icon: <FaWallet />,
+        text: "BusSleep - Alarme para Destinos (Google Play)",
         donwload: false,
         target: '_blank'
       }
