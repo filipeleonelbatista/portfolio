@@ -11,7 +11,7 @@ import {
   FaFileArchive,
   FaGamepad,
   FaGithub,
-  FaGlobeAmericas, FaInstagram,
+  FaGlobeAmericas, FaGooglePlay, FaInstagram,
   FaLinkedin,
   FaPaw,
   FaRegFileAlt,
@@ -111,6 +111,13 @@ export default function Links() {
         text: "BusSleep - Alarm to your locations (in PT-br Only)",
         donwload: false,
         target: '_blank'
+      },
+      {
+        href: 'https://play.google.com/store/apps/developer?id=Leonel+Informatica',
+        icon: <FaGooglePlay />,
+        text: "Published Apps on Google Play (in PT-br Only)",
+        donwload: false,
+        target: '_blank'
       }
     ],
     "pt-BR": [
@@ -188,6 +195,13 @@ export default function Links() {
         href: 'https://play.google.com/store/apps/details?id=bussleep.br',
         icon: <FaBus />,
         text: "BusSleep - Alarme para Destinos (Google Play)",
+        donwload: false,
+        target: '_blank'
+      },
+      {
+        href: 'https://play.google.com/store/apps/developer?id=Leonel+Informatica',
+        icon: <FaGooglePlay />,
+        text: "Aplicativos publicados na Google Play",
         donwload: false,
         target: '_blank'
       }
