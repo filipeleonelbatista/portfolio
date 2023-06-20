@@ -1,42 +1,26 @@
 {
-  "name": "@landing/003-next",
-  "version": "0.0.1",
+  "name": "portfolio",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "serve": "next start",
-    "export": "next export",
-    "sitemap": "next-sitemap",
-    "dev18": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next dev"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "cross-env": "^7.0.3",
-    "framer-motion": "^2.9.4",
-    "next": "10.0.1",
-    "next-compose-plugins": "^2.2.0",
-    "next-optimized-images": "^2.6.2",
-    "rc-drawer": "^4.1.0",
-    "react": "16.13.1",
-    "react-custom-scrollbars": "^4.2.1",
-    "react-dom": "16.13.1",
-    "react-ga": "^3.2.0",
-    "react-icons": "^4.3.1",
-    "react-modal-video": "^1.2.6",
-    "react-qr-code": "^2.0.5",
-    "react-reveal": "^1.2.2",
-    "react-scroll": "^1.8.1",
-    "react-stickynode": "^3.0.4",
-    "react-waypoint": "^9.0.3",
-    "swiper": "^6.3.5",
-    "theme-ui": "^0.3.1",
-    "typeface-dm-sans": "^1.1.13"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^8.0.0",
-    "next-sitemap": "^1.2.4"
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "vite": "^4.3.9"
   }
 }
