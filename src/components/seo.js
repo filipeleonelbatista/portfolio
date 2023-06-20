@@ -22,7 +22,7 @@ export default function SEO() {
         name="description"
         content={currentLanguageObject.seo_description}
       />
-      <link rel="canonical" href="https://desenvolvedordeaplicativos.com.br" />
+      <link rel="canonical" href="https://filipeleonelbatista.vercel.app" />
       <meta
         name="author"
         content={currentLanguageObject.seo_title}
@@ -49,7 +49,7 @@ export default function SEO() {
       />
       <meta
         property="og:url"
-        content="https://desenvolvedordeaplicativos.com.br"
+        content="https://filipeleonelbatista.vercel.app"
       />
       <meta
         property="og:site_name"
@@ -68,11 +68,11 @@ export default function SEO() {
       />
       <meta
         name="twitter:url"
-        content="https://desenvolvedordeaplicativos.com.br"
+        content="https://filipeleonelbatista.vercel.app"
       />
       <meta
         name="twitter:site"
-        content="https://desenvolvedordeaplicativos.com.br"
+        content="https://filipeleonelbatista.vercel.app"
       />
       <meta
         name="twitter:creator"

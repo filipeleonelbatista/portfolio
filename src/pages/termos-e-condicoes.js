@@ -35,7 +35,7 @@ export default function TermosECondicoesPage() {
                   <h2>1. Termos</h2>
                   <p>
                     Ao acessar ao site{" "}
-                    <a href="https://desenvolvedordeaplicativos.com.br">
+                    <a href="https://filipeleonelbatista.vercel.app">
                       Leonel Informática
                     </a>
                     , concorda em cumprir estes termos de serviço, todas as leis

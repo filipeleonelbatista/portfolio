@@ -37,7 +37,7 @@ export default function PoliticasDePrivacidadePage() {
                     A sua privacidade é importante para nós. É política do
                     Leonel Informática respeitar a sua privacidade em relação a
                     qualquer informação sua que possamos coletar no site{" "}
-                    <a href="https://desenvolvedordeaplicativos.com.br">
+                    <a href="https://filipeleonelbatista.vercel.app">
                       Leonel Informática
                     </a>
                     , e outros sites que possuímos e operamos.
@@ -67,7 +67,7 @@ export default function PoliticasDePrivacidadePage() {
                     sobre o conteúdo e práticas desses sites e não podemos
                     aceitar responsabilidade por suas respectivas{" "}
                     <a
-                      href="https://desenvolvedordeaplicativos.com.br/politcas-de-privacidade"
+                      href="https://filipeleonelbatista.vercel.app/politcas-de-privacidade"
                       target="_BLANK"
                     >
                       políticas de privacidade
@@ -83,7 +83,7 @@ export default function PoliticasDePrivacidadePage() {
                     O uso continuado de nosso site será considerado como
                     aceitação de nossas práticas em torno de{" "}
                     <a
-                      href="https://desenvolvedordeaplicativos.com.br/politcas-de-privacidade"
+                      href="https://filipeleonelbatista.vercel.app/politcas-de-privacidade"
                       target="_BLANK"
                     >
                       Aviso de Privacidade

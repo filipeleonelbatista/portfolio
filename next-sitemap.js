@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://desenvolvedordeaplicativos.com.br/',
+  siteUrl: 'https://filipeleonelbatista.vercel.app/',
   generateRobotsTxt: true,
   // optional
   // robotsTxtOptions: {
