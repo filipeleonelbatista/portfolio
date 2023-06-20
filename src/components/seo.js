@@ -37,7 +37,7 @@ export default function SEO() {
         itemProp="description"
         content={currentLanguageObject.seo_description}
       />
-      <meta itemProp="image" content="/images/header.png" />
+      <meta itemProp="image" content="https://filipeleonelbatista.vercel.app/images/header.png" />
 
       <meta
         property="og:title"
@@ -56,7 +56,7 @@ export default function SEO() {
         content={currentLanguageObject.seo_title}
       />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="/images/header.png" />
+      <meta property="og:image" content="https://filipeleonelbatista.vercel.app/images/header.png" />
 
       <meta
         name="twitter:title"
@@ -79,7 +79,7 @@ export default function SEO() {
         content={currentLanguageObject.seo_title}
       />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:image" content="/images/header.png" />
+      <meta name="twitter:image" content="https://filipeleonelbatista.vercel.app/images/header.png" />
     </Head>
   );
 }
