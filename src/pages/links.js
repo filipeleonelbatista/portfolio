@@ -18,7 +18,8 @@ import {
   FaRocket,
   FaWallet,
   FaWhatsapp,
-  FaYoutube
+  FaYoutube,
+  FaAt
 } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import {
@@ -360,6 +361,16 @@ export default function Links() {
               <FaInstagram size={48} />{" "}
               <p className={styles.label}>Instagram</p>
             </a>
+            <a
+              href="https://www.threads.net/@filipeleonelbatista"
+              target="_blank"
+              rel="noopener noreferer"
+              className={styles.actionsLink}
+            >
+              <FaAt size={48} />{" "}
+              <p className={styles.label}>Threads</p>
+            </a>
+
             <a
               href="mailto:filipe.x2016@gmail.com"
               target="_blank"
