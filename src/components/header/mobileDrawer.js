@@ -4,7 +4,7 @@ import { Link } from 'components/link';
 import Logo from 'components/logo';
 import { DrawerContext } from 'contexts/drawer/drawer.context';
 import { useI18n } from 'hooks/useI18n';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import {
   FaEnvelope, FaInstagram,
@@ -14,7 +14,11 @@ import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import { Box, Button } from 'theme-ui';
 
 const MobileDrawer = () => {
-  const { currentLanguageObject, currentLanguage } = useI18n();
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
 
   const [menuItems, setMenuItems] = useState([])
 
@@ -22,23 +26,23 @@ const MobileDrawer = () => {
     setMenuItems([
       {
         path: '/#banner',
-        label: currentLanguageObject.nav_home,
+        label: selectedLanguage.nav_home,
       },
       {
         path: '/#sobre',
-        label: currentLanguageObject.nav_about,
+        label: selectedLanguage.nav_about,
       },
       {
         path: '/#projetos',
-        label: currentLanguageObject.nav_projects,
+        label: selectedLanguage.nav_projects,
       },
       {
         path: '/#xp',
-        label: currentLanguageObject.nav_experiences,
+        label: selectedLanguage.nav_experiences,
       },
       {
         path: '/challenges',
-        label: currentLanguageObject.nav_challenges,
+        label: selectedLanguage.nav_challenges,
       },
     ])
   }, [currentLanguage])
@@ -99,7 +103,7 @@ const MobileDrawer = () => {
                 },
               }}
             >
-              {currentLanguageObject.nav_contact}
+              {selectedLanguage.nav_contact}
             </a>
           </Box>
 

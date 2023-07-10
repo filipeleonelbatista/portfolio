@@ -1,12 +1,18 @@
 import BlockTitle from "components/block-title";
 import FavoriteCardProject from "components/favorite-card-project";
 import { useI18n } from "hooks/useI18n";
+import { useMemo } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Container } from "theme-ui";
 
 const FavoriteCourse = () => {
-  const { currentLanguageObject, currentLanguage } = useI18n()
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
+
   const FavoriteCarousel = {
     spaceBetween: 30,
     slidesPerView: 3,
@@ -39,7 +45,7 @@ const FavoriteCourse = () => {
   };
 
   let favoriteCourseData = {
-    "en": [
+    en: [
       {
         title: "IF Pads - Streamers da instinct",
         description:
@@ -141,7 +147,7 @@ const FavoriteCourse = () => {
         view_app_url: "",
       },
     ],
-    "pt-BR": [
+    pt: [
       {
         title: "IF Pads - Steramers da instinct",
         description:
@@ -245,16 +251,18 @@ const FavoriteCourse = () => {
     ]
   };
 
+  const selectedFavoriteCourseData = currentLanguage === 'pt' ? favoriteCourseData.pt : favoriteCourseData.en
+
   return (
     <Box as="section" id="projetos" sx={styles.fevCourse}>
       <Container sx={styles.fevCourse.container}>
         <BlockTitle
           sx={styles.fevCourse.blockTitle}
-          tagline={currentLanguageObject.favorite_course_title_section}
-          heading={currentLanguageObject.favorite_course_description_section}
+          tagline={selectedLanguage.favorite_course_title_section}
+          heading={selectedLanguage.favorite_course_description_section}
         />
         <Swiper {...FavoriteCarousel} sx={styles.carousel}>
-          {favoriteCourseData[currentLanguage].map((course, index) => (
+          {selectedFavoriteCourseData.map((course, index) => (
             <SwiperSlide key={index}>
               <FavoriteCardProject
                 title={course.title}
@@ -297,7 +305,7 @@ const FavoriteCourse = () => {
             }}
           >
             <FaGithub size={24} style={{ marginRight: "1.2rem" }} />
-            {currentLanguageObject.favorite_course_button_text}
+            {selectedLanguage.favorite_course_button_text}
           </a>
         </div>
       </Container>

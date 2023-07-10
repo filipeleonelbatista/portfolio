@@ -2,7 +2,7 @@ import SEO from "components/seo";
 import SwitchLanguage from "components/SwitchLanguage";
 import { useI18n } from "hooks/useI18n";
 import Head from "next/head";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   FaArrowLeft,
   FaBus,
@@ -32,181 +32,190 @@ import pixLogo from "../assets/pix_logo.png";
 import styles from "../styles/pages/Links.module.css";
 
 export default function Links() {
-  const { currentLanguageObject, currentLanguage } = useI18n()
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
+
   const linksArray = {
-    "en": [
+    en: [
       {
         href: "/FilipeBatistaCV.pdf",
-        icon: <FaRegFileAlt />,
+        icon: <FaRegFileAlt style={{ marginRight: '8px' }} />,
         text: "Download CV",
         donwload: true,
         target: ''
       },
       {
         href: "https://docs.google.com/forms/d/e/1FAIpQLSeMOvLLlrmnCi94BUOAvgJDEfyRltBTRv2k75F74LMwExjmEA/viewform",
-        icon: <FaFileArchive />,
+        icon: <FaFileArchive style={{ marginRight: '8px' }} />,
         text: "Do you want to build website? Answer here!",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://app.rocketseat.com.br/me/filipeleonelbatista",
-        icon: <FaRocket />,
+        icon: <FaRocket style={{ marginRight: '8px' }} />,
         text: "My Rocketseat Profile",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://filipeleonelbatista.vercel.app",
-        icon: <FaGlobeAmericas />,
+        icon: <FaGlobeAmericas style={{ marginRight: '8px' }} />,
         text: "Portfolio",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://filipeleonelbatista.vercel.app/challenges",
-        icon: <FaCode />,
+        icon: <FaCode style={{ marginRight: '8px' }} />,
         text: "Dev Challenges",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://www.youtube.com/channel/UCYUeJiqZCXcABWukG9RvQtw",
-        icon: <FaYoutube />,
+        icon: <FaYoutube style={{ marginRight: '8px' }} />,
         text: "Youtube Channel",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://github.com/filipeleonelbatista",
-        icon: <FaGithub />,
+        icon: <FaGithub style={{ marginRight: '8px' }} />,
         text: "Github",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://cadastrapet.vercel.app/",
-        icon: <FaPaw />,
+        icon: <FaPaw style={{ marginRight: '8px' }} />,
         text: "Medical Pet Data in your hand.",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://enviodemensagensemmassa.vercel.app/",
-        icon: <FaWhatsapp />,
+        icon: <FaWhatsapp style={{ marginRight: '8px' }} />,
         text: "Send automated messages throught Whatsapp.",
         donwload: false,
         target: '_blank'
       },
       {
         href: 'https://play.google.com/store/apps/details?id=com.finances',
-        icon: <FaWallet />,
+        icon: <FaWallet style={{ marginRight: '8px' }} />,
         text: "Finances App - Manage your payments (in PT-br Only).",
         donwload: false,
         target: '_blank'
       },
       {
         href: 'https://play.google.com/store/apps/details?id=bussleep.br',
-        icon: <FaBus />,
+        icon: <FaBus style={{ marginRight: '8px' }} />,
         text: "BusSleep - Alarm to your locations (in PT-br Only)",
         donwload: false,
         target: '_blank'
       },
       {
         href: 'https://play.google.com/store/apps/developer?id=Leonel+Informatica',
-        icon: <FaGooglePlay />,
+        icon: <FaGooglePlay style={{ marginRight: '8px' }} />,
         text: "Published Apps on Google Play (in PT-br Only)",
         donwload: false,
         target: '_blank'
       }
     ],
-    "pt-BR": [
+    pt: [
       {
         href: "/FilipeBatistaCV.pdf",
-        icon: <FaRegFileAlt />,
+        icon: <FaRegFileAlt style={{ marginRight: '8px' }} />,
         text: "Curriculum",
         donwload: true,
         target: ''
       },
       {
         href: "https://docs.google.com/forms/d/e/1FAIpQLSeMOvLLlrmnCi94BUOAvgJDEfyRltBTRv2k75F74LMwExjmEA/viewform",
-        icon: <FaFileArchive />,
+        icon: <FaFileArchive style={{ marginRight: '8px' }} />,
         text: "Quer criar seu site, responda esse form aqui!",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://app.rocketseat.com.br/me/filipeleonelbatista",
-        icon: <FaRocket />,
+        icon: <FaRocket style={{ marginRight: '8px' }} />,
         text: "Perfil na Rocketseat",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://filipeleonelbatista.vercel.app",
-        icon: <FaGlobeAmericas />,
+        icon: <FaGlobeAmericas style={{ marginRight: '8px' }} />,
         text: "Portifólio",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://filipeleonelbatista.vercel.app/challenges",
-        icon: <FaCode />,
+        icon: <FaCode style={{ marginRight: '8px' }} />,
         text: "Desafios Dev",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://www.youtube.com/channel/UCYUeJiqZCXcABWukG9RvQtw",
-        icon: <FaYoutube />,
+        icon: <FaYoutube style={{ marginRight: '8px' }} />,
         text: "Canal do Youtube",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://github.com/filipeleonelbatista",
-        icon: <FaGithub />,
+        icon: <FaGithub style={{ marginRight: '8px' }} />,
         text: "Github",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://cadastrapet.vercel.app/",
-        icon: <FaPaw />,
+        icon: <FaPaw style={{ marginRight: '8px' }} />,
         text: "Histórico médico do seu pet na sua mão.",
         donwload: false,
         target: '_blank'
       },
       {
         href: "https://enviodemensagensemmassa.vercel.app/",
-        icon: <FaWhatsapp />,
+        icon: <FaWhatsapp style={{ marginRight: '8px' }} />,
         text: "Envie mensagens automaticas via Whatsapp.",
         donwload: false,
         target: '_blank'
       },
       {
         href: 'https://play.google.com/store/apps/details?id=com.finances',
-        icon: <FaWallet />,
+        icon: <FaWallet style={{ marginRight: '8px' }} />,
         text: "Finanças - Controle os gastos (Google Play)",
         donwload: false,
         target: '_blank'
       },
       {
         href: 'https://play.google.com/store/apps/details?id=bussleep.br',
-        icon: <FaBus />,
+        icon: <FaBus style={{ marginRight: '8px' }} />,
         text: "BusSleep - Alarme para Destinos (Google Play)",
         donwload: false,
         target: '_blank'
       },
       {
         href: 'https://play.google.com/store/apps/developer?id=Leonel+Informatica',
-        icon: <FaGooglePlay />,
+        icon: <FaGooglePlay style={{ marginRight: '8px' }} />,
         text: "Aplicativos publicados na Google Play",
         donwload: false,
         target: '_blank'
       }
     ],
   }
+
+  const selectedLanguageLinks = useMemo(() => {
+    return currentLanguage === 'pt' ? linksArray.pt : linksArray.en
+  }, [currentLanguage])
 
   const [showPix, setShowPix] = useState(false);
   const sharableContent = {
@@ -246,7 +255,7 @@ export default function Links() {
       <img
         className={styles.imageProfile}
         src={profilePic}
-        alt={currentLanguageObject.links_title}
+        alt={selectedLanguage.links_title}
       />
       {showPix ? (
         <div className={styles.content} style={{ position: "relative" }}>
@@ -259,8 +268,8 @@ export default function Links() {
           </button>
           <div className={styles.aboutContainer}>
             <div className={styles.aboutInfo}>
-              <h3 className={styles.title}>{currentLanguageObject.links_title}</h3>
-              <p className={styles.subtitle}>{currentLanguageObject.links_subtitle_title}</p>
+              <h3 className={styles.title}>{selectedLanguage.links_title}</h3>
+              <p className={styles.subtitle}>{selectedLanguage.links_subtitle_title}</p>
             </div>
           </div>
 
@@ -269,13 +278,13 @@ export default function Links() {
               <img
                 className={styles.pixImage}
                 src={pixLogo}
-                alt={currentLanguageObject.pix}
+                alt={selectedLanguage.pix}
               />
             </div>
             <div className={styles.pixContainerImage}>
               <QRCode value={pixKey} />
             </div>
-            <div className={styles.pixText} dangerouslySetInnerHTML={{ __html: currentLanguageObject.links_pix_description }}>
+            <div className={styles.pixText} dangerouslySetInnerHTML={{ __html: selectedLanguage.links_pix_description }}>
 
             </div>
 
@@ -289,7 +298,7 @@ export default function Links() {
               }}
             >
               <IoCopyOutline />
-              {currentLanguageObject.links_pix_button_copy_text}
+              {selectedLanguage.links_pix_button_copy_text}
             </button>
           </div>
         </div>
@@ -299,13 +308,13 @@ export default function Links() {
             <div className={styles.aboutInfo}>
               <SwitchLanguage />
               <h3 className={styles.title}>
-                {currentLanguageObject.links_title}
+                {selectedLanguage.links_title}
               </h3>
               <p className={styles.subtitle}>
-                {currentLanguageObject.links_subtitle_title}
+                {selectedLanguage.links_subtitle_title}
               </p>
               <p className={styles.subtitle}>
-                {currentLanguageObject.links_second_subtitle}
+                {selectedLanguage.links_second_subtitle}
               </p>
             </div>
             <div className={styles.aboutActions}>
@@ -315,11 +324,11 @@ export default function Links() {
               >
                 <IoQrCodeOutline size={18} />
                 <p className={styles.actionTransparentLabel}>
-                  {currentLanguageObject.links_pix_button_text}
+                  {selectedLanguage.links_pix_button_text}
                 </p>
               </button>
-              <a href={currentLanguageObject.links_vcard_link_text} download className={styles.action}>
-                {currentLanguageObject.links_vcard_button_text}
+              <a href={selectedLanguage.links_vcard_link_text} download className={styles.action}>
+                {selectedLanguage.links_vcard_button_text}
               </a>
               <button
                 onClick={handleShare}
@@ -327,7 +336,7 @@ export default function Links() {
               >
                 <IoShareSocialOutline size={18} />
                 <p className={styles.actionTransparentLabel}>
-                  {currentLanguageObject.links_share_button_text}
+                  {selectedLanguage.links_share_button_text}
                 </p>
               </button>
             </div>
@@ -364,14 +373,17 @@ export default function Links() {
           <iframe className={styles.videoFrame}
             src="https://www.youtube.com/embed/6z0ulsaxsAY"
             title="YouTube video player"
-            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
+            allowFullScreen
+            style={{
+              border: 0,
+            }}
+          >
           </iframe>
           <div className={styles.divider}></div>
           <div className={styles.linksContainer}>
             <h4 className={styles.title} style={{ textTransform: "uppercase" }}>
-              {currentLanguageObject.links_link_section_title}
+              {selectedLanguage.links_link_section_title}
             </h4>
 
             <button
@@ -379,14 +391,14 @@ export default function Links() {
               className={styles.link}
               style={{
                 width: "100%",
-                margin: "1.6rem 0 0 0",
+                margin: "4px 0",
                 fontSize: "small",
               }}
             >
-              <IoCopyOutline />
-              {currentLanguageObject.links_pix_button_copy_text}
+              <IoCopyOutline style={{ marginRight: '8px' }} />
+              {selectedLanguage.links_pix_button_copy_text}
             </button>
-            {linksArray[currentLanguage].map((link, index) => (
+            {selectedLanguageLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.href}
@@ -394,6 +406,11 @@ export default function Links() {
                 target={link.target}
                 rel="noopener noreferer"
                 className={styles.link}
+                style={{
+                  width: "100%",
+                  margin: "4px 0",
+                  fontSize: 12,
+                }}
               >
                 {link.icon} {link.text}
               </a>
@@ -406,7 +423,7 @@ export default function Links() {
             style={{ margin: "1.6rem 0", fontSize: "small" }}
           >
             <IoShareSocialOutline />
-            {currentLanguageObject.links_share_button_text}
+            {selectedLanguage.links_share_button_text}
           </button>
         </div>
       )}

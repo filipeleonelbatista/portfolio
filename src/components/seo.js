@@ -1,16 +1,21 @@
 import { useI18n } from "hooks/useI18n";
 import Head from "next/head";
+import { useMemo } from "react";
 
 export default function SEO() {
-  const { currentLanguageObject } = useI18n()
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
   
   return (
     <Head>
-      <title>{currentLanguageObject.seo_title}</title>
+      <title>{selectedLanguage.seo_title}</title>
       {/* SEO TRADICIONAL */}
       <meta
         name="title"
-        content={currentLanguageObject.seo_title}
+        content={selectedLanguage.seo_title}
       />
       <meta name="robots" content="index" />
       <meta
@@ -20,32 +25,32 @@ export default function SEO() {
 
       <meta
         name="description"
-        content={currentLanguageObject.seo_description}
+        content={selectedLanguage.seo_description}
       />
       <link rel="canonical" href="https://filipeleonelbatista.vercel.app" />
       <meta
         name="author"
-        content={currentLanguageObject.seo_title}
+        content={selectedLanguage.seo_title}
       />
       <meta name="robots" content="index" />
 
       <meta
         itemProp="name"
-        content={currentLanguageObject.seo_title}
+        content={selectedLanguage.seo_title}
       />
       <meta
         itemProp="description"
-        content={currentLanguageObject.seo_description}
+        content={selectedLanguage.seo_description}
       />
       <meta itemProp="image" content="https://filipeleonelbatista.vercel.app/images/header.png" />
 
       <meta
         property="og:title"
-        content={currentLanguageObject.seo_title}
+        content={selectedLanguage.seo_title}
       />
       <meta
         property="og:description"
-        content={currentLanguageObject.seo_description}
+        content={selectedLanguage.seo_description}
       />
       <meta
         property="og:url"
@@ -53,18 +58,18 @@ export default function SEO() {
       />
       <meta
         property="og:site_name"
-        content={currentLanguageObject.seo_title}
+        content={selectedLanguage.seo_title}
       />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="https://filipeleonelbatista.vercel.app/images/header.png" />
 
       <meta
         name="twitter:title"
-        content={currentLanguageObject.seo_title}
+        content={selectedLanguage.seo_title}
       />
       <meta
         name="twitter:description"
-        content={currentLanguageObject.seo_description}
+        content={selectedLanguage.seo_description}
       />
       <meta
         name="twitter:url"
@@ -76,7 +81,7 @@ export default function SEO() {
       />
       <meta
         name="twitter:creator"
-        content={currentLanguageObject.seo_title}
+        content={selectedLanguage.seo_title}
       />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:image" content="https://filipeleonelbatista.vercel.app/images/header.png" />

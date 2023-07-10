@@ -1,12 +1,16 @@
 import BlockTitle from "components/block-title";
 import OtherCardProject from "components/other-card-projects";
 import { useI18n } from "hooks/useI18n";
-import React, { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Container } from "theme-ui";
 
 const OtherProjects = () => {
-  const { currentLanguageObject, currentLanguage } = useI18n()
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
 
   const FavoriteCarousel = {
     spaceBetween: 30,
@@ -40,7 +44,7 @@ const OtherProjects = () => {
   };
 
   let favoriteCourseData = {
-    "en": [
+    en: [
       {
         title: "BusSleep - Alarm to your locations",
         description:
@@ -112,7 +116,7 @@ const OtherProjects = () => {
         view_app_url: "https://parkjardinagem.com.br/",
       },
     ],
-    "pt-BR": [
+    pt: [
       {
         title: "BusSleep - Alarme para destinos",
         description:
@@ -186,16 +190,20 @@ const OtherProjects = () => {
     ]
   };
 
+
+
+  const selectedFavoriteCourseData = currentLanguage === 'pt' ? favoriteCourseData.pt : favoriteCourseData.en
+
   return (
     <Box as="section" id="outros-projetos" sx={styles.fevCourse}>
       <Container sx={styles.fevCourse.container}>
         <BlockTitle
           sx={styles.fevCourse.blockTitle}
-          tagline={currentLanguageObject.other_projects_title_section}
-          heading={currentLanguageObject.other_projects_description_section}
+          tagline={selectedLanguage.other_projects_title_section}
+          heading={selectedLanguage.other_projects_description_section}
         />
         <Swiper {...FavoriteCarousel} sx={styles.carousel}>
-          {favoriteCourseData[currentLanguage].map((course, index) => (
+          {selectedFavoriteCourseData.map((course, index) => (
             <SwiperSlide key={index}>
               <OtherCardProject
                 title={course.title}

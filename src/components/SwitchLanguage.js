@@ -9,8 +9,8 @@ export default function SwitchLanguage() {
         <input
           type="checkbox"
           onChange={(event) => {
-            setCurrentLanguage(event.target.checked ? "en" : "pt-BR")
-            localStorage.setItem("@language", event.target.checked ? "en" : "pt-BR")
+            setCurrentLanguage(event.target.checked ? "en" : "pt")
+            localStorage.setItem("@language", event.target.checked ? "en" : "pt")
           }}
           checked={currentLanguage === 'en'}
         />

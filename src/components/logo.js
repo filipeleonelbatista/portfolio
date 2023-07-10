@@ -2,9 +2,15 @@
 import { jsx, Image } from 'theme-ui';
 import { Link } from 'components/link';
 import { useI18n } from 'hooks/useI18n';
+import { useMemo } from 'react';
 
 export default function Logo() {
-  const { currentLanguageObject } = useI18n();
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
+  
   return (
     <Link
       path="/"
@@ -16,9 +22,9 @@ export default function Logo() {
       }}
     >
       <Image
-        src={currentLanguageObject.nav_logo}
-        alt={currentLanguageObject.nav_logo_alt}
-        title={currentLanguageObject.nav_logo_alt} />
+        src={selectedLanguage.nav_logo}
+        alt={selectedLanguage.nav_logo_alt}
+        title={selectedLanguage.nav_logo_alt} />
     </Link>
   );
 }

@@ -1,15 +1,19 @@
 import { Box, Container } from 'theme-ui';
-import React from 'react';
+import React, { useMemo } from 'react';
 import BlockTitle from 'components/block-title';
 import PopularCard from 'components/popular-card';
 import { FaFileDownload } from 'react-icons/fa';
 import { useI18n } from 'hooks/useI18n';
 
 const PopularCourse = () => {
-  const { currentLanguage, currentLanguageObject } = useI18n()
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
 
   const popularCourseData = {
-    "en": [
+    en: [
       {
         title:
           'Stefanini Group',
@@ -164,7 +168,7 @@ const PopularCourse = () => {
         ],
       },
     ],
-    "pt-BR": [
+    pt: [
       {
         title:
           'Stefanini Group',
@@ -321,15 +325,17 @@ const PopularCourse = () => {
     ]
   };
 
+
+  const selectedPopularCourseData = currentLanguage === 'pt' ? popularCourseData.pt : popularCourseData.en
   return (
     <Box as="section" id="xp" sx={styles.popularCourse}>
       <Container>
         <BlockTitle
           sx={styles.popularCourse.blockTitle}
           tagline=""
-          heading={currentLanguageObject.popular_course_title_section}
+          heading={selectedLanguage.popular_course_title_section}
         />
-        {popularCourseData[currentLanguage].map((course, index) => (
+        {selectedPopularCourseData.map((course, index) => (
           <Box sx={styles.popularCourse.col} key={index}>
             <PopularCard
               key={index}
@@ -345,11 +351,11 @@ const PopularCourse = () => {
         ))}
 
         <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'center', alignItems: 'center' }}>
-          <a href={currentLanguageObject.popular_course_download_url_cv} target="_blank" rel="noreferer noopener nofollow"
+          <a href={selectedLanguage.popular_course_download_url_cv} target="_blank" rel="noreferer noopener nofollow"
             style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', textDecoration: 'none', padding: '0.8rem 1.8rem', borderRadius: '0.8rem', color: '#FFF', backgroundColor: '#0063c6', transition: '0.2s', "&:hover": { backgroundColor: '#82b4eb' } }}
           >
             <FaFileDownload size={24} style={{ marginRight: '1.2rem' }} />
-            {currentLanguageObject.popular_course_button_text}
+            {selectedLanguage.popular_course_button_text}
           </a>
         </div>
       </Container>

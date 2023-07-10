@@ -1,12 +1,16 @@
 import { useI18n } from 'hooks/useI18n';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
     FaWhatsapp
 } from 'react-icons/fa';
 import { sendDiscordNotification } from 'services/discord-notify';
 
 export default function Floating() {
-    const { currentLanguage, currentLanguageObject } = useI18n();
+    const { currentLanguage, languagesObject } = useI18n();
+  
+    const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
 
     const [whatsNome, setWhatsNome] = useState("");
     const [whatsFone, setWhatsFone] = useState("");
@@ -24,7 +28,7 @@ export default function Floating() {
 
     async function handleSubmitForm() {
         if (whatsNome === "") {
-            setErrorMsg(currentLanguageObject.floating_erro_message_name);
+            setErrorMsg(selectedLanguage.floating_erro_message_name);
 
             document.getElementById("errorMsg").classList.toggle("hidden");
             setTimeout(() => {
@@ -34,7 +38,7 @@ export default function Floating() {
             return;
         }
         if (whatsFone === "") {
-            setErrorMsg(currentLanguageObject.floating_erro_message_phone);
+            setErrorMsg(selectedLanguage.floating_erro_message_phone);
 
             document.getElementById("errorMsg").classList.toggle("hidden");
             setTimeout(() => {
@@ -45,7 +49,7 @@ export default function Floating() {
         }
 
         if (whatsFone.length < 15) {
-            setErrorMsg(currentLanguageObject.floating_erro_message_phone_length);
+            setErrorMsg(selectedLanguage.floating_erro_message_phone_length);
 
             document.getElementById("errorMsg").classList.toggle("hidden");
             setTimeout(() => {
@@ -100,11 +104,11 @@ export default function Floating() {
                 <FaWhatsapp size={32} color="#FFF" />
             </button>
             <div id="call-to-action" className="call-to-action hidden">
-                {currentLanguageObject.floating_ballon_text}
+                {selectedLanguage.floating_ballon_text}
             </div>
             <div id="whats-form" className="whats-form hidden">
                 <div className="form-header">
-                    {currentLanguageObject.floating_header_form_text}
+                    {selectedLanguage.floating_header_form_text}
                 </div>
                 <div className="form-body">
                     <div id="errorMsg" className="error hidden">
@@ -112,14 +116,14 @@ export default function Floating() {
                     </div>
                     <div className="form-input-group">
                         <label className="whats-form-label" htmlFor="whats-name">
-                            {currentLanguageObject.floating_field_label_name}
+                            {selectedLanguage.floating_field_label_name}
                         </label>
                         <input id="whats-name" value={whatsNome} onChange={(e) => { setWhatsNome(e.target.value) }} className="whats-form-input" />
                     </div>
 
                     <div className="form-input-group">
                         <label className="whats-form-label" htmlFor="whats-phone">
-                            {currentLanguageObject.floating_field_label_phone}
+                            {selectedLanguage.floating_field_label_phone}
                         </label>
                         <input
                             id="whats-phone"
@@ -132,11 +136,11 @@ export default function Floating() {
                     </div>
 
                     <button onClick={handleSubmitForm} className="whats-form-button">
-                        {currentLanguageObject.floating_form_button_text}
+                        {selectedLanguage.floating_form_button_text}
                     </button>
                 </div>
                 <div className="form-footer">
-                    {currentLanguageObject.floating_span_text}
+                    {selectedLanguage.floating_span_text}
                 </div>
             </div>
         </div>

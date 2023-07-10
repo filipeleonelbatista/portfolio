@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { useI18n } from "hooks/useI18n";
+import { useMemo } from "react";
 import {
   FaEnvelope, FaInstagram,
   FaLinkedinIn
@@ -7,7 +8,12 @@ import {
 import { Container, Divider, jsx } from "theme-ui";
 
 export default function Footer() {
-  const { currentLanguageObject } = useI18n()
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
+
   return (
     <footer sx={styles.footer}>
       <Divider sx={styles.footer.divider} />
@@ -83,9 +89,9 @@ export default function Footer() {
         </div>
 
         <p style={{ textAlign: "center" }}>
-          {`${new Date().getFullYear()} © ${currentLanguageObject.footer_copyright}.`}
+          {`${new Date().getFullYear()} © ${selectedLanguage.footer_copyright}.`}
           <br />
-          {currentLanguageObject.footer_subtitle}
+          {selectedLanguage.footer_subtitle}
         </p>
       </Container>
     </footer>

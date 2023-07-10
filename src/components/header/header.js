@@ -3,7 +3,7 @@ import Logo from "components/logo";
 import SwitchLanguage from "components/SwitchLanguage";
 import { DrawerProvider } from "contexts/drawer/drawer.provider";
 import { useI18n } from "hooks/useI18n";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   FaEnvelope, FaInstagram,
   FaLinkedinIn
@@ -16,7 +16,11 @@ import Link from 'next/link'
 import customStyles from 'styles/components/header.module.css';
 
 export default function Header({ className }) {
-  const { currentLanguageObject, currentLanguage } = useI18n();
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
 
   const [menuItems, setMenuItems] = useState([])
 
@@ -24,23 +28,23 @@ export default function Header({ className }) {
     setMenuItems([
       {
         path: '/#banner',
-        label: currentLanguageObject.nav_home,
+        label: selectedLanguage.nav_home,
       },
       {
         path: '/#sobre',
-        label: currentLanguageObject.nav_about,
+        label: selectedLanguage.nav_about,
       },
       {
         path: '/#projetos',
-        label: currentLanguageObject.nav_projects,
+        label: selectedLanguage.nav_projects,
       },
       {
         path: '/#xp',
-        label: currentLanguageObject.nav_experiences,
+        label: selectedLanguage.nav_experiences,
       },
       {
         path: '/challenges',
-        label: currentLanguageObject.nav_challenges,
+        label: selectedLanguage.nav_challenges,
       },
     ])
   }, [currentLanguage])

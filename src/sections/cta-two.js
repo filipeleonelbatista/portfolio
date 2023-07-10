@@ -1,12 +1,17 @@
-import { Box, Text, Flex, Image, Container } from 'theme-ui';
-import React from 'react';
-import { Link } from 'components/link';
-import BlockTitle from 'components/block-title';
 import ctaTwoImage from 'assets/free-course.png';
+import BlockTitle from 'components/block-title';
+import { Link } from 'components/link';
 import { useI18n } from 'hooks/useI18n';
+import { useMemo } from 'react';
+import { Box, Container, Flex, Image, Text } from 'theme-ui';
 
 const CtaTwo = () => {
-  const { currentLanguageObject } = useI18n()
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
+
   return (
     <Box as="section" id="sobre" sx={styles.ctaTwo}>
       <Container>
@@ -22,15 +27,15 @@ const CtaTwo = () => {
             <Box sx={styles.ctaTwo.content}>
               <BlockTitle
                 sx={styles.ctaTwo.blockTitle}
-                tagline={currentLanguageObject.cta_two_title_section}
-                heading={currentLanguageObject.cta_two_title}
+                tagline={selectedLanguage.cta_two_title_section}
+                heading={selectedLanguage.cta_two_title}
               />
               <Text as="p" sx={styles.ctaTwo.text}>
-                {currentLanguageObject.cta_two_description}
+                {selectedLanguage.cta_two_description}
               </Text>
               <Link
                 path="#projetos"
-                label={currentLanguageObject.cta_two_button_text}
+                label={selectedLanguage.cta_two_button_text}
                 variant="buttons.primary"
               />
             </Box>

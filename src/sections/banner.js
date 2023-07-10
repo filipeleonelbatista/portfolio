@@ -4,14 +4,18 @@ import BannerPattern from 'assets/banner-pattern.png';
 import BannerTextLine from 'assets/banner-text-line.png';
 import PartnerImage from 'assets/brands.png';
 import { useI18n } from 'hooks/useI18n';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { FaFileDownload } from 'react-icons/fa';
 import {
   Box, Container, Flex, Heading, Image, Text
 } from 'theme-ui';
 
 const Banner = () => {
-  const { currentLanguageObject } = useI18n();
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
 
   return (
     <Box as="section" id="banner" sx={styles.banner}>
@@ -20,21 +24,21 @@ const Banner = () => {
           <Box sx={styles.banner.col}>
             <Box sx={styles.banner.content}>
               <Heading as="h3">
-                {currentLanguageObject.banner_title}
+                {selectedLanguage.banner_title}
               </Heading>
-              <Text as="div" dangerouslySetInnerHTML={{ __html: currentLanguageObject.banner_subtitle }}>
+              <Text as="div" dangerouslySetInnerHTML={{ __html: selectedLanguage.banner_subtitle }}>
 
               </Text>
               <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'start', alignItems: 'center', marginTop: '0.8rem', marginBottom: '0.8rem' }}>
-                <a href={currentLanguageObject.banner_download_url_cv} target="_blank" rel="noreferer noopener nofollow"
+                <a href={selectedLanguage.banner_download_url_cv} target="_blank" rel="noreferer noopener nofollow"
                   style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', textDecoration: 'none', padding: '0.8rem 1.8rem', borderRadius: '0.8rem', color: '#FFF', backgroundColor: '#0063c6', transition: '0.2s', "&:hover": { backgroundColor: '#82b4eb' } }}
                 >
                   <FaFileDownload size={24} style={{ marginRight: '1.2rem' }} />
-                  {currentLanguageObject.banner_button_text}
+                  {selectedLanguage.banner_button_text}
                 </a>
               </div>
               <Box sx={styles.banner.partner}>
-                <span>{currentLanguageObject.banner_job_title}</span>
+                <span>{selectedLanguage.banner_job_title}</span>
                 <Image src={PartnerImage} width="450" alt="banner image" />
               </Box>
             </Box>

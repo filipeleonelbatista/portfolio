@@ -6,10 +6,10 @@ import LogoDarkEn from 'assets/logo_en.svg';
 export const I18nContext = createContext({});
 
 export function I18nContextProvider(props) {
-  const [currentLanguage, setCurrentLanguage] = useState("pt-BR");
+  const [currentLanguage, setCurrentLanguage] = useState("pt");
 
   let languagesObject = {
-    "en": {
+    en: {
       links_title: "Filipe Batista",
       links_subtitle_title: "Software Developer I",
       links_second_subtitle: "React JS | React Native | Node JS",
@@ -78,7 +78,7 @@ export function I18nContextProvider(props) {
       challenges_modal_figma_button_text: "Get Copy On Figma",
       challenges_modal_github_button_text: "See Github Page",
     },
-    "pt-BR": {
+    pt: {
       links_title: "Filipe Batista",
       links_subtitle_title: "Analista de Sistemas PL",
       links_second_subtitle: "React JS | React Native | Node JS",
@@ -154,8 +154,8 @@ export function I18nContextProvider(props) {
     if (selectedLanguage) {
       setCurrentLanguage(selectedLanguage)
     } else {
-      setCurrentLanguage(navigator.language)
-      localStorage.setItem("@language", navigator.language)
+      setCurrentLanguage(navigator.language.includes('pt') ? 'pt' : 'en')
+      localStorage.setItem("@language", navigator.language.includes('pt') ? 'pt' : 'en')
     }
   }, [])
 
@@ -163,7 +163,7 @@ export function I18nContextProvider(props) {
     <I18nContext.Provider value={{
       currentLanguage,
       setCurrentLanguage,
-      currentLanguageObject: languagesObject[currentLanguage]
+      languagesObject,
     }}>
       {props.children}
     </I18nContext.Provider>
