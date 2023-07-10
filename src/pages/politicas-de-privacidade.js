@@ -3,7 +3,6 @@ import Layout from "components/layout";
 import SEO from "components/seo";
 import { StickyProvider } from "contexts/app/app.provider";
 import { VideoProvider } from "contexts/video/video.provider";
-import Banner from "sections/banner";
 import theme from "theme";
 import { ThemeProvider } from "theme-ui";
 

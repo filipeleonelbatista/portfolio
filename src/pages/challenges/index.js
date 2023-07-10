@@ -12,7 +12,7 @@ import BannerPattern from 'assets/banner-pattern.png';
 import BannerTextLine from 'assets/banner-text-line.png';
 import ModalComponent from "components/ModalComponent";
 import { useI18n } from 'hooks/useI18n';
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { FaFigma, FaGithub } from "react-icons/fa";
 import ChallengeList from "sections/challenge-list";
 import {
@@ -20,7 +20,12 @@ import {
 } from 'theme-ui';
 
 export default function PoliticasDePrivacidadePage() {
-  const { currentLanguageObject, currentLanguage } = useI18n();
+  const { currentLanguage, languagesObject } = useI18n();
+
+  const selectedLanguage = useMemo(() => {
+    return currentLanguage === 'pt' ? languagesObject.pt : languagesObject.en
+  }, [currentLanguage])
+
   const [selectedProject, setSelectedProject] = useState()
   const [open, setOpen] = useState(false);
 
@@ -31,7 +36,7 @@ export default function PoliticasDePrivacidadePage() {
   ];
 
   const challengeList = {
-    "en": [
+    en: [
       {
         title: 'GoWatch',
         description: 'The Application must be developed respecting the layout. Initial screen with lists of cards with the covers of the movie with a footer menu to move to the other screens. Screen with a search field to list movies with the searched words, displaying as a result summarized cards of each movie and screen where the highlighted image of the movie will be, as well as all the information related to it.',
@@ -78,7 +83,7 @@ export default function PoliticasDePrivacidadePage() {
         category_id: 1,
       },
     ],
-    "pt-BR": [
+    pt: [
       {
         title: 'GoWatch',
         description: 'O Aplicativo deverá ser desenvolvido respeitando o layout. Tela inicial com listas de cards com as capas do filme com menu de rodapé para passar para as demais telas. Tela com campo de pesquisa para listar filmes com as palavras pesquisadas exibindo como resultado cards resumidos de cada filme e tela onde estará a imagem destacada do filme bem como todas as informações relativas do mesmo.',
@@ -126,6 +131,10 @@ export default function PoliticasDePrivacidadePage() {
       },
     ]
   }
+
+  const selectedChallengeList = useMemo(() => {
+    return currentLanguage === 'pt' ? challengeList.pt : challengeList.en
+  }, [currentLanguage])
 
   const colors = {
     "Easy": "#28a745",
@@ -263,7 +272,7 @@ export default function PoliticasDePrivacidadePage() {
                         }}
                       >
                         <FaGithub size={24} style={{ marginRight: '0.4rem' }} />
-                        {currentLanguageObject.challenges_modal_github_button_text}
+                        {selectedLanguage.challenges_modal_github_button_text}
                       </a>
                     )
                   }
@@ -290,7 +299,7 @@ export default function PoliticasDePrivacidadePage() {
                         }}
                       >
                         <FaFigma size={24} style={{ marginRight: '0.4rem' }} />
-                        {currentLanguageObject.challenges_modal_figma_button_text}
+                        {selectedLanguage.challenges_modal_figma_button_text}
                       </a>
                     )
                   }
@@ -310,9 +319,9 @@ export default function PoliticasDePrivacidadePage() {
                     <Box sx={{ ...styles.banner.col, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                       <Box sx={{ ...styles.banner.content, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <Heading as="h3">
-                          {currentLanguageObject.challenges_header_title}
+                          {selectedLanguage.challenges_header_title}
                         </Heading>
-                        <Text sx={{ mt: 2 }} as="div" dangerouslySetInnerHTML={{ __html: currentLanguageObject.challenges_header_subtitle }}>
+                        <Text sx={{ mt: 2 }} as="div" dangerouslySetInnerHTML={{ __html: selectedLanguage.challenges_header_subtitle }}>
 
                         </Text>
                         <div style={{ display: 'flex', flexDirection: 'row', width: '100%', justifyContent: 'start', alignItems: 'center', marginTop: '0.8rem', marginBottom: '0.8rem' }}>
@@ -331,7 +340,7 @@ export default function PoliticasDePrivacidadePage() {
                               "&:hover": { backgroundColor: '#82b4eb' }
                             }}
                           >
-                            {currentLanguageObject.challenges_button_text}
+                            {selectedLanguage.challenges_button_text}
                           </a>
                         </div>
                       </Box>
@@ -364,9 +373,9 @@ export default function PoliticasDePrivacidadePage() {
                     padding: "1.4rem",
                   }}
                 >
-                  <h2>{currentLanguageObject.challenges_list_section_title}</h2>
+                  <h2>{selectedLanguage.challenges_list_section_title}</h2>
 
-                  <ChallengeList list={challengeList[currentLanguage]} setSelectedProject={(project) => {
+                  <ChallengeList list={selectedChallengeList} setSelectedProject={(project) => {
                     setOpen(true)
                     setSelectedProject(project)
                   }} />
