@@ -38,6 +38,15 @@ export default function PoliticasDePrivacidadePage() {
   const challengeList = {
     en: [
       {
+        title: 'MY CHAT GPT',
+        description: "The Application must be developed layout with integration with the AI. Use the Chat GPT layout itself as a model and I suggest integrating with the Open AI api. There are hubs like Vercel's AI api that can be helpful. The objective is to create a front end where the user can access the chat with at least 3 predefined initial chat options and that the context of the conversation is always maintained. In the options you offer the user, characters must be preloaded in each option. Talk to Spongebob, for example. It will be necessary to write a briefing of how the chat should behave when answering the questions. Remember that using the Open AI api you have 3 responsibilities in the chat, the system, the assistant, which is the robot and the user, which is the user.",
+        dificult: 'Moderado',
+        featured_image: './images/challenges/6.png',
+        github_repo_url: '',
+        figma_url: '',
+        category_id: 3,
+      },
+      {
         title: 'GoWatch',
         description: 'The Application must be developed respecting the layout. Initial screen with lists of cards with the covers of the movie with a footer menu to move to the other screens. Screen with a search field to list movies with the searched words, displaying as a result summarized cards of each movie and screen where the highlighted image of the movie will be, as well as all the information related to it.',
         dificult: 'Moderate',
@@ -84,6 +93,15 @@ export default function PoliticasDePrivacidadePage() {
       },
     ],
     pt: [
+      {
+        title: 'MEU CHAT GPT',
+        description: 'O Aplicativo deverá ser desenvolvido layout com integração com o IA. Use como modelo o proprio layout do Chat GPT e sugiro integrar com a api da Open AI. Existem hubs como a api de IA da Vercel que podem ser úteis. O objetivo é criar um front end onde o usuario possa acessar o chat com pelo menos 3 opções pré definidas de chat inicial e que o contexto da conversa seja sempre mantido. Nas opções que você oferecer ao usuário, devem ser precarregados personagens em cada opção. Fale com o bob espoja, por exemplo. Será necedssário escrever um briefing de como o chat deve se comportar ao responder as perguntas. Lembre-se que usando a api da Open AI você tem 3 responsabilidades no chat, o system, o assistant, que é o robo e o user que é o usuário.',
+        dificult: 'Moderado',
+        featured_image: './images/challenges/6.png',
+        github_repo_url: '',
+        figma_url: '',
+        category_id: 3,
+      },
       {
         title: 'GoWatch',
         description: 'O Aplicativo deverá ser desenvolvido respeitando o layout. Tela inicial com listas de cards com as capas do filme com menu de rodapé para passar para as demais telas. Tela com campo de pesquisa para listar filmes com as palavras pesquisadas exibindo como resultado cards resumidos de cada filme e tela onde estará a imagem destacada do filme bem como todas as informações relativas do mesmo.',
