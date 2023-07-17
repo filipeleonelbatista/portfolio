@@ -27,7 +27,7 @@ import {
   IoShareSocialOutline
 } from "react-icons/io5";
 import QRCode from "react-qr-code";
-import profilePic from "../assets/banner-image-1.png";
+import profilePic from "../assets/pfp.png";
 import pixLogo from "../assets/pix_logo.png";
 import styles from "../styles/pages/Links.module.css";
 
