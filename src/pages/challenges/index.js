@@ -44,7 +44,7 @@ export default function PoliticasDePrivacidadePage() {
         featured_image: './images/challenges/6.png',
         github_repo_url: '',
         figma_url: '',
-        category_id: 3,
+        category_id: 1,
       },
       {
         title: 'GoWatch',
