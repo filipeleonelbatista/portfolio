@@ -40,7 +40,7 @@ export default function PoliticasDePrivacidadePage() {
       {
         title: 'MY CHAT GPT',
         description: "The Application must be developed layout with integration with the AI. Use the Chat GPT layout itself as a model and I suggest integrating with the Open AI api. There are hubs like Vercel's AI api that can be helpful. The objective is to create a front end where the user can access the chat with at least 3 predefined initial chat options and that the context of the conversation is always maintained. In the options you offer the user, characters must be preloaded in each option. Talk to Spongebob, for example. It will be necessary to write a briefing of how the chat should behave when answering the questions. Remember that using the Open AI api you have 3 responsibilities in the chat, the system, the assistant, which is the robot and the user, which is the user.",
-        dificult: 'Moderado',
+        dificult: 'Moderate',
         featured_image: './images/challenges/6.png',
         github_repo_url: '',
         figma_url: '',
