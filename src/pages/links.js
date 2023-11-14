@@ -2,20 +2,18 @@ import SEO from "components/seo";
 import SwitchLanguage from "components/SwitchLanguage";
 import { useI18n } from "hooks/useI18n";
 import Head from "next/head";
+import { payload } from "pix-payload";
+
 import { useMemo, useState } from "react";
 import {
   FaArrowLeft,
-  FaBus,
   FaCode,
-  FaFileArchive,
   FaGithub,
   FaGlobeAmericas,
   FaGooglePlay,
   FaInstagram,
   FaLinkedin,
-  FaPaw,
   FaRegFileAlt,
-  FaRocket,
   FaWallet,
   FaWhatsapp,
   FaYoutube,
@@ -224,8 +222,41 @@ export default function Links() {
     url: "https://filipeleonelbatista.vercel.app",
   };
 
+  // const [pixKey, setPixKey] = useState("");
   const pixKey =
     "00020126580014BR.GOV.BCB.PIX013649b3aa64-47eb-47a3-b439-b765a4d0f22c5204000053039865802BR5925FILIPE DE LEONEL BATISTA 6009SAO PAULO61080540900062250521hGjPosyoJ4dswj614vgvd63046514";
+
+  const [pixValue, setPixValue] = useState();
+
+  function formatarMoeda(e) {
+    let value = e;
+    value = value.replace(/\D/g, "");
+    value = value.replace(/(\d)(\d{2})$/, "$1,$2");
+    value = value.replace(/(?=(\d{3})+(\D))\B/g, ".");
+    return value;
+  }
+
+  const handleGeneratePix = () => {
+    if (pixValue == "") return alert("Digite um valor para gerar o pix!");
+    const comparativeValue = parseFloat(
+      pixValue.replaceAll(".", "").replace(",", ".")
+    );
+
+    if (!(comparativeValue >= 1 && comparativeValue < 1000000))
+      return alert(
+        "O Valor não está dentro do previsto, por favor corrija isso."
+      );
+
+    const QRCode = payload({
+      name: "FILIPE DE LEONEL BATISTA", // Receptor name
+      key: "f1bfe5be-67eb-42ad-8928-f71e02e1c99b",
+      amount: comparativeValue, // Amount
+      city: "SAO PAULO", // The city name
+      transactionId: "PAGAMENTO PELO LINK", // Payment identifier
+    });
+
+    setPixKey(QRCode);
+  };
 
   const handleCopyPix = () => {
     navigator.clipboard.writeText(pixKey);
@@ -306,6 +337,182 @@ export default function Links() {
               {selectedLanguage.links_pix_button_copy_text}
             </button>
           </div>
+
+          {/* {pixKey.length > 0 ? (
+            <>
+              <button
+                onClick={() => setShowPix(false)}
+                style={{ position: "absolute", top: 15, left: 15 }}
+                className={styles.actionTransparent}
+              >
+                <FaArrowLeft size={18} />
+              </button>
+              <div className={styles.aboutContainer}>
+                <div className={styles.aboutInfo}>
+                  <h3 className={styles.title}>
+                    {selectedLanguage.links_title}
+                  </h3>
+                  <p className={styles.subtitle}>
+                    {selectedLanguage.links_subtitle_title}
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className={styles.pixContainer}
+                style={{ alignItems: "center" }}
+              >
+                <div className={styles.pixContainerImage}>
+                  <img
+                    className={styles.pixImage}
+                    src={pixLogo}
+                    alt={selectedLanguage.pix}
+                  />
+                </div>
+                <div className={styles.pixContainerImage}>
+                  <QRCode value={pixKey} />
+                </div>
+                <div
+                  className={styles.pixText}
+                  dangerouslySetInnerHTML={{
+                    __html: selectedLanguage.links_pix_description,
+                  }}
+                ></div>
+
+                <button
+                  onClick={handleCopyPix}
+                  className={styles.action}
+                  style={{
+                    width: "100%",
+                    margin: "1.6rem 0 0 0",
+                    fontSize: "small",
+                  }}
+                >
+                  <IoCopyOutline />
+                  {selectedLanguage.links_pix_button_copy_text}
+                </button>
+                <button
+                  onClick={() => setPixKey("")}
+                  className={styles.action}
+                  style={{
+                    width: "100%",
+                    margin: "0.2rem 0 0 0",
+                    fontSize: "small",
+                    backgroundColor: "#dc2626",
+                    color: "white",
+                  }}
+                >
+                  <FaArrowLeft />
+                  {selectedLanguage.links_pix_button_cancel_text}
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <button
+                onClick={() => setShowPix(false)}
+                style={{ position: "absolute", top: 15, left: 15 }}
+                className={styles.actionTransparent}
+              >
+                <FaArrowLeft size={18} />
+              </button>
+              <div className={styles.aboutContainer}>
+                <div className={styles.aboutInfo}>
+                  <h3 className={styles.title}>
+                    {selectedLanguage.links_title}
+                  </h3>
+                  <p className={styles.subtitle}>
+                    {selectedLanguage.links_subtitle_title}
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className={styles.pixContainer}
+                style={{ alignItems: "center" }}
+              >
+                <div className={styles.pixContainerImage}>
+                  <QRCode value={pixKey} />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "16px",
+                    width: "100%",
+                  }}
+                >
+                  <label
+                    style={{
+                      color: "white",
+                    }}
+                    htmlFor="pixValue"
+                  >
+                    {selectedLanguage.links_input_label}
+                  </label>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      position: "relative",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        left: 8,
+                        fontSize: 20,
+                        position: "absolute",
+                        opacity: 0.7,
+                      }}
+                    >
+                      R$
+                    </span>
+                    <input
+                      style={{
+                        width: "100%",
+                        padding: 8,
+                        borderRadius: 8,
+                        height: 48,
+                        fontWeight: "bold",
+                        fontSize: 18,
+                        paddingLeft: 36,
+                      }}
+                      placeholder="1,00"
+                      id="pixValue"
+                      value={pixValue}
+                      onChange={(e) => {
+                        setPixValue(formatarMoeda(e.target.value));
+                      }}
+                      className="whats-form-input"
+                    />
+                  </div>
+
+                  <p
+                    style={{
+                      color: "white",
+                      fontSize: 12,
+                    }}
+                  >
+                    {selectedLanguage.links_input_helper_text}
+                  </p>
+                </div>
+
+                <button
+                  onClick={handleGeneratePix}
+                  className={styles.action}
+                  style={{
+                    width: "100%",
+                    margin: "1.6rem 0 0 0",
+                    fontSize: "small",
+                  }}
+                >
+                  <IoQrCodeOutline />
+                  {selectedLanguage.links_generate_pix}
+                </button>
+              </div>
+            </>
+          )} */}
         </div>
       ) : (
         <div className={styles.content}>

@@ -6145,6 +6145,11 @@ pinkie@^2.0.0:
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha512-MnUuEycAemtSaeFSjXKW/aroV7akBbY+Sv+RkyqFjgAe73F+MR0TBWKBRDkmfWq/HiFmdavfZ1G7h4SPZXaCSg==
 
+pix-payload@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/pix-payload/-/pix-payload-1.0.4.tgz#625bc77741d1905562dd385317d393419d444656"
+  integrity sha512-nXaX7EDIO51QgrfNiST0MXJ9rqKF7Y9PFZYsjV8gi+wYk8bEYVlHgUJnkFAqX4c8qVEOac22SPE9a4v1ezOtTQ==
+
 pkg-dir@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-3.0.0.tgz#2749020f239ed990881b1f71210d51eb6523bea3"

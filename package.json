@@ -18,6 +18,7 @@
     "next": "10.0.1",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.2",
+    "pix-payload": "^1.0.4",
     "rc-drawer": "^4.1.0",
     "react": "16.13.1",
     "react-custom-scrollbars": "^4.2.1",
