@@ -1,15 +1,6 @@
-import { useI18n } from "hooks/useI18n";
-import React, { useMemo } from "react";
-import { FaGlobe } from "react-icons/fa";
 import { Box, Heading, Image, Text } from "theme-ui";
 
-const ChallengeCard = ({ project }) => {
-  const { currentLanguage, languagesObject } = useI18n();
-
-  const selectedLanguage = useMemo(() => {
-    return currentLanguage === "pt" ? languagesObject.pt : languagesObject.en;
-  }, [currentLanguage]);
-
+const ChallengeModal = ({ project }) => {
   const colors = {
     Iniciante: "#28a745",
     Intermediário: "#ffc107",
@@ -31,14 +22,14 @@ const ChallengeCard = ({ project }) => {
       >
         <Box
           sx={{
-            backgroundColor: colors[project.level],
+            backgroundColor: colors[project?.level],
             padding: "4px 16px",
-            borderRadius: 16,
+            borderRadius: 8,
             height: "fit-content",
             color: "white",
           }}
         >
-          {project.level}
+          {project?.level}
         </Box>
 
         <Box
@@ -48,13 +39,13 @@ const ChallengeCard = ({ project }) => {
             gap: 2,
           }}
         >
-          {project.techs.slice(0, 2).map((item) => (
+          {project?.techs.slice(0, 2).map((item) => (
             <Box
-              key={`${item}-${project.id}`}
+              key={`${item}-${project?.id}`}
               sx={{
                 backgroundColor: "#3f3f46",
                 padding: "4px 16px",
-                borderRadius: 16,
+                borderRadius: 8,
                 height: "fit-content",
                 color: "white",
               }}
@@ -63,7 +54,7 @@ const ChallengeCard = ({ project }) => {
             </Box>
           ))}
 
-          {project.techs.length >= 2 && (
+          {project?.techs.length >= 2 && (
             <Box
               sx={{
                 backgroundColor: "#3f3f46",
@@ -72,60 +63,92 @@ const ChallengeCard = ({ project }) => {
                 color: "white",
               }}
             >
-              + {project.techs.length - 2}
+              + {project?.techs.length - 2}
             </Box>
           )}
         </Box>
       </Box>
       <Box sx={styles.fevCard.image}>
-        <Image src={project.background} alt="content image" />
+        <Image src={project?.background} alt="content image" />
       </Box>
       <Box sx={styles.fevCard.content}>
-        <Heading as="h3">{project.name}</Heading>
+        <Heading as="h3">{project?.name}</Heading>
+        <Box
+          as="a"
+          href={`https://github.com/${project.username}`}
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            gap: 2,
+            alignItems: "center",
+            margin: "16px 0",
+          }}
+        >
+          <Image
+            src={`https://github.com/${project.username}.png`}
+            sx={{
+              width: 32,
+              height: 32,
+              borderRadius: "50%",
+            }}
+          />
+          <Text as="p" sx={{ textAlign: "left" }}>
+            {project?.username}
+          </Text>
+        </Box>
+
         <Text as="p" sx={{ textAlign: "left" }}>
-          {project.description.substr(0, 150) + "(...)"}
+          {project?.description}
         </Text>
+        <a
+          href={project?.githubRepository}
+          target="_blank"
+          rel="noreferer noopener nofollow"
+          style={{
+            fontSize: 14,
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            textDecoration: "none",
+            padding: "0.4rem",
+            margin: "0.8rem",
+            borderRadius: "0.4rem",
+            color: "#FFF",
+            backgroundColor: "#0063c6",
+            transition: "0.2s",
+            "&:hover": { backgroundColor: "#82b4eb" },
+          }}
+        >
+          <b>Iniciar o desafio</b>
+        </a>
       </Box>
     </Box>
   );
 };
 
-export default ChallengeCard;
+export default ChallengeModal;
 
 const styles = {
   fevCard: {
     position: "relative",
-    backgroundColor: "#fff",
-    transition: "500ms",
-    border: "1px solid #F3F4F5",
     display: "flex",
     flexDirection: "column",
-    borderBottomLeftRadius: "5px",
-    borderBottomRightRadius: "5px",
-    maxWidth: 300,
     width: "100%",
-    height: 380,
-    "&:hover": {
-      boxShadow: "0px 15px 50px rgba(69, 88, 157, 0.1)",
-    },
+    maxHeigth: "80%",
+    overflow: "auto",
     image: {
       position: "relative",
       borderTopLeftRadius: "5px",
       borderTopRightRadius: "5px",
       overflow: "hidden",
+      height: 250,
       width: "100%",
-      height: 200,
       display: "flex",
       img: {
         display: "block",
         width: "100%",
         objectFit: "cover",
-      },
-      ".videoBtn": {
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
       },
     },
     content: {
