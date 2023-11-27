@@ -13,16 +13,6 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENTID,
 };
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDlSDvVRBTuEBULLJ7F1Zny9uEKvm34U8I",
-//   authDomain: "devchallenge-16edf.firebaseapp.com",
-//   projectId: "devchallenge-16edf",
-//   storageBucket: "devchallenge-16edf.appspot.com",
-//   messagingSenderId: "457450543508",
-//   appId: "1:457450543508:web:6afbe9416f72e9830b5781",
-//   measurementId: "G-KKVZ30J836"
-// };
-
 const app = initializeApp(firebaseConfig);
 export const authentication = getAuth(app);
 export const db = getFirestore(app);
