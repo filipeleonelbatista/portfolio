@@ -28,6 +28,7 @@ import QRCode from "react-qr-code";
 import profilePic from "../assets/pfp.png";
 import pixLogo from "../assets/pix_logo.png";
 import styles from "../styles/pages/Links.module.css";
+import LastVideo from "components/last-video";
 
 export default function Links() {
   const { currentLanguage, languagesObject } = useI18n();
@@ -595,16 +596,7 @@ export default function Links() {
             </a>
           </div>
           <div className={styles.divider}></div>
-          <iframe
-            className={styles.videoFrame}
-            src="https://www.youtube.com/embed/7VyGh_i29cE"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            style={{
-              border: 0,
-            }}
-          ></iframe>
+          <LastVideo />
           <div className={styles.divider}></div>
           <div className={styles.linksContainer}>
             <h4 className={styles.title} style={{ textTransform: "uppercase" }}>

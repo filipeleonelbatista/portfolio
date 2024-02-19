@@ -34,7 +34,8 @@
     "react-waypoint": "^9.0.3",
     "swiper": "^6.3.5",
     "theme-ui": "^0.3.1",
-    "typeface-dm-sans": "^1.1.13"
+    "typeface-dm-sans": "^1.1.13",
+    "xml-js": "^1.6.11"
   },
   "devDependencies": {
     "imagemin-mozjpeg": "^9.0.0",
