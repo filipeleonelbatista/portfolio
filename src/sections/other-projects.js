@@ -50,7 +50,7 @@ const OtherProjects = () => {
         description:
           "Manage your family payments with this eazy tool.",
         image: `/images/other-projects/8.png`,
-        view_app_url: "https://play.google.com/store/apps/details?id=com.finances",
+        view_app_url: "https://minhasfinancas.vercel.app/",
       },
       {
         title: "BusSleep - Alarm to your locations",
@@ -122,7 +122,7 @@ const OtherProjects = () => {
         description:
           "Administre os gastos de sua família de forma fácil.",
         image: `/images/other-projects/8.png`,
-        view_app_url: "https://play.google.com/store/apps/details?id=com.finances",
+        view_app_url: "https://minhasfinancas.vercel.app/",
       },
       {
         title: "BusSleep - Alarme para destinos",
