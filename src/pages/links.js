@@ -9,6 +9,7 @@ import {
   FaArrowLeft,
   FaCode,
   FaGithub,
+  FaGlobeAmericas,
   FaDiscord,
   FaGooglePlay,
   FaInstagram,
