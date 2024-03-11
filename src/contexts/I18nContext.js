@@ -15,7 +15,7 @@ export function I18nContextProvider(props) {
       links_input_helper_text:
         "Enter a value between BRL $1.00 and BRL $999.999.",
       links_title: "Filipe Batista",
-      links_subtitle_title: "Software Developer I",
+      links_subtitle_title: "Software Developer II",
       links_second_subtitle: "React JS | React Native | Node JS",
       links_pix: "Payment Instant Brazilian Method PIX",
       links_pix_description:
@@ -92,7 +92,7 @@ export function I18nContextProvider(props) {
       links_input_label: "Digite um valor para gerar o QRCode do Pix.",
       links_input_helper_text: "Digite um valor Entre 1,00 R$ e 999,999 R$.",
       links_title: "Filipe Batista",
-      links_subtitle_title: "Analista de Sistemas PL",
+      links_subtitle_title: "Desenvolvedor de Software II",
       links_second_subtitle: "React JS | React Native | Node JS",
       links_pix: "Pix Banco central do Brasil",
       links_pix_description:

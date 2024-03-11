@@ -18,6 +18,10 @@ import {
   FaWallet,
   FaWhatsapp,
   FaYoutube,
+  FaTwitch,
+  FaRocket,
+  FaDonate,
+  FaSignInAlt,
 } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import {
@@ -47,6 +51,20 @@ export default function Links() {
         donwload: true,
         target: "",
       },
+      {
+        href: "https://livepix.gg/filipeleonelbatista",
+        icon: <FaDonate style={{ marginRight: "8px" }} />,
+        text: "Make me a donate on live using PIX",
+        donwload: true,
+        target: "",
+      },
+      {
+        href: "https://livepix.gg/filipeleonelbatista/tier1",
+        icon: <FaGithub style={{ marginRight: "8px" }} />,
+        text: "Be a member of my exclusive project's group",
+        donwload: true,
+        target: "",
+      },
       // {
       //   href: "https://docs.google.com/forms/d/e/1FAIpQLSeMOvLLlrmnCi94BUOAvgJDEfyRltBTRv2k75F74LMwExjmEA/viewform",
       //   icon: <FaFileArchive style={{ marginRight: "8px" }} />,
@@ -54,13 +72,13 @@ export default function Links() {
       //   donwload: false,
       //   target: "_blank",
       // },
-      // {
-      //   href: "https://app.rocketseat.com.br/me/filipeleonelbatista",
-      //   icon: <FaRocket style={{ marginRight: "8px" }} />,
-      //   text: "My Rocketseat Profile",
-      //   donwload: false,
-      //   target: "_blank",
-      // },
+      {
+        href: "https://app.rocketseat.com.br/me/filipeleonelbatista",
+        icon: <FaRocket style={{ marginRight: "8px" }} />,
+        text: "My Rocketseat Profile",
+        donwload: false,
+        target: "_blank",
+      },
       {
         href: "https://filipeleonelbatista.vercel.app",
         icon: <FaGlobeAmericas style={{ marginRight: "8px" }} />,
@@ -83,6 +101,13 @@ export default function Links() {
         target: "_blank",
       },
       {
+        href: "https://twitch.tv/filipeleonelbatista",
+        icon: <FaTwitch style={{ marginRight: "8px" }} />,
+        text: "Twitch Channel",
+        donwload: false,
+        target: "_blank",
+      },
+      {
         href: "https://www.youtube.com/channel/UCYUeJiqZCXcABWukG9RvQtw",
         icon: <FaYoutube style={{ marginRight: "8px" }} />,
         text: "Youtube Channel",
@@ -96,13 +121,6 @@ export default function Links() {
         donwload: false,
         target: "_blank",
       },
-      // {
-      //   href: "https://cadastrapet.vercel.app/",
-      //   icon: <FaPaw style={{ marginRight: "8px" }} />,
-      //   text: "Medical Pet Data in your hand.",
-      //   donwload: false,
-      //   target: "_blank",
-      // },
       {
         href: "https://enviodemensagensemmassa.vercel.app/",
         icon: <FaWhatsapp style={{ marginRight: "8px" }} />,
@@ -117,13 +135,6 @@ export default function Links() {
         donwload: false,
         target: "_blank",
       },
-      // {
-      //   href: "https://play.google.com/store/apps/details?id=bussleep.br",
-      //   icon: <FaBus style={{ marginRight: "8px" }} />,
-      //   text: "BusSleep - Alarm to your locations (in PT-br Only)",
-      //   donwload: false,
-      //   target: "_blank",
-      // },
       {
         href: "https://play.google.com/store/apps/developer?id=Leonel+Informatica",
         icon: <FaGooglePlay style={{ marginRight: "8px" }} />,
@@ -140,6 +151,20 @@ export default function Links() {
         donwload: true,
         target: "",
       },
+      {
+        href: "https://livepix.gg/filipeleonelbatista",
+        icon: <FaDonate style={{ marginRight: "8px" }} />,
+        text: "Faça uma Doação por PIX",
+        donwload: true,
+        target: "",
+      },
+      {
+        href: "https://livepix.gg/filipeleonelbatista/tier1",
+        icon: <FaGithub style={{ marginRight: "8px" }} />,
+        text: "Seja membro do grupo de projetos do github",
+        donwload: true,
+        target: "",
+      },
       // {
       //   href: "https://docs.google.com/forms/d/e/1FAIpQLSeMOvLLlrmnCi94BUOAvgJDEfyRltBTRv2k75F74LMwExjmEA/viewform",
       //   icon: <FaFileArchive style={{ marginRight: "8px" }} />,
@@ -147,13 +172,13 @@ export default function Links() {
       //   donwload: false,
       //   target: "_blank",
       // },
-      // {
-      //   href: "https://app.rocketseat.com.br/me/filipeleonelbatista",
-      //   icon: <FaRocket style={{ marginRight: "8px" }} />,
-      //   text: "Perfil na Rocketseat",
-      //   donwload: false,
-      //   target: "_blank",
-      // },
+      {
+        href: "https://app.rocketseat.com.br/me/filipeleonelbatista",
+        icon: <FaRocket style={{ marginRight: "8px" }} />,
+        text: "Perfil na Rocketseat",
+        donwload: false,
+        target: "_blank",
+      },
       {
         href: "https://filipeleonelbatista.vercel.app",
         icon: <FaGlobeAmericas style={{ marginRight: "8px" }} />,
@@ -176,6 +201,13 @@ export default function Links() {
         target: "_blank",
       },
       {
+        href: "https://twitch.tv/filipeleonelbatista",
+        icon: <FaTwitch style={{ marginRight: "8px" }} />,
+        text: "Canal na Twitch",
+        donwload: false,
+        target: "_blank",
+      },
+      {
         href: "https://www.youtube.com/channel/UCYUeJiqZCXcABWukG9RvQtw",
         icon: <FaYoutube style={{ marginRight: "8px" }} />,
         text: "Canal do Youtube",
@@ -189,13 +221,6 @@ export default function Links() {
         donwload: false,
         target: "_blank",
       },
-      // {
-      //   href: "https://cadastrapet.vercel.app/",
-      //   icon: <FaPaw style={{ marginRight: "8px" }} />,
-      //   text: "Histórico médico do seu pet na sua mão.",
-      //   donwload: false,
-      //   target: "_blank",
-      // },
       {
         href: "https://enviodemensagensemmassa.vercel.app/",
         icon: <FaWhatsapp style={{ marginRight: "8px" }} />,
@@ -210,13 +235,6 @@ export default function Links() {
         donwload: false,
         target: "_blank",
       },
-      // {
-      //   href: "https://play.google.com/store/apps/details?id=bussleep.br",
-      //   icon: <FaBus style={{ marginRight: "8px" }} />,
-      //   text: "BusSleep - Alarme para Destinos (Google Play)",
-      //   donwload: false,
-      //   target: "_blank",
-      // },
       {
         href: "https://play.google.com/store/apps/developer?id=Leonel+Informatica",
         icon: <FaGooglePlay style={{ marginRight: "8px" }} />,
